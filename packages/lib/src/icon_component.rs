@@ -1,3 +1,6 @@
+use std::borrow::Cow;
+use std::ops::Deref;
+
 use dioxus::prelude::*;
 
 /// Icon shape trait
@@ -21,47 +24,64 @@ pub trait IconShape {
 pub struct IconProps<T: IconShape + Clone + PartialEq + 'static> {
     /// The icon shape to use.
     pub icon: T,
-    /// The height of the `<svg>` element. Defaults to 20.
-    #[props(default = 20)]
-    pub height: u32,
-    /// The width of the `<svg>` element. Defaults to 20.
-    #[props(default = 20)]
-    pub width: u32,
+
+    /// The height of the `<svg>` element
+    #[props(into)]
+    pub height: Option<Cow<'static, str>>,
+
+    /// The width of the `<svg>` element
+    #[props(into)]
+    pub width: Option<Cow<'static, str>>,
+
     /// The color to use for filling the icon. Defaults to "currentColor".
-    #[props(default = "currentColor".to_string())]
-    pub fill: String,
+    #[props(default = "currentColor".into())]
+    pub fill: Cow<'static, str>,
+
     /// An class for the `<svg>` element.
-    #[props(default = "".to_string())]
-    pub class: String,
-    /// An accessible, short-text description for the icon.
-    pub title: Option<String>,
+    #[props(into)]
+    pub class: Option<Cow<'static, str>>,
+
     /// The style of the `<svg>` element.
-    pub style: Option<String>,
+    #[props(into)]
+    pub style: Option<Cow<'static, str>>,
 }
 
 /// Icon component which generates SVG elements
 #[allow(non_snake_case)]
 pub fn Icon<T: IconShape + Clone + PartialEq + 'static>(props: IconProps<T>) -> Element {
-    let (fill, stroke, stroke_width) = props.icon.fill_and_stroke(&props.fill);
+    let IconProps {
+        icon,
+        height,
+        width,
+        fill,
+        class,
+        style,
+    } = props;
+
+    let (fill, stroke, stroke_width) = icon.fill_and_stroke(&fill);
+
     rsx!(
         svg {
-            class: "{props.class}",
-            style: props.style,
-            height: "{props.height}",
-            width: "{props.width}",
-            view_box: "{props.icon.view_box()}",
-            xmlns: "{props.icon.xmlns()}",
+            class: if let Some(class) = &class {
+                class.deref()
+            },
+            style: if let Some(style) = &style {
+                style.deref()
+            },
+            height: if let Some(height) = &height {
+                height.deref()
+            },
+            width: if let Some(width) = &width {
+                width.deref()
+            },
+            view_box: "{icon.view_box()}",
+            xmlns: "{icon.xmlns()}",
             fill,
             stroke,
             stroke_width,
-            stroke_linecap: "{props.icon.stroke_linecap()}",
-            stroke_linejoin: "{props.icon.stroke_linejoin()}",
-            if let Some(title_text) = props.title {
-                title {
-                    "{title_text}"
-                }
-            },
-            {props.icon.child_elements()}
+            stroke_linecap: "{icon.stroke_linecap()}",
+            stroke_linejoin: "{icon.stroke_linejoin()}",
+            {icon.child_elements()}
         }
     )
 }
