@@ -1,4 +1,3 @@
-use std::borrow::Cow;
 use std::ops::Deref;
 
 use dioxus::prelude::*;
@@ -26,24 +25,20 @@ pub struct IconProps<T: IconShape + Clone + PartialEq + 'static> {
     pub icon: T,
 
     /// The height of the `<svg>` element
-    #[props(into)]
-    pub height: Option<Cow<'static, str>>,
+    pub height: Option<String>,
 
     /// The width of the `<svg>` element
-    #[props(into)]
-    pub width: Option<Cow<'static, str>>,
+    pub width: Option<String>,
 
     /// The color to use for filling the icon. Defaults to "currentColor".
     #[props(default = "currentColor".into())]
-    pub fill: Cow<'static, str>,
+    pub fill: String,
 
     /// An class for the `<svg>` element.
-    #[props(into)]
-    pub class: Option<Cow<'static, str>>,
+    pub class: Option<String>,
 
     /// The style of the `<svg>` element.
-    #[props(into)]
-    pub style: Option<Cow<'static, str>>,
+    pub style: Option<String>,
 }
 
 /// Icon component which generates SVG elements

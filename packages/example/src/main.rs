@@ -17,10 +17,10 @@ fn app() -> Element {
             style: "text-align: center;",
             h1 { "🌗 Dioxus 🚀" }
             h3 { "Frontend that scales." }
-            p { "Dioxus is a portable, performant, and ergonomic framework for building cross-platform user interfaces in Rust." },
+            p { "Dioxus is a portable, performant, and ergonomic framework for building cross-platform user interfaces in Rust." }
             Icon {
-                width: 60,
-                height: 60,
+                width: "60",
+                height: "60",
                 icon: FaRust,
             }
         }
