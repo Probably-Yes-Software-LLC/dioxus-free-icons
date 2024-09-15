@@ -171,7 +171,7 @@ impl IconShape for LdActivity {
     fn child_elements(&self) -> Element {
         rsx! {
             path {
-                d: "M22 12h-4l-3 9L9 3l-3 9H2",
+                d: "M22 12h-2.48a2 2 0 0 0-1.93 1.46l-2.35 8.36a.25.25 0 0 1-.48 0L9.24 2.18a.25.25 0 0 0-.48 0l-2.35 8.36A2 2 0 0 1 4.49 12H2",
             }
         }
     }
@@ -485,16 +485,16 @@ impl IconShape for LdAlarmSmoke {
     fn child_elements(&self) -> Element {
         rsx! {
             path {
-                d: "M4 8a2 2 0 0 1-2-2V3h20v3a2 2 0 0 1-2 2Z",
-            }
-            path {
-                d: "m19 8-.8 3c-.1.6-.6 1-1.2 1H7c-.6 0-1.1-.4-1.2-1L5 8",
+                d: "M11 21c0-2.5 2-2.5 2-5",
             }
             path {
                 d: "M16 21c0-2.5 2-2.5 2-5",
             }
             path {
-                d: "M11 21c0-2.5 2-2.5 2-5",
+                d: "m19 8-.8 3a1.25 1.25 0 0 1-1.2 1H7a1.25 1.25 0 0 1-1.2-1L5 8",
+            }
+            path {
+                d: "M21 3a1 1 0 0 1 1 1v2a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V4a1 1 0 0 1 1-1z",
             }
             path {
                 d: "M6 21c0-2.5 2-2.5 2-5",
@@ -1742,6 +1742,48 @@ impl IconShape for LdAmpersands {
 }
 
 #[derive(Copy, Clone, Debug, PartialEq)]
+pub struct LdAmphora;
+impl IconShape for LdAmphora {
+    fn view_box(&self) -> &str {
+        "0 0 24 24"
+    }
+    fn xmlns(&self) -> &str {
+        "http://www.w3.org/2000/svg"
+    }
+    fn fill_and_stroke<'a>(&self, user_color: &'a str) -> (&'a str, &'a str, &'a str) {
+        ("none", user_color, "2")
+    }
+    fn stroke_linecap(&self) -> &str {
+        "round"
+    }
+    fn stroke_linejoin(&self) -> &str {
+        "round"
+    }
+    fn child_elements(&self) -> Element {
+        rsx! {
+            path {
+                d: "M10 2v5.632c0 .424-.272.795-.653.982A6 6 0 0 0 6 14c.006 4 3 7 5 8",
+            }
+            path {
+                d: "M10 5H8a2 2 0 0 0 0 4h.68",
+            }
+            path {
+                d: "M14 2v5.632c0 .424.272.795.652.982A6 6 0 0 1 18 14c0 4-3 7-5 8",
+            }
+            path {
+                d: "M14 5h2a2 2 0 0 1 0 4h-.68",
+            }
+            path {
+                d: "M18 22H6",
+            }
+            path {
+                d: "M9 2h6",
+            }
+        }
+    }
+}
+
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct LdAnchor;
 impl IconShape for LdAnchor {
     fn view_box(&self) -> &str {
@@ -1811,10 +1853,10 @@ impl IconShape for LdAngry {
                 d: "m14 9 2.5-1",
             }
             path {
-                d: "M9 10h0",
+                d: "M9 10h.01",
             }
             path {
-                d: "M15 10h0",
+                d: "M15 10h.01",
             }
         }
     }
@@ -2217,36 +2259,6 @@ impl IconShape for LdArchive {
 }
 
 #[derive(Copy, Clone, Debug, PartialEq)]
-pub struct LdAreaChart;
-impl IconShape for LdAreaChart {
-    fn view_box(&self) -> &str {
-        "0 0 24 24"
-    }
-    fn xmlns(&self) -> &str {
-        "http://www.w3.org/2000/svg"
-    }
-    fn fill_and_stroke<'a>(&self, user_color: &'a str) -> (&'a str, &'a str, &'a str) {
-        ("none", user_color, "2")
-    }
-    fn stroke_linecap(&self) -> &str {
-        "round"
-    }
-    fn stroke_linejoin(&self) -> &str {
-        "round"
-    }
-    fn child_elements(&self) -> Element {
-        rsx! {
-            path {
-                d: "M3 3v18h18",
-            }
-            path {
-                d: "M7 12v5h12V8l-5 5-4-4Z",
-            }
-        }
-    }
-}
-
-#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct LdArmchair;
 impl IconShape for LdArmchair {
     fn view_box(&self) -> &str {
@@ -2270,7 +2282,7 @@ impl IconShape for LdArmchair {
                 d: "M19 9V6a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v3",
             }
             path {
-                d: "M3 16a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-5a2 2 0 0 0-4 0v2H7v-2a2 2 0 0 0-4 0Z",
+                d: "M3 16a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-5a2 2 0 0 0-4 0v1.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V11a2 2 0 0 0-4 0z",
             }
             path {
                 d: "M5 18v2",
@@ -3940,13 +3952,13 @@ impl IconShape for LdAward {
     }
     fn child_elements(&self) -> Element {
         rsx! {
+            path {
+                d: "m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526",
+            }
             circle {
                 cx: "12",
                 cy: "8",
                 r: "6",
-            }
-            path {
-                d: "M15.477 12.89 17 22l-5-3-5 3 1.523-9.11",
             }
         }
     }
@@ -4069,19 +4081,19 @@ impl IconShape for LdBackpack {
     fn child_elements(&self) -> Element {
         rsx! {
             path {
-                d: "M4 10a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2Z",
-            }
-            path {
-                d: "M9 6V4a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2",
-            }
-            path {
-                d: "M8 21v-5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v5",
+                d: "M4 10a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z",
             }
             path {
                 d: "M8 10h8",
             }
             path {
                 d: "M8 18h8",
+            }
+            path {
+                d: "M8 22v-6a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v6",
+            }
+            path {
+                d: "M9 6V4a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2",
             }
         }
     }
@@ -4794,6 +4806,55 @@ impl IconShape for LdBanana {
 }
 
 #[derive(Copy, Clone, Debug, PartialEq)]
+pub struct LdBandage;
+impl IconShape for LdBandage {
+    fn view_box(&self) -> &str {
+        "0 0 24 24"
+    }
+    fn xmlns(&self) -> &str {
+        "http://www.w3.org/2000/svg"
+    }
+    fn fill_and_stroke<'a>(&self, user_color: &'a str) -> (&'a str, &'a str, &'a str) {
+        ("none", user_color, "2")
+    }
+    fn stroke_linecap(&self) -> &str {
+        "round"
+    }
+    fn stroke_linejoin(&self) -> &str {
+        "round"
+    }
+    fn child_elements(&self) -> Element {
+        rsx! {
+            path {
+                d: "M10 10.01h.01",
+            }
+            path {
+                d: "M10 14.01h.01",
+            }
+            path {
+                d: "M14 10.01h.01",
+            }
+            path {
+                d: "M14 14.01h.01",
+            }
+            path {
+                d: "M18 6v11.5",
+            }
+            path {
+                d: "M6 6v12",
+            }
+            rect {
+                height: "12",
+                rx: "2",
+                width: "20",
+                x: "2",
+                y: "6",
+            }
+        }
+    }
+}
+
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct LdBanknote;
 impl IconShape for LdBanknote {
     fn view_box(&self) -> &str {
@@ -4827,280 +4888,6 @@ impl IconShape for LdBanknote {
             }
             path {
                 d: "M6 12h.01M18 12h.01",
-            }
-        }
-    }
-}
-
-#[derive(Copy, Clone, Debug, PartialEq)]
-pub struct LdBarChart2;
-impl IconShape for LdBarChart2 {
-    fn view_box(&self) -> &str {
-        "0 0 24 24"
-    }
-    fn xmlns(&self) -> &str {
-        "http://www.w3.org/2000/svg"
-    }
-    fn fill_and_stroke<'a>(&self, user_color: &'a str) -> (&'a str, &'a str, &'a str) {
-        ("none", user_color, "2")
-    }
-    fn stroke_linecap(&self) -> &str {
-        "round"
-    }
-    fn stroke_linejoin(&self) -> &str {
-        "round"
-    }
-    fn child_elements(&self) -> Element {
-        rsx! {
-            line {
-                x1: "18",
-                x2: "18",
-                y1: "20",
-                y2: "10",
-            }
-            line {
-                x1: "12",
-                x2: "12",
-                y1: "20",
-                y2: "4",
-            }
-            line {
-                x1: "6",
-                x2: "6",
-                y1: "20",
-                y2: "14",
-            }
-        }
-    }
-}
-
-#[derive(Copy, Clone, Debug, PartialEq)]
-pub struct LdBarChart3;
-impl IconShape for LdBarChart3 {
-    fn view_box(&self) -> &str {
-        "0 0 24 24"
-    }
-    fn xmlns(&self) -> &str {
-        "http://www.w3.org/2000/svg"
-    }
-    fn fill_and_stroke<'a>(&self, user_color: &'a str) -> (&'a str, &'a str, &'a str) {
-        ("none", user_color, "2")
-    }
-    fn stroke_linecap(&self) -> &str {
-        "round"
-    }
-    fn stroke_linejoin(&self) -> &str {
-        "round"
-    }
-    fn child_elements(&self) -> Element {
-        rsx! {
-            path {
-                d: "M3 3v18h18",
-            }
-            path {
-                d: "M18 17V9",
-            }
-            path {
-                d: "M13 17V5",
-            }
-            path {
-                d: "M8 17v-3",
-            }
-        }
-    }
-}
-
-#[derive(Copy, Clone, Debug, PartialEq)]
-pub struct LdBarChart4;
-impl IconShape for LdBarChart4 {
-    fn view_box(&self) -> &str {
-        "0 0 24 24"
-    }
-    fn xmlns(&self) -> &str {
-        "http://www.w3.org/2000/svg"
-    }
-    fn fill_and_stroke<'a>(&self, user_color: &'a str) -> (&'a str, &'a str, &'a str) {
-        ("none", user_color, "2")
-    }
-    fn stroke_linecap(&self) -> &str {
-        "round"
-    }
-    fn stroke_linejoin(&self) -> &str {
-        "round"
-    }
-    fn child_elements(&self) -> Element {
-        rsx! {
-            path {
-                d: "M3 3v18h18",
-            }
-            path {
-                d: "M13 17V9",
-            }
-            path {
-                d: "M18 17V5",
-            }
-            path {
-                d: "M8 17v-3",
-            }
-        }
-    }
-}
-
-#[derive(Copy, Clone, Debug, PartialEq)]
-pub struct LdBarChartBig;
-impl IconShape for LdBarChartBig {
-    fn view_box(&self) -> &str {
-        "0 0 24 24"
-    }
-    fn xmlns(&self) -> &str {
-        "http://www.w3.org/2000/svg"
-    }
-    fn fill_and_stroke<'a>(&self, user_color: &'a str) -> (&'a str, &'a str, &'a str) {
-        ("none", user_color, "2")
-    }
-    fn stroke_linecap(&self) -> &str {
-        "round"
-    }
-    fn stroke_linejoin(&self) -> &str {
-        "round"
-    }
-    fn child_elements(&self) -> Element {
-        rsx! {
-            path {
-                d: "M3 3v18h18",
-            }
-            rect {
-                height: "7",
-                rx: "1",
-                width: "4",
-                x: "7",
-                y: "10",
-            }
-            rect {
-                height: "12",
-                rx: "1",
-                width: "4",
-                x: "15",
-                y: "5",
-            }
-        }
-    }
-}
-
-#[derive(Copy, Clone, Debug, PartialEq)]
-pub struct LdBarChartHorizontalBig;
-impl IconShape for LdBarChartHorizontalBig {
-    fn view_box(&self) -> &str {
-        "0 0 24 24"
-    }
-    fn xmlns(&self) -> &str {
-        "http://www.w3.org/2000/svg"
-    }
-    fn fill_and_stroke<'a>(&self, user_color: &'a str) -> (&'a str, &'a str, &'a str) {
-        ("none", user_color, "2")
-    }
-    fn stroke_linecap(&self) -> &str {
-        "round"
-    }
-    fn stroke_linejoin(&self) -> &str {
-        "round"
-    }
-    fn child_elements(&self) -> Element {
-        rsx! {
-            path {
-                d: "M3 3v18h18",
-            }
-            rect {
-                height: "4",
-                rx: "1",
-                width: "12",
-                x: "7",
-                y: "5",
-            }
-            rect {
-                height: "4",
-                rx: "1",
-                width: "7",
-                x: "7",
-                y: "13",
-            }
-        }
-    }
-}
-
-#[derive(Copy, Clone, Debug, PartialEq)]
-pub struct LdBarChartHorizontal;
-impl IconShape for LdBarChartHorizontal {
-    fn view_box(&self) -> &str {
-        "0 0 24 24"
-    }
-    fn xmlns(&self) -> &str {
-        "http://www.w3.org/2000/svg"
-    }
-    fn fill_and_stroke<'a>(&self, user_color: &'a str) -> (&'a str, &'a str, &'a str) {
-        ("none", user_color, "2")
-    }
-    fn stroke_linecap(&self) -> &str {
-        "round"
-    }
-    fn stroke_linejoin(&self) -> &str {
-        "round"
-    }
-    fn child_elements(&self) -> Element {
-        rsx! {
-            path {
-                d: "M3 3v18h18",
-            }
-            path {
-                d: "M7 16h8",
-            }
-            path {
-                d: "M7 11h12",
-            }
-            path {
-                d: "M7 6h3",
-            }
-        }
-    }
-}
-
-#[derive(Copy, Clone, Debug, PartialEq)]
-pub struct LdBarChart;
-impl IconShape for LdBarChart {
-    fn view_box(&self) -> &str {
-        "0 0 24 24"
-    }
-    fn xmlns(&self) -> &str {
-        "http://www.w3.org/2000/svg"
-    }
-    fn fill_and_stroke<'a>(&self, user_color: &'a str) -> (&'a str, &'a str, &'a str) {
-        ("none", user_color, "2")
-    }
-    fn stroke_linecap(&self) -> &str {
-        "round"
-    }
-    fn stroke_linejoin(&self) -> &str {
-        "round"
-    }
-    fn child_elements(&self) -> Element {
-        rsx! {
-            line {
-                x1: "12",
-                x2: "12",
-                y1: "20",
-                y2: "10",
-            }
-            line {
-                x1: "18",
-                x2: "18",
-                y1: "20",
-                y2: "4",
-            }
-            line {
-                x1: "6",
-                x2: "6",
-                y1: "20",
-                y2: "16",
             }
         }
     }
@@ -5439,28 +5226,19 @@ impl IconShape for LdBatteryWarning {
     fn child_elements(&self) -> Element {
         rsx! {
             path {
-                d: "M14 7h2a2 2 0 0 1 2 2v6c0 1-1 2-2 2h-2",
+                d: "M10 17h.01",
             }
             path {
-                d: "M6 7H4a2 2 0 0 0-2 2v6c0 1 1 2 2 2h2",
+                d: "M10 7v6",
             }
-            line {
-                x1: "22",
-                x2: "22",
-                y1: "11",
-                y2: "13",
+            path {
+                d: "M14 7h2a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2h-2",
             }
-            line {
-                x1: "10",
-                x2: "10",
-                y1: "7",
-                y2: "13",
+            path {
+                d: "M22 11v2",
             }
-            line {
-                x1: "10",
-                x2: "10",
-                y1: "17",
-                y2: "17.01",
+            path {
+                d: "M6 7H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2",
             }
         }
     }
@@ -6254,6 +6032,39 @@ impl IconShape for LdBetweenVerticalStart {
 }
 
 #[derive(Copy, Clone, Debug, PartialEq)]
+pub struct LdBicepsFlexed;
+impl IconShape for LdBicepsFlexed {
+    fn view_box(&self) -> &str {
+        "0 0 24 24"
+    }
+    fn xmlns(&self) -> &str {
+        "http://www.w3.org/2000/svg"
+    }
+    fn fill_and_stroke<'a>(&self, user_color: &'a str) -> (&'a str, &'a str, &'a str) {
+        ("none", user_color, "2")
+    }
+    fn stroke_linecap(&self) -> &str {
+        "round"
+    }
+    fn stroke_linejoin(&self) -> &str {
+        "round"
+    }
+    fn child_elements(&self) -> Element {
+        rsx! {
+            path {
+                d: "M12.409 13.017A5 5 0 0 1 22 15c0 3.866-4 7-9 7-4.077 0-8.153-.82-10.371-2.462-.426-.316-.631-.832-.62-1.362C2.118 12.723 2.627 2 10 2a3 3 0 0 1 3 3 2 2 0 0 1-2 2c-1.105 0-1.64-.444-2-1",
+            }
+            path {
+                d: "M15 14a5 5 0 0 0-7.584 2",
+            }
+            path {
+                d: "M9.964 6.825C8.019 7.977 9.5 13 8 15",
+            }
+        }
+    }
+}
+
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct LdBike;
 impl IconShape for LdBike {
     fn view_box(&self) -> &str {
@@ -6340,6 +6151,48 @@ impl IconShape for LdBinary {
             }
             path {
                 d: "M14 4h2v6",
+            }
+        }
+    }
+}
+
+#[derive(Copy, Clone, Debug, PartialEq)]
+pub struct LdBinoculars;
+impl IconShape for LdBinoculars {
+    fn view_box(&self) -> &str {
+        "0 0 24 24"
+    }
+    fn xmlns(&self) -> &str {
+        "http://www.w3.org/2000/svg"
+    }
+    fn fill_and_stroke<'a>(&self, user_color: &'a str) -> (&'a str, &'a str, &'a str) {
+        ("none", user_color, "2")
+    }
+    fn stroke_linecap(&self) -> &str {
+        "round"
+    }
+    fn stroke_linejoin(&self) -> &str {
+        "round"
+    }
+    fn child_elements(&self) -> Element {
+        rsx! {
+            path {
+                d: "M10 10h4",
+            }
+            path {
+                d: "M19 7V4a1 1 0 0 0-1-1h-2a1 1 0 0 0-1 1v3",
+            }
+            path {
+                d: "M20 21a2 2 0 0 0 2-2v-3.851c0-1.39-2-2.962-2-4.829V8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v11a2 2 0 0 0 2 2z",
+            }
+            path {
+                d: "M 22 16 L 2 16",
+            }
+            path {
+                d: "M4 21a2 2 0 0 1-2-2v-3.851c0-1.39 2-2.962 2-4.829V8a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v11a2 2 0 0 1-2 2z",
+            }
+            path {
+                d: "M9 7V4a1 1 0 0 0-1-1H6a1 1 0 0 0-1 1v3",
             }
         }
     }
@@ -6738,10 +6591,7 @@ impl IconShape for LdBold {
     fn child_elements(&self) -> Element {
         rsx! {
             path {
-                d: "M14 12a4 4 0 0 0 0-8H6v8",
-            }
-            path {
-                d: "M15 20a4 4 0 0 0 0-8H6v8Z",
+                d: "M6 12h9a4 4 0 0 1 0 8H7a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h7a4 4 0 0 1 0 8",
             }
         }
     }
@@ -6862,7 +6712,7 @@ impl IconShape for LdBookA {
     fn child_elements(&self) -> Element {
         rsx! {
             path {
-                d: "M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20",
+                d: "M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H19a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H6.5a1 1 0 0 1 0-5H20",
             }
             path {
                 d: "m8 13 4-7 4 7",
@@ -6895,16 +6745,16 @@ impl IconShape for LdBookAudio {
     fn child_elements(&self) -> Element {
         rsx! {
             path {
-                d: "M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20",
-            }
-            path {
-                d: "M8 8v3",
-            }
-            path {
                 d: "M12 6v7",
             }
             path {
                 d: "M16 8v3",
+            }
+            path {
+                d: "M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H19a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H6.5a1 1 0 0 1 0-5H20",
+            }
+            path {
+                d: "M8 8v3",
             }
         }
     }
@@ -6931,7 +6781,7 @@ impl IconShape for LdBookCheck {
     fn child_elements(&self) -> Element {
         rsx! {
             path {
-                d: "M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20",
+                d: "M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H19a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H6.5a1 1 0 0 1 0-5H20",
             }
             path {
                 d: "m9 9.5 2 2 4-4",
@@ -6964,10 +6814,10 @@ impl IconShape for LdBookCopy {
                 d: "M2 16V4a2 2 0 0 1 2-2h11",
             }
             path {
-                d: "M5 14H4a2 2 0 1 0 0 4h1",
+                d: "M22 18H11a2 2 0 1 0 0 4h10.5a.5.5 0 0 0 .5-.5v-15a.5.5 0 0 0-.5-.5H11a2 2 0 0 0-2 2v12",
             }
             path {
-                d: "M22 18H11a2 2 0 1 0 0 4h11V6H11a2 2 0 0 0-2 2v12",
+                d: "M5 14H4a2 2 0 1 0 0 4h1",
             }
         }
     }
@@ -6994,37 +6844,37 @@ impl IconShape for LdBookDashed {
     fn child_elements(&self) -> Element {
         rsx! {
             path {
-                d: "M20 22h-2",
-            }
-            path {
-                d: "M20 15v2h-2",
-            }
-            path {
-                d: "M4 19.5V15",
-            }
-            path {
-                d: "M20 8v3",
-            }
-            path {
-                d: "M18 2h2v2",
-            }
-            path {
-                d: "M4 11V9",
-            }
-            path {
-                d: "M12 2h2",
+                d: "M12 17h2",
             }
             path {
                 d: "M12 22h2",
             }
             path {
-                d: "M12 17h2",
+                d: "M12 2h2",
             }
             path {
-                d: "M8 22H6.5a2.5 2.5 0 0 1 0-5H8",
+                d: "M18 22h1a1 1 0 0 0 1-1",
+            }
+            path {
+                d: "M18 2h1a1 1 0 0 1 1 1v1",
+            }
+            path {
+                d: "M20 15v2h-2",
+            }
+            path {
+                d: "M20 8v3",
+            }
+            path {
+                d: "M4 11V9",
+            }
+            path {
+                d: "M4 19.5V15",
             }
             path {
                 d: "M4 5v-.5A2.5 2.5 0 0 1 6.5 2H8",
+            }
+            path {
+                d: "M8 22H6.5a1 1 0 0 1 0-5H8",
             }
         }
     }
@@ -7051,10 +6901,10 @@ impl IconShape for LdBookDown {
     fn child_elements(&self) -> Element {
         rsx! {
             path {
-                d: "M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20",
+                d: "M12 13V7",
             }
             path {
-                d: "M12 13V7",
+                d: "M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H19a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H6.5a1 1 0 0 1 0-5H20",
             }
             path {
                 d: "m9 10 3 3 3-3",
@@ -7084,18 +6934,18 @@ impl IconShape for LdBookHeadphones {
     fn child_elements(&self) -> Element {
         rsx! {
             path {
-                d: "M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20",
-            }
-            circle {
-                cx: "9",
-                cy: "12",
-                r: "1",
+                d: "M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H19a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H6.5a1 1 0 0 1 0-5H20",
             }
             path {
                 d: "M8 12v-2a4 4 0 0 1 8 0v2",
             }
             circle {
                 cx: "15",
+                cy: "12",
+                r: "1",
+            }
+            circle {
+                cx: "9",
                 cy: "12",
                 r: "1",
             }
@@ -7124,10 +6974,10 @@ impl IconShape for LdBookHeart {
     fn child_elements(&self) -> Element {
         rsx! {
             path {
-                d: "M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20",
+                d: "M16 8.2A2.22 2.22 0 0 0 13.8 6c-.8 0-1.4.3-1.8.9-.4-.6-1-.9-1.8-.9A2.22 2.22 0 0 0 8 8.2c0 .6.3 1.2.7 1.6A226.652 226.652 0 0 0 12 13a404 404 0 0 0 3.3-3.1 2.413 2.413 0 0 0 .7-1.7",
             }
             path {
-                d: "M16 8.2C16 7 15 6 13.8 6c-.8 0-1.4.3-1.8.9-.4-.6-1-.9-1.8-.9C9 6 8 7 8 8.2c0 .6.3 1.2.7 1.6h0C10 11.1 12 13 12 13s2-1.9 3.3-3.1h0c.4-.4.7-1 .7-1.7z",
+                d: "M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H19a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H6.5a1 1 0 0 1 0-5H20",
             }
         }
     }
@@ -7154,15 +7004,15 @@ impl IconShape for LdBookImage {
     fn child_elements(&self) -> Element {
         rsx! {
             path {
-                d: "M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20",
+                d: "m20 13.7-2.1-2.1a2 2 0 0 0-2.8 0L9.7 17",
+            }
+            path {
+                d: "M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H19a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H6.5a1 1 0 0 1 0-5H20",
             }
             circle {
                 cx: "10",
                 cy: "8",
                 r: "2",
-            }
-            path {
-                d: "m20 13.7-2.1-2.1c-.8-.8-2-.8-2.8 0L9.7 17",
             }
         }
     }
@@ -7189,21 +7039,21 @@ impl IconShape for LdBookKey {
     fn child_elements(&self) -> Element {
         rsx! {
             path {
-                d: "M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H14",
-            }
-            path {
-                d: "M20 8v14H6.5a2.5 2.5 0 0 1 0-5H20",
-            }
-            circle {
-                cx: "14",
-                cy: "8",
-                r: "2",
+                d: "m19 3 1 1",
             }
             path {
                 d: "m20 2-4.5 4.5",
             }
             path {
-                d: "m19 3 1 1",
+                d: "M20 8v13a1 1 0 0 1-1 1H6.5a1 1 0 0 1 0-5H20",
+            }
+            path {
+                d: "M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H14",
+            }
+            circle {
+                cx: "14",
+                cy: "8",
+                r: "2",
             }
         }
     }
@@ -7230,10 +7080,13 @@ impl IconShape for LdBookLock {
     fn child_elements(&self) -> Element {
         rsx! {
             path {
-                d: "M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H10",
+                d: "M18 6V4a2 2 0 1 0-4 0v2",
             }
             path {
-                d: "M20 15v7H6.5a2.5 2.5 0 0 1 0-5H20",
+                d: "M20 15v6a1 1 0 0 1-1 1H6.5a1 1 0 0 1 0-5H20",
+            }
+            path {
+                d: "M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H10",
             }
             rect {
                 height: "5",
@@ -7241,9 +7094,6 @@ impl IconShape for LdBookLock {
                 width: "8",
                 x: "12",
                 y: "6",
-            }
-            path {
-                d: "M18 6V4a2 2 0 1 0-4 0v2",
             }
         }
     }
@@ -7270,10 +7120,10 @@ impl IconShape for LdBookMarked {
     fn child_elements(&self) -> Element {
         rsx! {
             path {
-                d: "M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20",
+                d: "M10 2v8l3-3 3 3V2",
             }
-            polyline {
-                points: "10 2 10 10 13 7 16 10 16 2",
+            path {
+                d: "M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H19a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H6.5a1 1 0 0 1 0-5H20",
             }
         }
     }
@@ -7300,7 +7150,7 @@ impl IconShape for LdBookMinus {
     fn child_elements(&self) -> Element {
         rsx! {
             path {
-                d: "M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20",
+                d: "M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H19a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H6.5a1 1 0 0 1 0-5H20",
             }
             path {
                 d: "M9 10h6",
@@ -7330,13 +7180,13 @@ impl IconShape for LdBookOpenCheck {
     fn child_elements(&self) -> Element {
         rsx! {
             path {
-                d: "M8 3H2v15h7c1.7 0 3 1.3 3 3V7c0-2.2-1.8-4-4-4Z",
+                d: "M12 21V7",
             }
             path {
                 d: "m16 12 2 2 4-4",
             }
             path {
-                d: "M22 6V3h-6c-2.2 0-4 1.8-4 4v14c0-1.7 1.3-3 3-3h7v-2.3",
+                d: "M22 6V4a1 1 0 0 0-1-1h-5a4 4 0 0 0-4 4 4 4 0 0 0-4-4H3a1 1 0 0 0-1 1v13a1 1 0 0 0 1 1h6a3 3 0 0 1 3 3 3 3 0 0 1 3-3h6a1 1 0 0 0 1-1v-1.3",
             }
         }
     }
@@ -7363,22 +7213,22 @@ impl IconShape for LdBookOpenText {
     fn child_elements(&self) -> Element {
         rsx! {
             path {
-                d: "M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z",
+                d: "M12 7v14",
             }
             path {
-                d: "M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z",
-            }
-            path {
-                d: "M6 8h2",
-            }
-            path {
-                d: "M6 12h2",
+                d: "M16 12h2",
             }
             path {
                 d: "M16 8h2",
             }
             path {
-                d: "M16 12h2",
+                d: "M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z",
+            }
+            path {
+                d: "M6 12h2",
+            }
+            path {
+                d: "M6 8h2",
             }
         }
     }
@@ -7405,10 +7255,10 @@ impl IconShape for LdBookOpen {
     fn child_elements(&self) -> Element {
         rsx! {
             path {
-                d: "M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z",
+                d: "M12 7v14",
             }
             path {
-                d: "M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z",
+                d: "M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z",
             }
         }
     }
@@ -7435,13 +7285,13 @@ impl IconShape for LdBookPlus {
     fn child_elements(&self) -> Element {
         rsx! {
             path {
-                d: "M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20",
+                d: "M12 7v6",
+            }
+            path {
+                d: "M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H19a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H6.5a1 1 0 0 1 0-5H20",
             }
             path {
                 d: "M9 10h6",
-            }
-            path {
-                d: "M12 7v6",
             }
         }
     }
@@ -7468,13 +7318,13 @@ impl IconShape for LdBookText {
     fn child_elements(&self) -> Element {
         rsx! {
             path {
-                d: "M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20",
-            }
-            path {
-                d: "M8 7h6",
+                d: "M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H19a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H6.5a1 1 0 0 1 0-5H20",
             }
             path {
                 d: "M8 11h8",
+            }
+            path {
+                d: "M8 7h6",
             }
         }
     }
@@ -7501,16 +7351,16 @@ impl IconShape for LdBookType {
     fn child_elements(&self) -> Element {
         rsx! {
             path {
-                d: "M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20",
-            }
-            path {
-                d: "M16 8V6H8v2",
+                d: "M10 13h4",
             }
             path {
                 d: "M12 6v7",
             }
             path {
-                d: "M10 13h4",
+                d: "M16 8V6H8v2",
+            }
+            path {
+                d: "M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H19a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H6.5a1 1 0 0 1 0-5H20",
             }
         }
     }
@@ -7537,13 +7387,13 @@ impl IconShape for LdBookUp2 {
     fn child_elements(&self) -> Element {
         rsx! {
             path {
-                d: "M4 19.5v-15A2.5 2.5 0 0 1 6.5 2",
-            }
-            path {
-                d: "M18 2h2v20H6.5a2.5 2.5 0 0 1 0-5H20",
-            }
-            path {
                 d: "M12 13V7",
+            }
+            path {
+                d: "M18 2h1a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H6.5a1 1 0 0 1 0-5H20",
+            }
+            path {
+                d: "M4 19.5v-15A2.5 2.5 0 0 1 6.5 2",
             }
             path {
                 d: "m9 10 3-3 3 3",
@@ -7576,10 +7426,10 @@ impl IconShape for LdBookUp {
     fn child_elements(&self) -> Element {
         rsx! {
             path {
-                d: "M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20",
+                d: "M12 13V7",
             }
             path {
-                d: "M12 13V7",
+                d: "M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H19a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H6.5a1 1 0 0 1 0-5H20",
             }
             path {
                 d: "m9 10 3-3 3 3",
@@ -7609,15 +7459,15 @@ impl IconShape for LdBookUser {
     fn child_elements(&self) -> Element {
         rsx! {
             path {
-                d: "M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20",
+                d: "M15 13a3 3 0 1 0-6 0",
+            }
+            path {
+                d: "M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H19a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H6.5a1 1 0 0 1 0-5H20",
             }
             circle {
                 cx: "12",
                 cy: "8",
                 r: "2",
-            }
-            path {
-                d: "M15 13a3 3 0 1 0-6 0",
             }
         }
     }
@@ -7644,10 +7494,10 @@ impl IconShape for LdBookX {
     fn child_elements(&self) -> Element {
         rsx! {
             path {
-                d: "M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20",
+                d: "m14.5 7-5 5",
             }
             path {
-                d: "m14.5 7-5 5",
+                d: "M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H19a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H6.5a1 1 0 0 1 0-5H20",
             }
             path {
                 d: "m9.5 7 5 5",
@@ -7677,7 +7527,7 @@ impl IconShape for LdBook {
     fn child_elements(&self) -> Element {
         rsx! {
             path {
-                d: "M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20",
+                d: "M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H19a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H6.5a1 1 0 0 1 0-5H20",
             }
         }
     }
@@ -9217,13 +9067,13 @@ impl IconShape for LdCake {
                 d: "M17 8v3",
             }
             path {
-                d: "M7 4h0.01",
+                d: "M7 4h.01",
             }
             path {
-                d: "M12 4h0.01",
+                d: "M12 4h.01",
             }
             path {
-                d: "M17 4h0.01",
+                d: "M17 4h.01",
             }
         }
     }
@@ -9288,6 +9138,90 @@ impl IconShape for LdCalculator {
             }
             path {
                 d: "M8 18h.01",
+            }
+        }
+    }
+}
+
+#[derive(Copy, Clone, Debug, PartialEq)]
+pub struct LdCalendarArrowDown;
+impl IconShape for LdCalendarArrowDown {
+    fn view_box(&self) -> &str {
+        "0 0 24 24"
+    }
+    fn xmlns(&self) -> &str {
+        "http://www.w3.org/2000/svg"
+    }
+    fn fill_and_stroke<'a>(&self, user_color: &'a str) -> (&'a str, &'a str, &'a str) {
+        ("none", user_color, "2")
+    }
+    fn stroke_linecap(&self) -> &str {
+        "round"
+    }
+    fn stroke_linejoin(&self) -> &str {
+        "round"
+    }
+    fn child_elements(&self) -> Element {
+        rsx! {
+            path {
+                d: "m14 18 4 4 4-4",
+            }
+            path {
+                d: "M16 2v4",
+            }
+            path {
+                d: "M18 14v8",
+            }
+            path {
+                d: "M21 11.354V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h7.343",
+            }
+            path {
+                d: "M3 10h18",
+            }
+            path {
+                d: "M8 2v4",
+            }
+        }
+    }
+}
+
+#[derive(Copy, Clone, Debug, PartialEq)]
+pub struct LdCalendarArrowUp;
+impl IconShape for LdCalendarArrowUp {
+    fn view_box(&self) -> &str {
+        "0 0 24 24"
+    }
+    fn xmlns(&self) -> &str {
+        "http://www.w3.org/2000/svg"
+    }
+    fn fill_and_stroke<'a>(&self, user_color: &'a str) -> (&'a str, &'a str, &'a str) {
+        ("none", user_color, "2")
+    }
+    fn stroke_linecap(&self) -> &str {
+        "round"
+    }
+    fn stroke_linejoin(&self) -> &str {
+        "round"
+    }
+    fn child_elements(&self) -> Element {
+        rsx! {
+            path {
+                d: "m14 18 4-4 4 4",
+            }
+            path {
+                d: "M16 2v4",
+            }
+            path {
+                d: "M18 22v-8",
+            }
+            path {
+                d: "M21 11.343V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h9",
+            }
+            path {
+                d: "M3 10h18",
+            }
+            path {
+                d: "M8 2v4",
             }
         }
     }
@@ -9414,6 +9348,71 @@ impl IconShape for LdCalendarClock {
                 cx: "16",
                 cy: "16",
                 r: "6",
+            }
+        }
+    }
+}
+
+#[derive(Copy, Clone, Debug, PartialEq)]
+pub struct LdCalendarCog;
+impl IconShape for LdCalendarCog {
+    fn view_box(&self) -> &str {
+        "0 0 24 24"
+    }
+    fn xmlns(&self) -> &str {
+        "http://www.w3.org/2000/svg"
+    }
+    fn fill_and_stroke<'a>(&self, user_color: &'a str) -> (&'a str, &'a str, &'a str) {
+        ("none", user_color, "2")
+    }
+    fn stroke_linecap(&self) -> &str {
+        "round"
+    }
+    fn stroke_linejoin(&self) -> &str {
+        "round"
+    }
+    fn child_elements(&self) -> Element {
+        rsx! {
+            path {
+                d: "m15.2 16.9-.9-.4",
+            }
+            path {
+                d: "m15.2 19.1-.9.4",
+            }
+            path {
+                d: "M16 2v4",
+            }
+            path {
+                d: "m16.9 15.2-.4-.9",
+            }
+            path {
+                d: "m16.9 20.8-.4.9",
+            }
+            path {
+                d: "m19.5 14.3-.4.9",
+            }
+            path {
+                d: "m19.5 21.7-.4-.9",
+            }
+            path {
+                d: "M21 10.5V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h6",
+            }
+            path {
+                d: "m21.7 16.5-.9.4",
+            }
+            path {
+                d: "m21.7 19.5-.9-.4",
+            }
+            path {
+                d: "M3 10h18",
+            }
+            path {
+                d: "M8 2v4",
+            }
+            circle {
+                cx: "18",
+                cy: "18",
+                r: "3",
             }
         }
     }
@@ -9616,19 +9615,19 @@ impl IconShape for LdCalendarMinus {
     fn child_elements(&self) -> Element {
         rsx! {
             path {
-                d: "M8 2v4",
+                d: "M16 19h6",
             }
             path {
                 d: "M16 2v4",
             }
             path {
-                d: "M21 13V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h8",
+                d: "M21 15V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h8.5",
             }
             path {
                 d: "M3 10h18",
             }
             path {
-                d: "M16 19h6",
+                d: "M8 2v4",
             }
         }
     }
@@ -9837,24 +9836,24 @@ impl IconShape for LdCalendarSearch {
     fn child_elements(&self) -> Element {
         rsx! {
             path {
-                d: "M21 12V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h7.5",
-            }
-            path {
                 d: "M16 2v4",
             }
             path {
-                d: "M8 2v4",
+                d: "M21 11.75V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h7.25",
+            }
+            path {
+                d: "m22 22-1.875-1.875",
             }
             path {
                 d: "M3 10h18",
+            }
+            path {
+                d: "M8 2v4",
             }
             circle {
                 cx: "18",
                 cy: "18",
                 r: "3",
-            }
-            path {
-                d: "m22 22-1.5-1.5",
             }
         }
     }
@@ -10054,59 +10053,6 @@ impl IconShape for LdCamera {
                 cx: "12",
                 cy: "13",
                 r: "3",
-            }
-        }
-    }
-}
-
-#[derive(Copy, Clone, Debug, PartialEq)]
-pub struct LdCandlestickChart;
-impl IconShape for LdCandlestickChart {
-    fn view_box(&self) -> &str {
-        "0 0 24 24"
-    }
-    fn xmlns(&self) -> &str {
-        "http://www.w3.org/2000/svg"
-    }
-    fn fill_and_stroke<'a>(&self, user_color: &'a str) -> (&'a str, &'a str, &'a str) {
-        ("none", user_color, "2")
-    }
-    fn stroke_linecap(&self) -> &str {
-        "round"
-    }
-    fn stroke_linejoin(&self) -> &str {
-        "round"
-    }
-    fn child_elements(&self) -> Element {
-        rsx! {
-            path {
-                d: "M9 5v4",
-            }
-            rect {
-                height: "6",
-                rx: "1",
-                width: "4",
-                x: "7",
-                y: "9",
-            }
-            path {
-                d: "M9 15v2",
-            }
-            path {
-                d: "M17 3v2",
-            }
-            rect {
-                height: "8",
-                rx: "1",
-                width: "4",
-                x: "15",
-                y: "5",
-            }
-            path {
-                d: "M17 13v3",
-            }
-            path {
-                d: "M3 3v18h18",
             }
         }
     }
@@ -10503,28 +10449,19 @@ impl IconShape for LdCaravan {
     }
     fn child_elements(&self) -> Element {
         rsx! {
-            rect {
-                height: "4",
-                width: "4",
-                x: "2",
-                y: "9",
-            }
-            rect {
-                height: "10",
-                width: "4",
-                x: "10",
-                y: "9",
-            }
             path {
                 d: "M18 19V9a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v8a2 2 0 0 0 2 2h2",
+            }
+            path {
+                d: "M2 9h3a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H2",
+            }
+            path {
+                d: "M22 17v1a1 1 0 0 1-1 1H10v-9a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v9",
             }
             circle {
                 cx: "8",
                 cy: "19",
                 r: "2",
-            }
-            path {
-                d: "M10 19h12v-2",
             }
         }
     }
@@ -10787,7 +10724,7 @@ impl IconShape for LdCastle {
                 d: "M18 11V4H6v7",
             }
             path {
-                d: "M15 22v-4a3 3 0 0 0-3-3v0a3 3 0 0 0-3 3v4",
+                d: "M15 22v-4a3 3 0 0 0-3-3a3 3 0 0 0-3 3v4",
             }
             path {
                 d: "M22 11V9",
@@ -10881,6 +10818,902 @@ impl IconShape for LdCctv {
             }
             path {
                 d: "M7 9h.01",
+            }
+        }
+    }
+}
+
+#[derive(Copy, Clone, Debug, PartialEq)]
+pub struct LdChartArea;
+impl IconShape for LdChartArea {
+    fn view_box(&self) -> &str {
+        "0 0 24 24"
+    }
+    fn xmlns(&self) -> &str {
+        "http://www.w3.org/2000/svg"
+    }
+    fn fill_and_stroke<'a>(&self, user_color: &'a str) -> (&'a str, &'a str, &'a str) {
+        ("none", user_color, "2")
+    }
+    fn stroke_linecap(&self) -> &str {
+        "round"
+    }
+    fn stroke_linejoin(&self) -> &str {
+        "round"
+    }
+    fn child_elements(&self) -> Element {
+        rsx! {
+            path {
+                d: "M3 3v16a2 2 0 0 0 2 2h16",
+            }
+            path {
+                d: "M7 11.207a.5.5 0 0 1 .146-.353l2-2a.5.5 0 0 1 .708 0l3.292 3.292a.5.5 0 0 0 .708 0l4.292-4.292a.5.5 0 0 1 .854.353V16a1 1 0 0 1-1 1H8a1 1 0 0 1-1-1z",
+            }
+        }
+    }
+}
+
+#[derive(Copy, Clone, Debug, PartialEq)]
+pub struct LdChartBarBig;
+impl IconShape for LdChartBarBig {
+    fn view_box(&self) -> &str {
+        "0 0 24 24"
+    }
+    fn xmlns(&self) -> &str {
+        "http://www.w3.org/2000/svg"
+    }
+    fn fill_and_stroke<'a>(&self, user_color: &'a str) -> (&'a str, &'a str, &'a str) {
+        ("none", user_color, "2")
+    }
+    fn stroke_linecap(&self) -> &str {
+        "round"
+    }
+    fn stroke_linejoin(&self) -> &str {
+        "round"
+    }
+    fn child_elements(&self) -> Element {
+        rsx! {
+            path {
+                d: "M3 3v16a2 2 0 0 0 2 2h16",
+            }
+            rect {
+                height: "4",
+                rx: "1",
+                width: "9",
+                x: "7",
+                y: "13",
+            }
+            rect {
+                height: "4",
+                rx: "1",
+                width: "12",
+                x: "7",
+                y: "5",
+            }
+        }
+    }
+}
+
+#[derive(Copy, Clone, Debug, PartialEq)]
+pub struct LdChartBarDecreasing;
+impl IconShape for LdChartBarDecreasing {
+    fn view_box(&self) -> &str {
+        "0 0 24 24"
+    }
+    fn xmlns(&self) -> &str {
+        "http://www.w3.org/2000/svg"
+    }
+    fn fill_and_stroke<'a>(&self, user_color: &'a str) -> (&'a str, &'a str, &'a str) {
+        ("none", user_color, "2")
+    }
+    fn stroke_linecap(&self) -> &str {
+        "round"
+    }
+    fn stroke_linejoin(&self) -> &str {
+        "round"
+    }
+    fn child_elements(&self) -> Element {
+        rsx! {
+            path {
+                d: "M3 3v16a2 2 0 0 0 2 2h16",
+            }
+            path {
+                d: "M7 11h8",
+            }
+            path {
+                d: "M7 16h3",
+            }
+            path {
+                d: "M7 6h12",
+            }
+        }
+    }
+}
+
+#[derive(Copy, Clone, Debug, PartialEq)]
+pub struct LdChartBarIncreasing;
+impl IconShape for LdChartBarIncreasing {
+    fn view_box(&self) -> &str {
+        "0 0 24 24"
+    }
+    fn xmlns(&self) -> &str {
+        "http://www.w3.org/2000/svg"
+    }
+    fn fill_and_stroke<'a>(&self, user_color: &'a str) -> (&'a str, &'a str, &'a str) {
+        ("none", user_color, "2")
+    }
+    fn stroke_linecap(&self) -> &str {
+        "round"
+    }
+    fn stroke_linejoin(&self) -> &str {
+        "round"
+    }
+    fn child_elements(&self) -> Element {
+        rsx! {
+            path {
+                d: "M3 3v16a2 2 0 0 0 2 2h16",
+            }
+            path {
+                d: "M7 11h8",
+            }
+            path {
+                d: "M7 16h12",
+            }
+            path {
+                d: "M7 6h3",
+            }
+        }
+    }
+}
+
+#[derive(Copy, Clone, Debug, PartialEq)]
+pub struct LdChartBarStacked;
+impl IconShape for LdChartBarStacked {
+    fn view_box(&self) -> &str {
+        "0 0 24 24"
+    }
+    fn xmlns(&self) -> &str {
+        "http://www.w3.org/2000/svg"
+    }
+    fn fill_and_stroke<'a>(&self, user_color: &'a str) -> (&'a str, &'a str, &'a str) {
+        ("none", user_color, "2")
+    }
+    fn stroke_linecap(&self) -> &str {
+        "round"
+    }
+    fn stroke_linejoin(&self) -> &str {
+        "round"
+    }
+    fn child_elements(&self) -> Element {
+        rsx! {
+            path {
+                d: "M11 13v4",
+            }
+            path {
+                d: "M15 5v4",
+            }
+            path {
+                d: "M3 3v16a2 2 0 0 0 2 2h16",
+            }
+            rect {
+                height: "4",
+                rx: "1",
+                width: "9",
+                x: "7",
+                y: "13",
+            }
+            rect {
+                height: "4",
+                rx: "1",
+                width: "12",
+                x: "7",
+                y: "5",
+            }
+        }
+    }
+}
+
+#[derive(Copy, Clone, Debug, PartialEq)]
+pub struct LdChartBar;
+impl IconShape for LdChartBar {
+    fn view_box(&self) -> &str {
+        "0 0 24 24"
+    }
+    fn xmlns(&self) -> &str {
+        "http://www.w3.org/2000/svg"
+    }
+    fn fill_and_stroke<'a>(&self, user_color: &'a str) -> (&'a str, &'a str, &'a str) {
+        ("none", user_color, "2")
+    }
+    fn stroke_linecap(&self) -> &str {
+        "round"
+    }
+    fn stroke_linejoin(&self) -> &str {
+        "round"
+    }
+    fn child_elements(&self) -> Element {
+        rsx! {
+            path {
+                d: "M3 3v16a2 2 0 0 0 2 2h16",
+            }
+            path {
+                d: "M7 16h8",
+            }
+            path {
+                d: "M7 11h12",
+            }
+            path {
+                d: "M7 6h3",
+            }
+        }
+    }
+}
+
+#[derive(Copy, Clone, Debug, PartialEq)]
+pub struct LdChartCandlestick;
+impl IconShape for LdChartCandlestick {
+    fn view_box(&self) -> &str {
+        "0 0 24 24"
+    }
+    fn xmlns(&self) -> &str {
+        "http://www.w3.org/2000/svg"
+    }
+    fn fill_and_stroke<'a>(&self, user_color: &'a str) -> (&'a str, &'a str, &'a str) {
+        ("none", user_color, "2")
+    }
+    fn stroke_linecap(&self) -> &str {
+        "round"
+    }
+    fn stroke_linejoin(&self) -> &str {
+        "round"
+    }
+    fn child_elements(&self) -> Element {
+        rsx! {
+            path {
+                d: "M9 5v4",
+            }
+            rect {
+                height: "6",
+                rx: "1",
+                width: "4",
+                x: "7",
+                y: "9",
+            }
+            path {
+                d: "M9 15v2",
+            }
+            path {
+                d: "M17 3v2",
+            }
+            rect {
+                height: "8",
+                rx: "1",
+                width: "4",
+                x: "15",
+                y: "5",
+            }
+            path {
+                d: "M17 13v3",
+            }
+            path {
+                d: "M3 3v16a2 2 0 0 0 2 2h16",
+            }
+        }
+    }
+}
+
+#[derive(Copy, Clone, Debug, PartialEq)]
+pub struct LdChartColumnBig;
+impl IconShape for LdChartColumnBig {
+    fn view_box(&self) -> &str {
+        "0 0 24 24"
+    }
+    fn xmlns(&self) -> &str {
+        "http://www.w3.org/2000/svg"
+    }
+    fn fill_and_stroke<'a>(&self, user_color: &'a str) -> (&'a str, &'a str, &'a str) {
+        ("none", user_color, "2")
+    }
+    fn stroke_linecap(&self) -> &str {
+        "round"
+    }
+    fn stroke_linejoin(&self) -> &str {
+        "round"
+    }
+    fn child_elements(&self) -> Element {
+        rsx! {
+            path {
+                d: "M3 3v16a2 2 0 0 0 2 2h16",
+            }
+            rect {
+                height: "12",
+                rx: "1",
+                width: "4",
+                x: "15",
+                y: "5",
+            }
+            rect {
+                height: "9",
+                rx: "1",
+                width: "4",
+                x: "7",
+                y: "8",
+            }
+        }
+    }
+}
+
+#[derive(Copy, Clone, Debug, PartialEq)]
+pub struct LdChartColumnDecreasing;
+impl IconShape for LdChartColumnDecreasing {
+    fn view_box(&self) -> &str {
+        "0 0 24 24"
+    }
+    fn xmlns(&self) -> &str {
+        "http://www.w3.org/2000/svg"
+    }
+    fn fill_and_stroke<'a>(&self, user_color: &'a str) -> (&'a str, &'a str, &'a str) {
+        ("none", user_color, "2")
+    }
+    fn stroke_linecap(&self) -> &str {
+        "round"
+    }
+    fn stroke_linejoin(&self) -> &str {
+        "round"
+    }
+    fn child_elements(&self) -> Element {
+        rsx! {
+            path {
+                d: "M13 17V9",
+            }
+            path {
+                d: "M18 17v-3",
+            }
+            path {
+                d: "M3 3v16a2 2 0 0 0 2 2h16",
+            }
+            path {
+                d: "M8 17V5",
+            }
+        }
+    }
+}
+
+#[derive(Copy, Clone, Debug, PartialEq)]
+pub struct LdChartColumnIncreasing;
+impl IconShape for LdChartColumnIncreasing {
+    fn view_box(&self) -> &str {
+        "0 0 24 24"
+    }
+    fn xmlns(&self) -> &str {
+        "http://www.w3.org/2000/svg"
+    }
+    fn fill_and_stroke<'a>(&self, user_color: &'a str) -> (&'a str, &'a str, &'a str) {
+        ("none", user_color, "2")
+    }
+    fn stroke_linecap(&self) -> &str {
+        "round"
+    }
+    fn stroke_linejoin(&self) -> &str {
+        "round"
+    }
+    fn child_elements(&self) -> Element {
+        rsx! {
+            path {
+                d: "M13 17V9",
+            }
+            path {
+                d: "M18 17V5",
+            }
+            path {
+                d: "M3 3v16a2 2 0 0 0 2 2h16",
+            }
+            path {
+                d: "M8 17v-3",
+            }
+        }
+    }
+}
+
+#[derive(Copy, Clone, Debug, PartialEq)]
+pub struct LdChartColumnStacked;
+impl IconShape for LdChartColumnStacked {
+    fn view_box(&self) -> &str {
+        "0 0 24 24"
+    }
+    fn xmlns(&self) -> &str {
+        "http://www.w3.org/2000/svg"
+    }
+    fn fill_and_stroke<'a>(&self, user_color: &'a str) -> (&'a str, &'a str, &'a str) {
+        ("none", user_color, "2")
+    }
+    fn stroke_linecap(&self) -> &str {
+        "round"
+    }
+    fn stroke_linejoin(&self) -> &str {
+        "round"
+    }
+    fn child_elements(&self) -> Element {
+        rsx! {
+            path {
+                d: "M11 13H7",
+            }
+            path {
+                d: "M19 9h-4",
+            }
+            path {
+                d: "M3 3v16a2 2 0 0 0 2 2h16",
+            }
+            rect {
+                height: "12",
+                rx: "1",
+                width: "4",
+                x: "15",
+                y: "5",
+            }
+            rect {
+                height: "9",
+                rx: "1",
+                width: "4",
+                x: "7",
+                y: "8",
+            }
+        }
+    }
+}
+
+#[derive(Copy, Clone, Debug, PartialEq)]
+pub struct LdChartColumn;
+impl IconShape for LdChartColumn {
+    fn view_box(&self) -> &str {
+        "0 0 24 24"
+    }
+    fn xmlns(&self) -> &str {
+        "http://www.w3.org/2000/svg"
+    }
+    fn fill_and_stroke<'a>(&self, user_color: &'a str) -> (&'a str, &'a str, &'a str) {
+        ("none", user_color, "2")
+    }
+    fn stroke_linecap(&self) -> &str {
+        "round"
+    }
+    fn stroke_linejoin(&self) -> &str {
+        "round"
+    }
+    fn child_elements(&self) -> Element {
+        rsx! {
+            path {
+                d: "M3 3v16a2 2 0 0 0 2 2h16",
+            }
+            path {
+                d: "M18 17V9",
+            }
+            path {
+                d: "M13 17V5",
+            }
+            path {
+                d: "M8 17v-3",
+            }
+        }
+    }
+}
+
+#[derive(Copy, Clone, Debug, PartialEq)]
+pub struct LdChartGantt;
+impl IconShape for LdChartGantt {
+    fn view_box(&self) -> &str {
+        "0 0 24 24"
+    }
+    fn xmlns(&self) -> &str {
+        "http://www.w3.org/2000/svg"
+    }
+    fn fill_and_stroke<'a>(&self, user_color: &'a str) -> (&'a str, &'a str, &'a str) {
+        ("none", user_color, "2")
+    }
+    fn stroke_linecap(&self) -> &str {
+        "round"
+    }
+    fn stroke_linejoin(&self) -> &str {
+        "round"
+    }
+    fn child_elements(&self) -> Element {
+        rsx! {
+            path {
+                d: "M10 6h8",
+            }
+            path {
+                d: "M12 16h6",
+            }
+            path {
+                d: "M3 3v16a2 2 0 0 0 2 2h16",
+            }
+            path {
+                d: "M8 11h7",
+            }
+        }
+    }
+}
+
+#[derive(Copy, Clone, Debug, PartialEq)]
+pub struct LdChartLine;
+impl IconShape for LdChartLine {
+    fn view_box(&self) -> &str {
+        "0 0 24 24"
+    }
+    fn xmlns(&self) -> &str {
+        "http://www.w3.org/2000/svg"
+    }
+    fn fill_and_stroke<'a>(&self, user_color: &'a str) -> (&'a str, &'a str, &'a str) {
+        ("none", user_color, "2")
+    }
+    fn stroke_linecap(&self) -> &str {
+        "round"
+    }
+    fn stroke_linejoin(&self) -> &str {
+        "round"
+    }
+    fn child_elements(&self) -> Element {
+        rsx! {
+            path {
+                d: "M3 3v16a2 2 0 0 0 2 2h16",
+            }
+            path {
+                d: "m19 9-5 5-4-4-3 3",
+            }
+        }
+    }
+}
+
+#[derive(Copy, Clone, Debug, PartialEq)]
+pub struct LdChartNetwork;
+impl IconShape for LdChartNetwork {
+    fn view_box(&self) -> &str {
+        "0 0 24 24"
+    }
+    fn xmlns(&self) -> &str {
+        "http://www.w3.org/2000/svg"
+    }
+    fn fill_and_stroke<'a>(&self, user_color: &'a str) -> (&'a str, &'a str, &'a str) {
+        ("none", user_color, "2")
+    }
+    fn stroke_linecap(&self) -> &str {
+        "round"
+    }
+    fn stroke_linejoin(&self) -> &str {
+        "round"
+    }
+    fn child_elements(&self) -> Element {
+        rsx! {
+            path {
+                d: "m13.11 7.664 1.78 2.672",
+            }
+            path {
+                d: "m14.162 12.788-3.324 1.424",
+            }
+            path {
+                d: "m20 4-6.06 1.515",
+            }
+            path {
+                d: "M3 3v16a2 2 0 0 0 2 2h16",
+            }
+            circle {
+                cx: "12",
+                cy: "6",
+                r: "2",
+            }
+            circle {
+                cx: "16",
+                cy: "12",
+                r: "2",
+            }
+            circle {
+                cx: "9",
+                cy: "15",
+                r: "2",
+            }
+        }
+    }
+}
+
+#[derive(Copy, Clone, Debug, PartialEq)]
+pub struct LdChartNoAxesColumnDecreasing;
+impl IconShape for LdChartNoAxesColumnDecreasing {
+    fn view_box(&self) -> &str {
+        "0 0 24 24"
+    }
+    fn xmlns(&self) -> &str {
+        "http://www.w3.org/2000/svg"
+    }
+    fn fill_and_stroke<'a>(&self, user_color: &'a str) -> (&'a str, &'a str, &'a str) {
+        ("none", user_color, "2")
+    }
+    fn stroke_linecap(&self) -> &str {
+        "round"
+    }
+    fn stroke_linejoin(&self) -> &str {
+        "round"
+    }
+    fn child_elements(&self) -> Element {
+        rsx! {
+            path {
+                d: "M12 20V10",
+            }
+            path {
+                d: "M18 20v-4",
+            }
+            path {
+                d: "M6 20V4",
+            }
+        }
+    }
+}
+
+#[derive(Copy, Clone, Debug, PartialEq)]
+pub struct LdChartNoAxesColumnIncreasing;
+impl IconShape for LdChartNoAxesColumnIncreasing {
+    fn view_box(&self) -> &str {
+        "0 0 24 24"
+    }
+    fn xmlns(&self) -> &str {
+        "http://www.w3.org/2000/svg"
+    }
+    fn fill_and_stroke<'a>(&self, user_color: &'a str) -> (&'a str, &'a str, &'a str) {
+        ("none", user_color, "2")
+    }
+    fn stroke_linecap(&self) -> &str {
+        "round"
+    }
+    fn stroke_linejoin(&self) -> &str {
+        "round"
+    }
+    fn child_elements(&self) -> Element {
+        rsx! {
+            line {
+                x1: "12",
+                x2: "12",
+                y1: "20",
+                y2: "10",
+            }
+            line {
+                x1: "18",
+                x2: "18",
+                y1: "20",
+                y2: "4",
+            }
+            line {
+                x1: "6",
+                x2: "6",
+                y1: "20",
+                y2: "16",
+            }
+        }
+    }
+}
+
+#[derive(Copy, Clone, Debug, PartialEq)]
+pub struct LdChartNoAxesColumn;
+impl IconShape for LdChartNoAxesColumn {
+    fn view_box(&self) -> &str {
+        "0 0 24 24"
+    }
+    fn xmlns(&self) -> &str {
+        "http://www.w3.org/2000/svg"
+    }
+    fn fill_and_stroke<'a>(&self, user_color: &'a str) -> (&'a str, &'a str, &'a str) {
+        ("none", user_color, "2")
+    }
+    fn stroke_linecap(&self) -> &str {
+        "round"
+    }
+    fn stroke_linejoin(&self) -> &str {
+        "round"
+    }
+    fn child_elements(&self) -> Element {
+        rsx! {
+            line {
+                x1: "18",
+                x2: "18",
+                y1: "20",
+                y2: "10",
+            }
+            line {
+                x1: "12",
+                x2: "12",
+                y1: "20",
+                y2: "4",
+            }
+            line {
+                x1: "6",
+                x2: "6",
+                y1: "20",
+                y2: "14",
+            }
+        }
+    }
+}
+
+#[derive(Copy, Clone, Debug, PartialEq)]
+pub struct LdChartNoAxesCombined;
+impl IconShape for LdChartNoAxesCombined {
+    fn view_box(&self) -> &str {
+        "0 0 24 24"
+    }
+    fn xmlns(&self) -> &str {
+        "http://www.w3.org/2000/svg"
+    }
+    fn fill_and_stroke<'a>(&self, user_color: &'a str) -> (&'a str, &'a str, &'a str) {
+        ("none", user_color, "2")
+    }
+    fn stroke_linecap(&self) -> &str {
+        "round"
+    }
+    fn stroke_linejoin(&self) -> &str {
+        "round"
+    }
+    fn child_elements(&self) -> Element {
+        rsx! {
+            path {
+                d: "M12 16v5",
+            }
+            path {
+                d: "M16 14v7",
+            }
+            path {
+                d: "M20 10v11",
+            }
+            path {
+                d: "m22 3-8.646 8.646a.5.5 0 0 1-.708 0L9.354 8.354a.5.5 0 0 0-.707 0L2 15",
+            }
+            path {
+                d: "M4 18v3",
+            }
+            path {
+                d: "M8 14v7",
+            }
+        }
+    }
+}
+
+#[derive(Copy, Clone, Debug, PartialEq)]
+pub struct LdChartNoAxesGantt;
+impl IconShape for LdChartNoAxesGantt {
+    fn view_box(&self) -> &str {
+        "0 0 24 24"
+    }
+    fn xmlns(&self) -> &str {
+        "http://www.w3.org/2000/svg"
+    }
+    fn fill_and_stroke<'a>(&self, user_color: &'a str) -> (&'a str, &'a str, &'a str) {
+        ("none", user_color, "2")
+    }
+    fn stroke_linecap(&self) -> &str {
+        "round"
+    }
+    fn stroke_linejoin(&self) -> &str {
+        "round"
+    }
+    fn child_elements(&self) -> Element {
+        rsx! {
+            path {
+                d: "M8 6h10",
+            }
+            path {
+                d: "M6 12h9",
+            }
+            path {
+                d: "M11 18h7",
+            }
+        }
+    }
+}
+
+#[derive(Copy, Clone, Debug, PartialEq)]
+pub struct LdChartPie;
+impl IconShape for LdChartPie {
+    fn view_box(&self) -> &str {
+        "0 0 24 24"
+    }
+    fn xmlns(&self) -> &str {
+        "http://www.w3.org/2000/svg"
+    }
+    fn fill_and_stroke<'a>(&self, user_color: &'a str) -> (&'a str, &'a str, &'a str) {
+        ("none", user_color, "2")
+    }
+    fn stroke_linecap(&self) -> &str {
+        "round"
+    }
+    fn stroke_linejoin(&self) -> &str {
+        "round"
+    }
+    fn child_elements(&self) -> Element {
+        rsx! {
+            path {
+                d: "M21 12c.552 0 1.005-.449.95-.998a10 10 0 0 0-8.953-8.951c-.55-.055-.998.398-.998.95v8a1 1 0 0 0 1 1z",
+            }
+            path {
+                d: "M21.21 15.89A10 10 0 1 1 8 2.83",
+            }
+        }
+    }
+}
+
+#[derive(Copy, Clone, Debug, PartialEq)]
+pub struct LdChartScatter;
+impl IconShape for LdChartScatter {
+    fn view_box(&self) -> &str {
+        "0 0 24 24"
+    }
+    fn xmlns(&self) -> &str {
+        "http://www.w3.org/2000/svg"
+    }
+    fn fill_and_stroke<'a>(&self, user_color: &'a str) -> (&'a str, &'a str, &'a str) {
+        ("none", user_color, "2")
+    }
+    fn stroke_linecap(&self) -> &str {
+        "round"
+    }
+    fn stroke_linejoin(&self) -> &str {
+        "round"
+    }
+    fn child_elements(&self) -> Element {
+        rsx! {
+            circle {
+                cx: "7.5",
+                cy: "7.5",
+                r: ".5",
+            }
+            circle {
+                cx: "18.5",
+                cy: "5.5",
+                r: ".5",
+            }
+            circle {
+                cx: "11.5",
+                cy: "11.5",
+                r: ".5",
+            }
+            circle {
+                cx: "7.5",
+                cy: "16.5",
+                r: ".5",
+            }
+            circle {
+                cx: "17.5",
+                cy: "14.5",
+                r: ".5",
+            }
+            path {
+                d: "M3 3v16a2 2 0 0 0 2 2h16",
+            }
+        }
+    }
+}
+
+#[derive(Copy, Clone, Debug, PartialEq)]
+pub struct LdChartSpline;
+impl IconShape for LdChartSpline {
+    fn view_box(&self) -> &str {
+        "0 0 24 24"
+    }
+    fn xmlns(&self) -> &str {
+        "http://www.w3.org/2000/svg"
+    }
+    fn fill_and_stroke<'a>(&self, user_color: &'a str) -> (&'a str, &'a str, &'a str) {
+        ("none", user_color, "2")
+    }
+    fn stroke_linecap(&self) -> &str {
+        "round"
+    }
+    fn stroke_linejoin(&self) -> &str {
+        "round"
+    }
+    fn child_elements(&self) -> Element {
+        rsx! {
+            path {
+                d: "M3 3v16a2 2 0 0 0 2 2h16",
+            }
+            path {
+                d: "M7 16c.5-2 1.5-7 4-7 2 0 2 3 4 3 2.5 0 4.5-5 5-7",
             }
         }
     }
@@ -11238,6 +12071,45 @@ impl IconShape for LdChevronsDown {
 }
 
 #[derive(Copy, Clone, Debug, PartialEq)]
+pub struct LdChevronsLeftRightEllipsis;
+impl IconShape for LdChevronsLeftRightEllipsis {
+    fn view_box(&self) -> &str {
+        "0 0 24 24"
+    }
+    fn xmlns(&self) -> &str {
+        "http://www.w3.org/2000/svg"
+    }
+    fn fill_and_stroke<'a>(&self, user_color: &'a str) -> (&'a str, &'a str, &'a str) {
+        ("none", user_color, "2")
+    }
+    fn stroke_linecap(&self) -> &str {
+        "round"
+    }
+    fn stroke_linejoin(&self) -> &str {
+        "round"
+    }
+    fn child_elements(&self) -> Element {
+        rsx! {
+            path {
+                d: "m18 8 4 4-4 4",
+            }
+            path {
+                d: "m6 8-4 4 4 4",
+            }
+            path {
+                d: "M8 12h.01",
+            }
+            path {
+                d: "M12 12h.01",
+            }
+            path {
+                d: "M16 12h.01",
+            }
+        }
+    }
+}
+
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct LdChevronsLeftRight;
 impl IconShape for LdChevronsLeftRight {
     fn view_box(&self) -> &str {
@@ -11490,19 +12362,19 @@ impl IconShape for LdChurch {
     fn child_elements(&self) -> Element {
         rsx! {
             path {
-                d: "m18 7 4 2v11a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V9l4-2",
-            }
-            path {
-                d: "M14 22v-4a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v4",
-            }
-            path {
-                d: "M18 22V5l-6-3-6 3v17",
+                d: "M10 9h4",
             }
             path {
                 d: "M12 7v5",
             }
             path {
-                d: "M10 9h4",
+                d: "M14 22v-4a2 2 0 0 0-4 0v4",
+            }
+            path {
+                d: "M18 22V5.618a1 1 0 0 0-.553-.894l-4.553-2.277a2 2 0 0 0-1.788 0L6.553 4.724A1 1 0 0 0 6 5.618V22",
+            }
+            path {
+                d: "m18 7 3.447 1.724a1 1 0 0 1 .553.894V20a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V9.618a1 1 0 0 1 .553-.894L6 7",
             }
         }
     }
@@ -11528,29 +12400,23 @@ impl IconShape for LdCigaretteOff {
     }
     fn child_elements(&self) -> Element {
         rsx! {
-            line {
-                x1: "2",
-                x2: "22",
-                y1: "2",
-                y2: "22",
-            }
             path {
-                d: "M12 12H2v4h14",
-            }
-            path {
-                d: "M22 12v4",
-            }
-            path {
-                d: "M18 12h-.5",
-            }
-            path {
-                d: "M7 12v4",
+                d: "M12 12H3a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h13",
             }
             path {
                 d: "M18 8c0-2.5-2-2.5-2-5",
             }
             path {
+                d: "m2 2 20 20",
+            }
+            path {
+                d: "M21 12a1 1 0 0 1 1 1v2a1 1 0 0 1-.5.866",
+            }
+            path {
                 d: "M22 8c0-2.5-2-2.5-2-5",
+            }
+            path {
+                d: "M7 12v4",
             }
         }
     }
@@ -11577,19 +12443,19 @@ impl IconShape for LdCigarette {
     fn child_elements(&self) -> Element {
         rsx! {
             path {
-                d: "M18 12H2v4h16",
-            }
-            path {
-                d: "M22 12v4",
-            }
-            path {
-                d: "M7 12v4",
+                d: "M17 12H3a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h14",
             }
             path {
                 d: "M18 8c0-2.5-2-2.5-2-5",
             }
             path {
+                d: "M21 16a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1",
+            }
+            path {
                 d: "M22 8c0-2.5-2-2.5-2-5",
+            }
+            path {
+                d: "M7 12v4",
             }
         }
     }
@@ -11929,7 +12795,7 @@ impl IconShape for LdCircleCheckBig {
     fn child_elements(&self) -> Element {
         rsx! {
             path {
-                d: "M22 11.08V12a10 10 0 1 1-5.93-9.14",
+                d: "M21.801 10A10 10 0 1 1 17 3.335",
             }
             path {
                 d: "m9 11 3 3L22 4",
@@ -12389,6 +13255,51 @@ impl IconShape for LdCircleEqual {
 }
 
 #[derive(Copy, Clone, Debug, PartialEq)]
+pub struct LdCircleFadingArrowUp;
+impl IconShape for LdCircleFadingArrowUp {
+    fn view_box(&self) -> &str {
+        "0 0 24 24"
+    }
+    fn xmlns(&self) -> &str {
+        "http://www.w3.org/2000/svg"
+    }
+    fn fill_and_stroke<'a>(&self, user_color: &'a str) -> (&'a str, &'a str, &'a str) {
+        ("none", user_color, "2")
+    }
+    fn stroke_linecap(&self) -> &str {
+        "round"
+    }
+    fn stroke_linejoin(&self) -> &str {
+        "round"
+    }
+    fn child_elements(&self) -> Element {
+        rsx! {
+            path {
+                d: "M12 2a10 10 0 0 1 7.38 16.75",
+            }
+            path {
+                d: "m16 12-4-4-4 4",
+            }
+            path {
+                d: "M12 16V8",
+            }
+            path {
+                d: "M2.5 8.875a10 10 0 0 0-.5 3",
+            }
+            path {
+                d: "M2.83 16a10 10 0 0 0 2.43 3.4",
+            }
+            path {
+                d: "M4.636 5.235a10 10 0 0 1 .891-.857",
+            }
+            path {
+                d: "M8.644 21.42a10 10 0 0 0 7.631-.38",
+            }
+        }
+    }
+}
+
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct LdCircleFadingPlus;
 impl IconShape for LdCircleFadingPlus {
     fn view_box(&self) -> &str {
@@ -12804,16 +13715,16 @@ impl IconShape for LdCirclePower {
     }
     fn child_elements(&self) -> Element {
         rsx! {
+            path {
+                d: "M12 7v4",
+            }
+            path {
+                d: "M7.998 9.003a5 5 0 1 0 8-.005",
+            }
             circle {
                 cx: "12",
                 cy: "12",
                 r: "10",
-            }
-            path {
-                d: "M12 12V7",
-            }
-            path {
-                d: "M16 9a5 5 0 1 1-8 0",
             }
         }
     }
@@ -12871,16 +13782,16 @@ impl IconShape for LdCircleSlash {
     }
     fn child_elements(&self) -> Element {
         rsx! {
+            circle {
+                cx: "12",
+                cy: "12",
+                r: "10",
+            }
             line {
                 x1: "9",
                 x2: "15",
                 y1: "15",
                 y2: "9",
-            }
-            circle {
-                cx: "12",
-                cy: "12",
-                r: "10",
             }
         }
     }
@@ -13415,7 +14326,7 @@ impl IconShape for LdClipboardPenLine {
                 d: "M8 18h1",
             }
             path {
-                d: "M18.4 9.6a2 2 0 0 1 3 3L17 17l-4 1 1-4Z",
+                d: "M21.378 12.626a1 1 0 0 0-3.004-3.004l-4.01 4.012a2 2 0 0 0-.506.854l-.837 2.87a.5.5 0 0 0 .62.62l2.87-.837a2 2 0 0 0 .854-.506z",
             }
         }
     }
@@ -13449,13 +14360,13 @@ impl IconShape for LdClipboardPen {
                 y: "2",
             }
             path {
-                d: "M10.4 12.6a2 2 0 0 1 3 3L8 21l-4 1 1-4Z",
-            }
-            path {
                 d: "M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-5.5",
             }
             path {
                 d: "M4 13.5V6a2 2 0 0 1 2-2h2",
+            }
+            path {
+                d: "M13.378 15.626a1 1 0 1 0-3.004-3.004l-5.01 5.012a2 2 0 0 0-.506.854l-.837 2.87a.5.5 0 0 0 .62.62l2.87-.837a2 2 0 0 0 .854-.506z",
             }
         }
     }
@@ -14007,6 +14918,114 @@ impl IconShape for LdClock9 {
 }
 
 #[derive(Copy, Clone, Debug, PartialEq)]
+pub struct LdClockAlert;
+impl IconShape for LdClockAlert {
+    fn view_box(&self) -> &str {
+        "0 0 24 24"
+    }
+    fn xmlns(&self) -> &str {
+        "http://www.w3.org/2000/svg"
+    }
+    fn fill_and_stroke<'a>(&self, user_color: &'a str) -> (&'a str, &'a str, &'a str) {
+        ("none", user_color, "2")
+    }
+    fn stroke_linecap(&self) -> &str {
+        "round"
+    }
+    fn stroke_linejoin(&self) -> &str {
+        "round"
+    }
+    fn child_elements(&self) -> Element {
+        rsx! {
+            path {
+                d: "M12 6v6l4 2",
+            }
+            path {
+                d: "M16 21.16a10 10 0 1 1 5-13.516",
+            }
+            path {
+                d: "M20 11.5v6",
+            }
+            path {
+                d: "M20 21.5h.01",
+            }
+        }
+    }
+}
+
+#[derive(Copy, Clone, Debug, PartialEq)]
+pub struct LdClockArrowDown;
+impl IconShape for LdClockArrowDown {
+    fn view_box(&self) -> &str {
+        "0 0 24 24"
+    }
+    fn xmlns(&self) -> &str {
+        "http://www.w3.org/2000/svg"
+    }
+    fn fill_and_stroke<'a>(&self, user_color: &'a str) -> (&'a str, &'a str, &'a str) {
+        ("none", user_color, "2")
+    }
+    fn stroke_linecap(&self) -> &str {
+        "round"
+    }
+    fn stroke_linejoin(&self) -> &str {
+        "round"
+    }
+    fn child_elements(&self) -> Element {
+        rsx! {
+            path {
+                d: "M12.338 21.994A10 10 0 1 1 21.925 13.227",
+            }
+            path {
+                d: "M12 6v6l2 1",
+            }
+            path {
+                d: "m14 18 4 4 4-4",
+            }
+            path {
+                d: "M18 14v8",
+            }
+        }
+    }
+}
+
+#[derive(Copy, Clone, Debug, PartialEq)]
+pub struct LdClockArrowUp;
+impl IconShape for LdClockArrowUp {
+    fn view_box(&self) -> &str {
+        "0 0 24 24"
+    }
+    fn xmlns(&self) -> &str {
+        "http://www.w3.org/2000/svg"
+    }
+    fn fill_and_stroke<'a>(&self, user_color: &'a str) -> (&'a str, &'a str, &'a str) {
+        ("none", user_color, "2")
+    }
+    fn stroke_linecap(&self) -> &str {
+        "round"
+    }
+    fn stroke_linejoin(&self) -> &str {
+        "round"
+    }
+    fn child_elements(&self) -> Element {
+        rsx! {
+            path {
+                d: "M13.228 21.925A10 10 0 1 1 21.994 12.338",
+            }
+            path {
+                d: "M12 6v6l1.562.781",
+            }
+            path {
+                d: "m14 18 4-4 4 4",
+            }
+            path {
+                d: "M18 22v-8",
+            }
+        }
+    }
+}
+
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct LdClock;
 impl IconShape for LdClock {
     fn view_box(&self) -> &str {
@@ -14115,13 +15134,13 @@ impl IconShape for LdCloudDownload {
     fn child_elements(&self) -> Element {
         rsx! {
             path {
-                d: "M4 14.899A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 2.5 8.242",
+                d: "M12 13v8l-4-4",
             }
             path {
-                d: "M12 12v9",
+                d: "m12 21 4-4",
             }
             path {
-                d: "m8 17 4 4 4-4",
+                d: "M4.393 15.269A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 2.436 8.284",
             }
         }
     }
@@ -14301,13 +15320,13 @@ impl IconShape for LdCloudMoonRain {
     fn child_elements(&self) -> Element {
         rsx! {
             path {
-                d: "M10.083 9A6.002 6.002 0 0 1 16 4a4.243 4.243 0 0 0 6 6c0 2.22-1.206 4.16-3 5.197",
-            }
-            path {
-                d: "M3 20a5 5 0 1 1 8.9-4H13a3 3 0 0 1 2 5.24",
+                d: "M10.188 8.5A6 6 0 0 1 16 4a1 1 0 0 0 6 6 6 6 0 0 1-3 5.197",
             }
             path {
                 d: "M11 20v2",
+            }
+            path {
+                d: "M3 20a5 5 0 1 1 8.9-4H13a3 3 0 0 1 2 5.24",
             }
             path {
                 d: "M7 19v2",
@@ -14337,10 +15356,10 @@ impl IconShape for LdCloudMoon {
     fn child_elements(&self) -> Element {
         rsx! {
             path {
-                d: "M13 16a3 3 0 1 1 0 6H7a5 5 0 1 1 4.9-6Z",
+                d: "M10.188 8.5A6 6 0 0 1 16 4a1 1 0 0 0 6 6 6 6 0 0 1-3 5.197",
             }
             path {
-                d: "M10.1 9A6 6 0 0 1 16 4a4.24 4.24 0 0 0 6 6 6 6 0 0 1-3 5.197",
+                d: "M13 16a3 3 0 1 1 0 6H7a5 5 0 1 1 4.9-6Z",
             }
         }
     }
@@ -14607,13 +15626,13 @@ impl IconShape for LdCloudUpload {
     fn child_elements(&self) -> Element {
         rsx! {
             path {
+                d: "M12 13v8",
+            }
+            path {
                 d: "M4 14.899A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 2.5 8.242",
             }
             path {
-                d: "M12 12v9",
-            }
-            path {
-                d: "m16 16-4-4-4 4",
+                d: "m8 17 4-4 4 4",
             }
         }
     }
@@ -15163,24 +16182,17 @@ impl IconShape for LdCombine {
     }
     fn child_elements(&self) -> Element {
         rsx! {
-            rect {
-                height: "8",
-                rx: "2",
-                width: "8",
-                x: "2",
-                y: "2",
+            path {
+                d: "M10 18H5a3 3 0 0 1-3-3v-1",
             }
             path {
-                d: "M14 2c1.1 0 2 .9 2 2v4c0 1.1-.9 2-2 2",
+                d: "M14 2a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2",
             }
             path {
-                d: "M20 2c1.1 0 2 .9 2 2v4c0 1.1-.9 2-2 2",
+                d: "M20 2a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2",
             }
             path {
-                d: "M10 18H5c-1.7 0-3-1.3-3-3v-1",
-            }
-            polyline {
-                points: "7 21 10 18 7 15",
+                d: "m7 21 3-3-3-3",
             }
             rect {
                 height: "8",
@@ -15188,6 +16200,13 @@ impl IconShape for LdCombine {
                 width: "8",
                 x: "14",
                 y: "14",
+            }
+            rect {
+                height: "8",
+                rx: "2",
+                width: "8",
+                x: "2",
+                y: "2",
             }
         }
     }
@@ -15240,13 +16259,13 @@ impl IconShape for LdCompass {
     }
     fn child_elements(&self) -> Element {
         rsx! {
+            path {
+                d: "m16.24 7.76-1.804 5.411a2 2 0 0 1-1.265 1.265L7.76 16.24l1.804-5.411a2 2 0 0 1 1.265-1.265z",
+            }
             circle {
                 cx: "12",
                 cy: "12",
                 r: "10",
-            }
-            polygon {
-                points: "16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76",
             }
         }
     }
@@ -15474,12 +16493,18 @@ impl IconShape for LdContactRound {
     fn child_elements(&self) -> Element {
         rsx! {
             path {
-                d: "M16 18a4 4 0 0 0-8 0",
+                d: "M16 2v2",
+            }
+            path {
+                d: "M17.915 22a6 6 0 0 0-12 0",
+            }
+            path {
+                d: "M8 2v2",
             }
             circle {
                 cx: "12",
-                cy: "11",
-                r: "3",
+                cy: "12",
+                r: "4",
             }
             rect {
                 height: "18",
@@ -15487,18 +16512,6 @@ impl IconShape for LdContactRound {
                 width: "18",
                 x: "3",
                 y: "4",
-            }
-            line {
-                x1: "8",
-                x2: "8",
-                y1: "2",
-                y2: "4",
-            }
-            line {
-                x1: "16",
-                x2: "16",
-                y1: "2",
-                y2: "4",
             }
         }
     }
@@ -15525,7 +16538,18 @@ impl IconShape for LdContact {
     fn child_elements(&self) -> Element {
         rsx! {
             path {
-                d: "M17 18a2 2 0 0 0-2-2H9a2 2 0 0 0-2 2",
+                d: "M16 2v2",
+            }
+            path {
+                d: "M7 22v-2a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v2",
+            }
+            path {
+                d: "M8 2v2",
+            }
+            circle {
+                cx: "12",
+                cy: "11",
+                r: "3",
             }
             rect {
                 height: "18",
@@ -15533,23 +16557,6 @@ impl IconShape for LdContact {
                 width: "18",
                 x: "3",
                 y: "4",
-            }
-            circle {
-                cx: "12",
-                cy: "10",
-                r: "2",
-            }
-            line {
-                x1: "8",
-                x2: "8",
-                y1: "2",
-                y2: "4",
-            }
-            line {
-                x1: "16",
-                x2: "16",
-                y1: "2",
-                y2: "4",
             }
         }
     }
@@ -16726,6 +17733,51 @@ impl IconShape for LdCylinder {
 }
 
 #[derive(Copy, Clone, Debug, PartialEq)]
+pub struct LdDam;
+impl IconShape for LdDam {
+    fn view_box(&self) -> &str {
+        "0 0 24 24"
+    }
+    fn xmlns(&self) -> &str {
+        "http://www.w3.org/2000/svg"
+    }
+    fn fill_and_stroke<'a>(&self, user_color: &'a str) -> (&'a str, &'a str, &'a str) {
+        ("none", user_color, "2")
+    }
+    fn stroke_linecap(&self) -> &str {
+        "round"
+    }
+    fn stroke_linejoin(&self) -> &str {
+        "round"
+    }
+    fn child_elements(&self) -> Element {
+        rsx! {
+            path {
+                d: "M11 11.31c1.17.56 1.54 1.69 3.5 1.69 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1",
+            }
+            path {
+                d: "M11.75 18c.35.5 1.45 1 2.75 1 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1",
+            }
+            path {
+                d: "M2 10h4",
+            }
+            path {
+                d: "M2 14h4",
+            }
+            path {
+                d: "M2 18h4",
+            }
+            path {
+                d: "M2 6h4",
+            }
+            path {
+                d: "M7 3a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1L10 4a1 1 0 0 0-1-1z",
+            }
+        }
+    }
+}
+
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct LdDatabaseBackup;
 impl IconShape for LdDatabaseBackup {
     fn view_box(&self) -> &str {
@@ -16869,19 +17921,13 @@ impl IconShape for LdDelete {
     fn child_elements(&self) -> Element {
         rsx! {
             path {
-                d: "M20 5H9l-7 7 7 7h11a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2Z",
+                d: "M10 5a2 2 0 0 0-1.344.519l-6.328 5.74a1 1 0 0 0 0 1.481l6.328 5.741A2 2 0 0 0 10 19h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2z",
             }
-            line {
-                x1: "18",
-                x2: "12",
-                y1: "9",
-                y2: "15",
+            path {
+                d: "m12 9 6 6",
             }
-            line {
-                x1: "12",
-                x2: "18",
-                y1: "9",
-                y2: "15",
+            path {
+                d: "m18 9-6 6",
             }
         }
     }
@@ -17637,40 +18683,34 @@ impl IconShape for LdDnaOff {
     fn child_elements(&self) -> Element {
         rsx! {
             path {
-                d: "M15 2c-1.35 1.5-2.092 3-2.5 4.5M9 22c1.35-1.5 2.092-3 2.5-4.5",
+                d: "M15 2c-1.35 1.5-2.092 3-2.5 4.5L14 8",
             }
             path {
-                d: "M2 15c3.333-3 6.667-3 10-3m10-3c-1.5 1.35-3 2.092-4.5 2.5",
+                d: "m17 6-2.891-2.891",
             }
             path {
-                d: "m17 6-2.5-2.5",
+                d: "M2 15c3.333-3 6.667-3 10-3",
             }
             path {
-                d: "m14 8-1.5-1.5",
+                d: "m2 2 20 20",
             }
             path {
-                d: "m7 18 2.5 2.5",
+                d: "m20 9 .891.891",
             }
             path {
-                d: "m3.5 14.5.5.5",
+                d: "M22 9c-1.5 1.35-3 2.092-4.5 2.5l-1-1",
             }
             path {
-                d: "m20 9 .5.5",
+                d: "M3.109 14.109 4 15",
             }
             path {
                 d: "m6.5 12.5 1 1",
             }
             path {
-                d: "m16.5 10.5 1 1",
+                d: "m7 18 2.891 2.891",
             }
             path {
-                d: "m10 16 1.5 1.5",
-            }
-            line {
-                x1: "2",
-                x2: "22",
-                y1: "2",
-                y2: "22",
+                d: "M9 22c1.35-1.5 2.092-3 2.5-4.5L10 16",
             }
         }
     }
@@ -17697,37 +18737,37 @@ impl IconShape for LdDna {
     fn child_elements(&self) -> Element {
         rsx! {
             path {
-                d: "M2 15c6.667-6 13.333 0 20-6",
+                d: "m10 16 1.5 1.5",
             }
             path {
-                d: "M9 22c1.798-1.998 2.518-3.995 2.807-5.993",
+                d: "m14 8-1.5-1.5",
             }
             path {
                 d: "M15 2c-1.798 1.998-2.518 3.995-2.807 5.993",
             }
             path {
-                d: "m17 6-2.5-2.5",
+                d: "m16.5 10.5 1 1",
             }
             path {
-                d: "m14 8-1-1",
+                d: "m17 6-2.891-2.891",
             }
             path {
-                d: "m7 18 2.5 2.5",
+                d: "M2 15c6.667-6 13.333 0 20-6",
             }
             path {
-                d: "m3.5 14.5.5.5",
+                d: "m20 9 .891.891",
             }
             path {
-                d: "m20 9 .5.5",
+                d: "M3.109 14.109 4 15",
             }
             path {
                 d: "m6.5 12.5 1 1",
             }
             path {
-                d: "m16.5 10.5 1 1",
+                d: "m7 18 2.891 2.891",
             }
             path {
-                d: "m10 16 1.5 1.5",
+                d: "M9 22c1.798-1.998 2.518-3.995 2.807-5.993",
             }
         }
     }
@@ -17791,22 +18831,19 @@ impl IconShape for LdDog {
     fn child_elements(&self) -> Element {
         rsx! {
             path {
-                d: "M10 5.172C10 3.782 8.423 2.679 6.5 3c-2.823.47-4.113 6.006-4 7 .08.703 1.725 1.722 3.656 1 1.261-.472 1.96-1.45 2.344-2.5",
-            }
-            path {
-                d: "M14.267 5.172c0-1.39 1.577-2.493 3.5-2.172 2.823.47 4.113 6.006 4 7-.08.703-1.725 1.722-3.656 1-1.261-.472-1.855-1.45-2.239-2.5",
-            }
-            path {
-                d: "M8 14v.5",
+                d: "M11.25 16.25h1.5L12 17z",
             }
             path {
                 d: "M16 14v.5",
             }
             path {
-                d: "M11.25 16.25h1.5L12 17l-.75-.75Z",
+                d: "M4.42 11.247A13.152 13.152 0 0 0 4 14.556C4 18.728 7.582 21 12 21s8-2.272 8-6.444a11.702 11.702 0 0 0-.493-3.309",
             }
             path {
-                d: "M4.42 11.247A13.152 13.152 0 0 0 4 14.556C4 18.728 7.582 21 12 21s8-2.272 8-6.444c0-1.061-.162-2.2-.493-3.309m-9.243-6.082A8.801 8.801 0 0 1 12 5c.78 0 1.5.108 2.161.306",
+                d: "M8 14v.5",
+            }
+            path {
+                d: "M8.5 8.5c-.384 1.05-1.083 2.028-2.344 2.5-1.931.722-3.576-.297-3.656-1-.113-.994 1.177-6.53 4-7 1.923-.321 3.651.845 3.651 2.235A7.497 7.497 0 0 1 14 5.277c0-1.39 1.844-2.598 3.767-2.277 2.823.47 4.113 6.006 4 7-.08.703-1.725 1.722-3.656 1-1.261-.472-1.855-1.45-2.239-2.5",
             }
         }
     }
@@ -18034,22 +19071,22 @@ impl IconShape for LdDraftingCompass {
     }
     fn child_elements(&self) -> Element {
         rsx! {
-            circle {
-                cx: "12",
-                cy: "5",
-                r: "2",
-            }
-            path {
-                d: "m3 21 8.02-14.26",
-            }
             path {
                 d: "m12.99 6.74 1.93 3.44",
             }
             path {
-                d: "M19 12c-3.87 4-10.13 4-14 0",
+                d: "M19.136 12a10 10 0 0 1-14.271 0",
             }
             path {
                 d: "m21 21-2.16-3.84",
+            }
+            path {
+                d: "m3 21 8.02-14.26",
+            }
+            circle {
+                cx: "12",
+                cy: "5",
+                r: "2",
             }
         }
     }
@@ -18502,10 +19539,10 @@ impl IconShape for LdEarth {
                 d: "M21.54 15H17a2 2 0 0 0-2 2v4.54",
             }
             path {
-                d: "M7 3.34V5a3 3 0 0 0 3 3v0a2 2 0 0 1 2 2v0c0 1.1.9 2 2 2v0a2 2 0 0 0 2-2v0c0-1.1.9-2 2-2h3.17",
+                d: "M7 3.34V5a3 3 0 0 0 3 3a2 2 0 0 1 2 2c0 1.1.9 2 2 2a2 2 0 0 0 2-2c0-1.1.9-2 2-2h3.17",
             }
             path {
-                d: "M11 21.95V18a2 2 0 0 0-2-2v0a2 2 0 0 1-2-2v-1a2 2 0 0 0-2-2H2.05",
+                d: "M11 21.95V18a2 2 0 0 0-2-2a2 2 0 0 1-2-2v-1a2 2 0 0 0-2-2H2.05",
             }
             circle {
                 cx: "12",
@@ -18833,6 +19870,45 @@ impl IconShape for LdEraser {
 }
 
 #[derive(Copy, Clone, Debug, PartialEq)]
+pub struct LdEthernetPort;
+impl IconShape for LdEthernetPort {
+    fn view_box(&self) -> &str {
+        "0 0 24 24"
+    }
+    fn xmlns(&self) -> &str {
+        "http://www.w3.org/2000/svg"
+    }
+    fn fill_and_stroke<'a>(&self, user_color: &'a str) -> (&'a str, &'a str, &'a str) {
+        ("none", user_color, "2")
+    }
+    fn stroke_linecap(&self) -> &str {
+        "round"
+    }
+    fn stroke_linejoin(&self) -> &str {
+        "round"
+    }
+    fn child_elements(&self) -> Element {
+        rsx! {
+            path {
+                d: "m15 20 3-3h2a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h2l3 3z",
+            }
+            path {
+                d: "M6 8v1",
+            }
+            path {
+                d: "M10 8v1",
+            }
+            path {
+                d: "M14 8v1",
+            }
+            path {
+                d: "M18 8v1",
+            }
+        }
+    }
+}
+
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct LdEuro;
 impl IconShape for LdEuro {
     fn view_box(&self) -> &str {
@@ -18955,19 +20031,16 @@ impl IconShape for LdEyeOff {
     fn child_elements(&self) -> Element {
         rsx! {
             path {
-                d: "M9.88 9.88a3 3 0 1 0 4.24 4.24",
+                d: "M10.733 5.076a10.744 10.744 0 0 1 11.205 6.575 1 1 0 0 1 0 .696 10.747 10.747 0 0 1-1.444 2.49",
             }
             path {
-                d: "M10.73 5.08A10.43 10.43 0 0 1 12 5c7 0 10 7 10 7a13.16 13.16 0 0 1-1.67 2.68",
+                d: "M14.084 14.158a3 3 0 0 1-4.242-4.242",
             }
             path {
-                d: "M6.61 6.61A13.526 13.526 0 0 0 2 12s3 7 10 7a9.74 9.74 0 0 0 5.39-1.61",
+                d: "M17.479 17.499a10.75 10.75 0 0 1-15.417-5.151 1 1 0 0 1 0-.696 10.75 10.75 0 0 1 4.446-5.143",
             }
-            line {
-                x1: "2",
-                x2: "22",
-                y1: "2",
-                y2: "22",
+            path {
+                d: "m2 2 20 20",
             }
         }
     }
@@ -18994,7 +20067,7 @@ impl IconShape for LdEye {
     fn child_elements(&self) -> Element {
         rsx! {
             path {
-                d: "M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z",
+                d: "M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0",
             }
             circle {
                 cx: "12",
@@ -19319,24 +20392,24 @@ impl IconShape for LdFileArchive {
     fn child_elements(&self) -> Element {
         rsx! {
             path {
-                d: "M16 22h2a2 2 0 0 0 2-2V7l-5-5H6a2 2 0 0 0-2 2v18",
+                d: "M10 12v-1",
             }
             path {
-                d: "M14 2v4a2 2 0 0 0 2 2h4",
-            }
-            circle {
-                cx: "10",
-                cy: "20",
-                r: "2",
+                d: "M10 18v-2",
             }
             path {
                 d: "M10 7V6",
             }
             path {
-                d: "M10 12v-1",
+                d: "M14 2v4a2 2 0 0 0 2 2h4",
             }
             path {
-                d: "M10 18v-2",
+                d: "M15.5 22H18a2 2 0 0 0 2-2V7l-5-5H6a2 2 0 0 0-2 2v16a2 2 0 0 0 .274 1.01",
+            }
+            circle {
+                cx: "10",
+                cy: "20",
+                r: "2",
             }
         }
     }
@@ -19529,8 +20602,8 @@ impl IconShape for LdFileBadge {
 }
 
 #[derive(Copy, Clone, Debug, PartialEq)]
-pub struct LdFileBarChart2;
-impl IconShape for LdFileBarChart2 {
+pub struct LdFileBox;
+impl IconShape for LdFileBox {
     fn view_box(&self) -> &str {
         "0 0 24 24"
     }
@@ -19549,27 +20622,27 @@ impl IconShape for LdFileBarChart2 {
     fn child_elements(&self) -> Element {
         rsx! {
             path {
-                d: "M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z",
+                d: "M14.5 22H18a2 2 0 0 0 2-2V7l-5-5H6a2 2 0 0 0-2 2v4",
             }
             path {
                 d: "M14 2v4a2 2 0 0 0 2 2h4",
             }
             path {
-                d: "M8 18v-1",
+                d: "M3 13.1a2 2 0 0 0-1 1.76v3.24a2 2 0 0 0 .97 1.78L6 21.7a2 2 0 0 0 2.03.01L11 19.9a2 2 0 0 0 1-1.76V14.9a2 2 0 0 0-.97-1.78L8 11.3a2 2 0 0 0-2.03-.01Z",
             }
             path {
-                d: "M12 18v-6",
+                d: "M7 17v5",
             }
             path {
-                d: "M16 18v-3",
+                d: "M11.7 14.2 7 17l-4.7-2.8",
             }
         }
     }
 }
 
 #[derive(Copy, Clone, Debug, PartialEq)]
-pub struct LdFileBarChart;
-impl IconShape for LdFileBarChart {
+pub struct LdFileChartColumnIncreasing;
+impl IconShape for LdFileChartColumnIncreasing {
     fn view_box(&self) -> &str {
         "0 0 24 24"
     }
@@ -19607,8 +20680,8 @@ impl IconShape for LdFileBarChart {
 }
 
 #[derive(Copy, Clone, Debug, PartialEq)]
-pub struct LdFileBox;
-impl IconShape for LdFileBox {
+pub struct LdFileChartColumn;
+impl IconShape for LdFileChartColumn {
     fn view_box(&self) -> &str {
         "0 0 24 24"
     }
@@ -19627,19 +20700,88 @@ impl IconShape for LdFileBox {
     fn child_elements(&self) -> Element {
         rsx! {
             path {
-                d: "M14.5 22H18a2 2 0 0 0 2-2V7l-5-5H6a2 2 0 0 0-2 2v4",
+                d: "M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z",
             }
             path {
                 d: "M14 2v4a2 2 0 0 0 2 2h4",
             }
             path {
-                d: "M3 13.1a2 2 0 0 0-1 1.76v3.24a2 2 0 0 0 .97 1.78L6 21.7a2 2 0 0 0 2.03.01L11 19.9a2 2 0 0 0 1-1.76V14.9a2 2 0 0 0-.97-1.78L8 11.3a2 2 0 0 0-2.03-.01Z",
+                d: "M8 18v-1",
             }
             path {
-                d: "M7 17v5",
+                d: "M12 18v-6",
             }
             path {
-                d: "M11.7 14.2 7 17l-4.7-2.8",
+                d: "M16 18v-3",
+            }
+        }
+    }
+}
+
+#[derive(Copy, Clone, Debug, PartialEq)]
+pub struct LdFileChartLine;
+impl IconShape for LdFileChartLine {
+    fn view_box(&self) -> &str {
+        "0 0 24 24"
+    }
+    fn xmlns(&self) -> &str {
+        "http://www.w3.org/2000/svg"
+    }
+    fn fill_and_stroke<'a>(&self, user_color: &'a str) -> (&'a str, &'a str, &'a str) {
+        ("none", user_color, "2")
+    }
+    fn stroke_linecap(&self) -> &str {
+        "round"
+    }
+    fn stroke_linejoin(&self) -> &str {
+        "round"
+    }
+    fn child_elements(&self) -> Element {
+        rsx! {
+            path {
+                d: "M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z",
+            }
+            path {
+                d: "M14 2v4a2 2 0 0 0 2 2h4",
+            }
+            path {
+                d: "m16 13-3.5 3.5-2-2L8 17",
+            }
+        }
+    }
+}
+
+#[derive(Copy, Clone, Debug, PartialEq)]
+pub struct LdFileChartPie;
+impl IconShape for LdFileChartPie {
+    fn view_box(&self) -> &str {
+        "0 0 24 24"
+    }
+    fn xmlns(&self) -> &str {
+        "http://www.w3.org/2000/svg"
+    }
+    fn fill_and_stroke<'a>(&self, user_color: &'a str) -> (&'a str, &'a str, &'a str) {
+        ("none", user_color, "2")
+    }
+    fn stroke_linecap(&self) -> &str {
+        "round"
+    }
+    fn stroke_linejoin(&self) -> &str {
+        "round"
+    }
+    fn child_elements(&self) -> Element {
+        rsx! {
+            path {
+                d: "M14 2v4a2 2 0 0 0 2 2h4",
+            }
+            path {
+                d: "M16 22h2a2 2 0 0 0 2-2V7l-5-5H6a2 2 0 0 0-2 2v3.5",
+            }
+            path {
+                d: "M4.017 11.512a6 6 0 1 0 8.466 8.475",
+            }
+            path {
+                d: "M9 16a1 1 0 0 1-1-1v-4c0-.552.45-1.008.995-.917a6 6 0 0 1 4.922 4.922c.091.544-.365.995-.917.995z",
             }
         }
     }
@@ -19806,16 +20948,16 @@ impl IconShape for LdFileCode {
     fn child_elements(&self) -> Element {
         rsx! {
             path {
-                d: "M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z",
+                d: "M10 12.5 8 15l2 2.5",
+            }
+            path {
+                d: "m14 12.5 2 2.5-2 2.5",
             }
             path {
                 d: "M14 2v4a2 2 0 0 0 2 2h4",
             }
             path {
-                d: "m10 13-2 2 2 2",
-            }
-            path {
-                d: "m14 17 2-2-2-2",
+                d: "M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7z",
             }
         }
     }
@@ -19842,39 +20984,39 @@ impl IconShape for LdFileCog {
     fn child_elements(&self) -> Element {
         rsx! {
             path {
-                d: "M4 22h14a2 2 0 0 0 2-2V7l-5-5H6a2 2 0 0 0-2 2v2",
+                d: "M14 2v4a2 2 0 0 0 2 2h4",
             }
             path {
-                d: "M14 2v4a2 2 0 0 0 2 2h4",
+                d: "m3.2 12.9-.9-.4",
+            }
+            path {
+                d: "m3.2 15.1-.9.4",
+            }
+            path {
+                d: "M4.677 21.5a2 2 0 0 0 1.313.5H18a2 2 0 0 0 2-2V7l-5-5H6a2 2 0 0 0-2 2v2.5",
+            }
+            path {
+                d: "m4.9 11.2-.4-.9",
+            }
+            path {
+                d: "m4.9 16.8-.4.9",
+            }
+            path {
+                d: "m7.5 10.3-.4.9",
+            }
+            path {
+                d: "m7.5 17.7-.4-.9",
+            }
+            path {
+                d: "m9.7 12.5-.9.4",
+            }
+            path {
+                d: "m9.7 15.5-.9-.4",
             }
             circle {
                 cx: "6",
                 cy: "14",
                 r: "3",
-            }
-            path {
-                d: "M6 10v1",
-            }
-            path {
-                d: "M6 17v1",
-            }
-            path {
-                d: "M10 14H9",
-            }
-            path {
-                d: "M3 14H2",
-            }
-            path {
-                d: "m9 11-.88.88",
-            }
-            path {
-                d: "M3.88 16.12 3 17",
-            }
-            path {
-                d: "m9 17-.88-.88",
-            }
-            path {
-                d: "M3.88 11.88 3 11",
             }
         }
     }
@@ -20254,39 +21396,6 @@ impl IconShape for LdFileKey {
 }
 
 #[derive(Copy, Clone, Debug, PartialEq)]
-pub struct LdFileLineChart;
-impl IconShape for LdFileLineChart {
-    fn view_box(&self) -> &str {
-        "0 0 24 24"
-    }
-    fn xmlns(&self) -> &str {
-        "http://www.w3.org/2000/svg"
-    }
-    fn fill_and_stroke<'a>(&self, user_color: &'a str) -> (&'a str, &'a str, &'a str) {
-        ("none", user_color, "2")
-    }
-    fn stroke_linecap(&self) -> &str {
-        "round"
-    }
-    fn stroke_linejoin(&self) -> &str {
-        "round"
-    }
-    fn child_elements(&self) -> Element {
-        rsx! {
-            path {
-                d: "M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z",
-            }
-            path {
-                d: "M14 2v4a2 2 0 0 0 2 2h4",
-            }
-            path {
-                d: "m16 13-3.5 3.5-2-2L8 17",
-            }
-        }
-    }
-}
-
-#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct LdFileLock2;
 impl IconShape for LdFileLock2 {
     fn view_box(&self) -> &str {
@@ -20529,13 +21638,13 @@ impl IconShape for LdFilePenLine {
     fn child_elements(&self) -> Element {
         rsx! {
             path {
-                d: "m18 5-3-3H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2",
+                d: "m18 5-2.414-2.414A2 2 0 0 0 14.172 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2",
+            }
+            path {
+                d: "M21.378 12.626a1 1 0 0 0-3.004-3.004l-4.01 4.012a2 2 0 0 0-.506.854l-.837 2.87a.5.5 0 0 0 .62.62l2.87-.837a2 2 0 0 0 .854-.506z",
             }
             path {
                 d: "M8 18h1",
-            }
-            path {
-                d: "M18.4 9.6a2 2 0 1 1 3 3L17 17l-4 1 1-4Z",
             }
         }
     }
@@ -20562,49 +21671,13 @@ impl IconShape for LdFilePen {
     fn child_elements(&self) -> Element {
         rsx! {
             path {
-                d: "M12 22h6a2 2 0 0 0 2-2V7l-5-5H6a2 2 0 0 0-2 2v10",
+                d: "M12.5 22H18a2 2 0 0 0 2-2V7l-5-5H6a2 2 0 0 0-2 2v9.5",
             }
             path {
                 d: "M14 2v4a2 2 0 0 0 2 2h4",
             }
             path {
-                d: "M10.4 12.6a2 2 0 1 1 3 3L8 21l-4 1 1-4Z",
-            }
-        }
-    }
-}
-
-#[derive(Copy, Clone, Debug, PartialEq)]
-pub struct LdFilePieChart;
-impl IconShape for LdFilePieChart {
-    fn view_box(&self) -> &str {
-        "0 0 24 24"
-    }
-    fn xmlns(&self) -> &str {
-        "http://www.w3.org/2000/svg"
-    }
-    fn fill_and_stroke<'a>(&self, user_color: &'a str) -> (&'a str, &'a str, &'a str) {
-        ("none", user_color, "2")
-    }
-    fn stroke_linecap(&self) -> &str {
-        "round"
-    }
-    fn stroke_linejoin(&self) -> &str {
-        "round"
-    }
-    fn child_elements(&self) -> Element {
-        rsx! {
-            path {
-                d: "M14 2v4a2 2 0 0 0 2 2h4",
-            }
-            path {
-                d: "M16 22h2a2 2 0 0 0 2-2V7l-5-5H6a2 2 0 0 0-2 2v3.5",
-            }
-            path {
-                d: "M4.017 11.512a6 6 0 1 0 8.466 8.475",
-            }
-            path {
-                d: "M8 16v-6a6 6 0 0 1 6 6z",
+                d: "M13.378 15.626a1 1 0 1 0-3.004-3.004l-5.01 5.012a2 2 0 0 0-.506.854l-.837 2.87a.5.5 0 0 0 .62.62l2.87-.837a2 2 0 0 0 .854-.506z",
             }
         }
     }
@@ -21314,10 +22387,10 @@ impl IconShape for LdFileVolume {
                 d: "M14 2v4a2 2 0 0 0 2 2h4",
             }
             path {
-                d: "M4.268 21A2 2 0 0 0 6 22h12a2 2 0 0 0 2-2V7l-5-5H6a2 2 0 0 0-2 2v3",
+                d: "M4 6.765V4a2 2 0 0 1 2-2h9l5 5v13a2 2 0 0 1-2 2H6a2 2 0 0 1-.93-.23",
             }
             path {
-                d: "m7 10-3 2H2v4h2l3 2z",
+                d: "M7 10.51a.5.5 0 0 0-.826-.38l-1.893 1.628A1 1 0 0 1 3.63 12H2.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h1.129a1 1 0 0 1 .652.242l1.893 1.63a.5.5 0 0 0 .826-.38z",
             }
         }
     }
@@ -22718,6 +23791,39 @@ impl IconShape for LdFolderClosed {
 }
 
 #[derive(Copy, Clone, Debug, PartialEq)]
+pub struct LdFolderCode;
+impl IconShape for LdFolderCode {
+    fn view_box(&self) -> &str {
+        "0 0 24 24"
+    }
+    fn xmlns(&self) -> &str {
+        "http://www.w3.org/2000/svg"
+    }
+    fn fill_and_stroke<'a>(&self, user_color: &'a str) -> (&'a str, &'a str, &'a str) {
+        ("none", user_color, "2")
+    }
+    fn stroke_linecap(&self) -> &str {
+        "round"
+    }
+    fn stroke_linejoin(&self) -> &str {
+        "round"
+    }
+    fn child_elements(&self) -> Element {
+        rsx! {
+            path {
+                d: "M10 10.5 8 13l2 2.5",
+            }
+            path {
+                d: "m14 10.5 2 2.5-2 2.5",
+            }
+            path {
+                d: "M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2z",
+            }
+        }
+    }
+}
+
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct LdFolderCog;
 impl IconShape for LdFolderCog {
     fn view_box(&self) -> &str {
@@ -22940,7 +24046,7 @@ impl IconShape for LdFolderHeart {
                 d: "M11 20H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h3.9a2 2 0 0 1 1.69.9l.81 1.2a2 2 0 0 0 1.67.9H20a2 2 0 0 1 2 2v1.5",
             }
             path {
-                d: "M13.9 17.45c-1.2-1.2-1.14-2.8-.2-3.73a2.43 2.43 0 0 1 3.44 0l.36.34.34-.34a2.43 2.43 0 0 1 3.45-.01v0c.95.95 1 2.53-.2 3.74L17.5 21Z",
+                d: "M13.9 17.45c-1.2-1.2-1.14-2.8-.2-3.73a2.43 2.43 0 0 1 3.44 0l.36.34.34-.34a2.43 2.43 0 0 1 3.45-.01c.95.95 1 2.53-.2 3.74L17.5 21Z",
             }
         }
     }
@@ -23233,10 +24339,10 @@ impl IconShape for LdFolderPen {
     fn child_elements(&self) -> Element {
         rsx! {
             path {
-                d: "M8.4 10.6a2 2 0 0 1 3 3L6 19l-4 1 1-4Z",
+                d: "M2 11.5V5a2 2 0 0 1 2-2h3.9c.7 0 1.3.3 1.7.9l.8 1.2c.4.6 1 .9 1.7.9H20a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-9.5",
             }
             path {
-                d: "M2 11.5V5a2 2 0 0 1 2-2h3.9c.7 0 1.3.3 1.7.9l.8 1.2c.4.6 1 .9 1.7.9H20a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-9.5",
+                d: "M11.378 13.626a1 1 0 1 0-3.004-3.004l-5.01 5.012a2 2 0 0 0-.506.854l-.837 2.87a.5.5 0 0 0 .62.62l2.87-.837a2 2 0 0 0 .854-.506z",
             }
         }
     }
@@ -23365,16 +24471,16 @@ impl IconShape for LdFolderSearch {
     }
     fn child_elements(&self) -> Element {
         rsx! {
-            circle {
-                cx: "17",
-                cy: "17",
-                r: "3",
-            }
             path {
                 d: "M10.7 20H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h3.9a2 2 0 0 1 1.69.9l.81 1.2a2 2 0 0 0 1.67.9H20a2 2 0 0 1 2 2v4.1",
             }
             path {
-                d: "m21 21-1.5-1.5",
+                d: "m21 21-1.9-1.9",
+            }
+            circle {
+                cx: "17",
+                cy: "17",
+                r: "3",
             }
         }
     }
@@ -23869,7 +24975,7 @@ impl IconShape for LdFuel {
                 d: "M14 22V4a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v18",
             }
             path {
-                d: "M14 13h2a2 2 0 0 1 2 2v2a2 2 0 0 0 2 2h0a2 2 0 0 0 2-2V9.83a2 2 0 0 0-.59-1.42L18 5",
+                d: "M14 13h2a2 2 0 0 1 2 2v2a2 2 0 0 0 2 2a2 2 0 0 0 2-2V9.83a2 2 0 0 0-.59-1.42L18 5",
             }
         }
     }
@@ -24210,39 +25316,6 @@ impl IconShape for LdGamepad {
                 width: "20",
                 x: "2",
                 y: "6",
-            }
-        }
-    }
-}
-
-#[derive(Copy, Clone, Debug, PartialEq)]
-pub struct LdGanttChart;
-impl IconShape for LdGanttChart {
-    fn view_box(&self) -> &str {
-        "0 0 24 24"
-    }
-    fn xmlns(&self) -> &str {
-        "http://www.w3.org/2000/svg"
-    }
-    fn fill_and_stroke<'a>(&self, user_color: &'a str) -> (&'a str, &'a str, &'a str) {
-        ("none", user_color, "2")
-    }
-    fn stroke_linecap(&self) -> &str {
-        "round"
-    }
-    fn stroke_linejoin(&self) -> &str {
-        "round"
-    }
-    fn child_elements(&self) -> Element {
-        rsx! {
-            path {
-                d: "M8 6h10",
-            }
-            path {
-                d: "M6 12h9",
-            }
-            path {
-                d: "M11 18h7",
             }
         }
     }
@@ -25322,19 +26395,19 @@ impl IconShape for LdGrab {
     fn child_elements(&self) -> Element {
         rsx! {
             path {
-                d: "M18 11.5V9a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v1.4",
+                d: "M18 11.5V9a2 2 0 0 0-2-2a2 2 0 0 0-2 2v1.4",
             }
             path {
-                d: "M14 10V8a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v2",
+                d: "M14 10V8a2 2 0 0 0-2-2a2 2 0 0 0-2 2v2",
             }
             path {
-                d: "M10 9.9V9a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v5",
+                d: "M10 9.9V9a2 2 0 0 0-2-2a2 2 0 0 0-2 2v5",
             }
             path {
-                d: "M6 14v0a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v0",
+                d: "M6 14a2 2 0 0 0-2-2a2 2 0 0 0-2 2",
             }
             path {
-                d: "M18 11v0a2 2 0 1 1 4 0v3a8 8 0 0 1-8 8h-4a8 8 0 0 1-8-8 2 2 0 1 1 4 0",
+                d: "M18 11a2 2 0 1 1 4 0v3a8 8 0 0 1-8 8h-4a8 8 0 0 1-8-8 2 2 0 1 1 4 0",
             }
         }
     }
@@ -25435,6 +26508,102 @@ impl IconShape for LdGrape {
                 cx: "5",
                 cy: "19",
                 r: "3",
+            }
+        }
+    }
+}
+
+#[derive(Copy, Clone, Debug, PartialEq)]
+pub struct LdGrid2x2Check;
+impl IconShape for LdGrid2x2Check {
+    fn view_box(&self) -> &str {
+        "0 0 24 24"
+    }
+    fn xmlns(&self) -> &str {
+        "http://www.w3.org/2000/svg"
+    }
+    fn fill_and_stroke<'a>(&self, user_color: &'a str) -> (&'a str, &'a str, &'a str) {
+        ("none", user_color, "2")
+    }
+    fn stroke_linecap(&self) -> &str {
+        "round"
+    }
+    fn stroke_linejoin(&self) -> &str {
+        "round"
+    }
+    fn child_elements(&self) -> Element {
+        rsx! {
+            path {
+                d: "M12 3v17a1 1 0 0 1-1 1H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v6a1 1 0 0 1-1 1H3",
+            }
+            path {
+                d: "m16 19 2 2 4-4",
+            }
+        }
+    }
+}
+
+#[derive(Copy, Clone, Debug, PartialEq)]
+pub struct LdGrid2x2Plus;
+impl IconShape for LdGrid2x2Plus {
+    fn view_box(&self) -> &str {
+        "0 0 24 24"
+    }
+    fn xmlns(&self) -> &str {
+        "http://www.w3.org/2000/svg"
+    }
+    fn fill_and_stroke<'a>(&self, user_color: &'a str) -> (&'a str, &'a str, &'a str) {
+        ("none", user_color, "2")
+    }
+    fn stroke_linecap(&self) -> &str {
+        "round"
+    }
+    fn stroke_linejoin(&self) -> &str {
+        "round"
+    }
+    fn child_elements(&self) -> Element {
+        rsx! {
+            path {
+                d: "M12 3v17a1 1 0 0 1-1 1H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v6a1 1 0 0 1-1 1H3",
+            }
+            path {
+                d: "M16 19h6",
+            }
+            path {
+                d: "M19 22v-6",
+            }
+        }
+    }
+}
+
+#[derive(Copy, Clone, Debug, PartialEq)]
+pub struct LdGrid2x2X;
+impl IconShape for LdGrid2x2X {
+    fn view_box(&self) -> &str {
+        "0 0 24 24"
+    }
+    fn xmlns(&self) -> &str {
+        "http://www.w3.org/2000/svg"
+    }
+    fn fill_and_stroke<'a>(&self, user_color: &'a str) -> (&'a str, &'a str, &'a str) {
+        ("none", user_color, "2")
+    }
+    fn stroke_linecap(&self) -> &str {
+        "round"
+    }
+    fn stroke_linejoin(&self) -> &str {
+        "round"
+    }
+    fn child_elements(&self) -> Element {
+        rsx! {
+            path {
+                d: "M12 3v17a1 1 0 0 1-1 1H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v6a1 1 0 0 1-1 1H3",
+            }
+            path {
+                d: "m16 16 5 5",
+            }
+            path {
+                d: "m16 21 5-5",
             }
         }
     }
@@ -25768,21 +26937,21 @@ impl IconShape for LdGuitar {
     fn child_elements(&self) -> Element {
         rsx! {
             path {
-                d: "m20 7 1.7-1.7a1 1 0 0 0 0-1.4l-1.6-1.6a1 1 0 0 0-1.4 0L17 4v3Z",
+                d: "m11.9 12.1 4.514-4.514",
             }
             path {
-                d: "m17 7-5.1 5.1",
+                d: "M20.1 2.3a1 1 0 0 0-1.4 0l-1.114 1.114A2 2 0 0 0 17 4.828v1.344a2 2 0 0 1-.586 1.414A2 2 0 0 1 17.828 7h1.344a2 2 0 0 0 1.414-.586L21.7 5.3a1 1 0 0 0 0-1.4z",
+            }
+            path {
+                d: "m6 16 2 2",
+            }
+            path {
+                d: "M8.2 9.9C8.7 8.8 9.8 8 11 8c2.8 0 5 2.2 5 5 0 1.2-.8 2.3-1.9 2.8l-.9.4A2 2 0 0 0 12 18a4 4 0 0 1-4 4c-3.3 0-6-2.7-6-6a4 4 0 0 1 4-4 2 2 0 0 0 1.8-1.2z",
             }
             circle {
                 cx: "11.5",
                 cy: "12.5",
                 r: ".5",
-            }
-            path {
-                d: "M6 12a2 2 0 0 0 1.8-1.2l.4-.9C8.7 8.8 9.8 8 11 8c2.8 0 5 2.2 5 5 0 1.2-.8 2.3-1.9 2.8l-.9.4A2 2 0 0 0 12 18a4 4 0 0 1-4 4c-3.3 0-6-2.7-6-6a4 4 0 0 1 4-4",
-            }
-            path {
-                d: "m6 16 2 2",
             }
         }
     }
@@ -25990,7 +27159,7 @@ impl IconShape for LdHandMetal {
     fn child_elements(&self) -> Element {
         rsx! {
             path {
-                d: "M18 12.5V10a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v1.4",
+                d: "M18 12.5V10a2 2 0 0 0-2-2a2 2 0 0 0-2 2v1.4",
             }
             path {
                 d: "M14 11V9a2 2 0 1 0-4 0v2",
@@ -26068,13 +27237,13 @@ impl IconShape for LdHand {
     fn child_elements(&self) -> Element {
         rsx! {
             path {
-                d: "M18 11V6a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v0",
+                d: "M18 11V6a2 2 0 0 0-2-2a2 2 0 0 0-2 2",
             }
             path {
-                d: "M14 10V4a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v2",
+                d: "M14 10V4a2 2 0 0 0-2-2a2 2 0 0 0-2 2v2",
             }
             path {
-                d: "M10 10.5V6a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v8",
+                d: "M10 10.5V6a2 2 0 0 0-2-2a2 2 0 0 0-2 2v8",
             }
             path {
                 d: "M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15",
@@ -26280,10 +27449,10 @@ impl IconShape for LdHardHat {
                 d: "M10 10V5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v5",
             }
             path {
-                d: "M4 15v-3a6 6 0 0 1 6-6h0",
+                d: "M4 15v-3a6 6 0 0 1 6-6",
             }
             path {
-                d: "M14 6h0a6 6 0 0 1 6 6v3",
+                d: "M14 6a6 6 0 0 1 6 6v3",
             }
         }
     }
@@ -26679,6 +27848,45 @@ impl IconShape for LdHeading {
 }
 
 #[derive(Copy, Clone, Debug, PartialEq)]
+pub struct LdHeadphoneOff;
+impl IconShape for LdHeadphoneOff {
+    fn view_box(&self) -> &str {
+        "0 0 24 24"
+    }
+    fn xmlns(&self) -> &str {
+        "http://www.w3.org/2000/svg"
+    }
+    fn fill_and_stroke<'a>(&self, user_color: &'a str) -> (&'a str, &'a str, &'a str) {
+        ("none", user_color, "2")
+    }
+    fn stroke_linecap(&self) -> &str {
+        "round"
+    }
+    fn stroke_linejoin(&self) -> &str {
+        "round"
+    }
+    fn child_elements(&self) -> Element {
+        rsx! {
+            path {
+                d: "M21 14h-1.343",
+            }
+            path {
+                d: "M9.128 3.47A9 9 0 0 1 21 12v3.343",
+            }
+            path {
+                d: "m2 2 20 20",
+            }
+            path {
+                d: "M20.414 20.414A2 2 0 0 1 19 21h-1a2 2 0 0 1-2-2v-3",
+            }
+            path {
+                d: "M3 14h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-7a9 9 0 0 1 2.636-6.364",
+            }
+        }
+    }
+}
+
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct LdHeadphones;
 impl IconShape for LdHeadphones {
     fn view_box(&self) -> &str {
@@ -26789,7 +27997,7 @@ impl IconShape for LdHeartHandshake {
                 d: "M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z",
             }
             path {
-                d: "M12 5 9.04 7.96a2.17 2.17 0 0 0 0 3.08v0c.82.82 2.13.85 3 .07l2.07-1.9a2.82 2.82 0 0 1 3.79 0l2.96 2.66",
+                d: "M12 5 9.04 7.96a2.17 2.17 0 0 0 0 3.08c.82.82 2.13.85 3 .07l2.07-1.9a2.82 2.82 0 0 1 3.79 0l2.96 2.66",
             }
             path {
                 d: "m18 15-2-2",
@@ -27039,36 +28247,6 @@ impl IconShape for LdHistory {
 }
 
 #[derive(Copy, Clone, Debug, PartialEq)]
-pub struct LdHome;
-impl IconShape for LdHome {
-    fn view_box(&self) -> &str {
-        "0 0 24 24"
-    }
-    fn xmlns(&self) -> &str {
-        "http://www.w3.org/2000/svg"
-    }
-    fn fill_and_stroke<'a>(&self, user_color: &'a str) -> (&'a str, &'a str, &'a str) {
-        ("none", user_color, "2")
-    }
-    fn stroke_linecap(&self) -> &str {
-        "round"
-    }
-    fn stroke_linejoin(&self) -> &str {
-        "round"
-    }
-    fn child_elements(&self) -> Element {
-        rsx! {
-            path {
-                d: "m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z",
-            }
-            polyline {
-                points: "9 22 9 12 15 12 15 22",
-            }
-        }
-    }
-}
-
-#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct LdHopOff;
 impl IconShape for LdHopOff {
     fn view_box(&self) -> &str {
@@ -27304,6 +28482,108 @@ impl IconShape for LdHourglass {
 }
 
 #[derive(Copy, Clone, Debug, PartialEq)]
+pub struct LdHousePlug;
+impl IconShape for LdHousePlug {
+    fn view_box(&self) -> &str {
+        "0 0 24 24"
+    }
+    fn xmlns(&self) -> &str {
+        "http://www.w3.org/2000/svg"
+    }
+    fn fill_and_stroke<'a>(&self, user_color: &'a str) -> (&'a str, &'a str, &'a str) {
+        ("none", user_color, "2")
+    }
+    fn stroke_linecap(&self) -> &str {
+        "round"
+    }
+    fn stroke_linejoin(&self) -> &str {
+        "round"
+    }
+    fn child_elements(&self) -> Element {
+        rsx! {
+            path {
+                d: "M10 12V8.964",
+            }
+            path {
+                d: "M14 12V8.964",
+            }
+            path {
+                d: "M15 12a1 1 0 0 1 1 1v2a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2v-2a1 1 0 0 1 1-1z",
+            }
+            path {
+                d: "M8.5 21H5a2 2 0 0 1-2-2v-9a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2h-5a2 2 0 0 1-2-2v-2",
+            }
+        }
+    }
+}
+
+#[derive(Copy, Clone, Debug, PartialEq)]
+pub struct LdHousePlus;
+impl IconShape for LdHousePlus {
+    fn view_box(&self) -> &str {
+        "0 0 24 24"
+    }
+    fn xmlns(&self) -> &str {
+        "http://www.w3.org/2000/svg"
+    }
+    fn fill_and_stroke<'a>(&self, user_color: &'a str) -> (&'a str, &'a str, &'a str) {
+        ("none", user_color, "2")
+    }
+    fn stroke_linecap(&self) -> &str {
+        "round"
+    }
+    fn stroke_linejoin(&self) -> &str {
+        "round"
+    }
+    fn child_elements(&self) -> Element {
+        rsx! {
+            path {
+                d: "M13.22 2.416a2 2 0 0 0-2.511.057l-7 5.999A2 2 0 0 0 3 10v9a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7.354",
+            }
+            path {
+                d: "M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8",
+            }
+            path {
+                d: "M15 6h6",
+            }
+            path {
+                d: "M18 3v6",
+            }
+        }
+    }
+}
+
+#[derive(Copy, Clone, Debug, PartialEq)]
+pub struct LdHouse;
+impl IconShape for LdHouse {
+    fn view_box(&self) -> &str {
+        "0 0 24 24"
+    }
+    fn xmlns(&self) -> &str {
+        "http://www.w3.org/2000/svg"
+    }
+    fn fill_and_stroke<'a>(&self, user_color: &'a str) -> (&'a str, &'a str, &'a str) {
+        ("none", user_color, "2")
+    }
+    fn stroke_linecap(&self) -> &str {
+        "round"
+    }
+    fn stroke_linejoin(&self) -> &str {
+        "round"
+    }
+    fn child_elements(&self) -> Element {
+        rsx! {
+            path {
+                d: "M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8",
+            }
+            path {
+                d: "M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z",
+            }
+        }
+    }
+}
+
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct LdIceCreamBowl;
 impl IconShape for LdIceCreamBowl {
     fn view_box(&self) -> &str {
@@ -27364,6 +28644,51 @@ impl IconShape for LdIceCreamCone {
             }
             path {
                 d: "M17 7a2 2 0 0 1 0 4H7a2 2 0 0 1 0-4",
+            }
+        }
+    }
+}
+
+#[derive(Copy, Clone, Debug, PartialEq)]
+pub struct LdIdCard;
+impl IconShape for LdIdCard {
+    fn view_box(&self) -> &str {
+        "0 0 24 24"
+    }
+    fn xmlns(&self) -> &str {
+        "http://www.w3.org/2000/svg"
+    }
+    fn fill_and_stroke<'a>(&self, user_color: &'a str) -> (&'a str, &'a str, &'a str) {
+        ("none", user_color, "2")
+    }
+    fn stroke_linecap(&self) -> &str {
+        "round"
+    }
+    fn stroke_linejoin(&self) -> &str {
+        "round"
+    }
+    fn child_elements(&self) -> Element {
+        rsx! {
+            path {
+                d: "M16 10h2",
+            }
+            path {
+                d: "M16 14h2",
+            }
+            path {
+                d: "M6.17 15a3 3 0 0 1 5.66 0",
+            }
+            circle {
+                cx: "9",
+                cy: "11",
+                r: "2",
+            }
+            rect {
+                height: "14",
+                rx: "2",
+                width: "20",
+                x: "2",
+                y: "5",
             }
         }
     }
@@ -27558,27 +28883,21 @@ impl IconShape for LdImagePlus {
     fn child_elements(&self) -> Element {
         rsx! {
             path {
-                d: "M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7",
+                d: "M16 5h6",
             }
-            line {
-                x1: "16",
-                x2: "22",
-                y1: "5",
-                y2: "5",
+            path {
+                d: "M19 2v6",
             }
-            line {
-                x1: "19",
-                x2: "19",
-                y1: "2",
-                y2: "8",
+            path {
+                d: "M21 11.5V19a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7.5",
+            }
+            path {
+                d: "m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21",
             }
             circle {
                 cx: "9",
                 cy: "9",
                 r: "2",
-            }
-            path {
-                d: "m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21",
             }
         }
     }
@@ -28269,7 +29588,7 @@ impl IconShape for LdKeyRound {
     fn child_elements(&self) -> Element {
         rsx! {
             path {
-                d: "M2 18v3c0 .6.4 1 1 1h4v-3h3v-3h2l1.4-1.4a6.5 6.5 0 1 0-4-4Z",
+                d: "M2.586 17.414A2 2 0 0 0 2 18.828V21a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1v-1a1 1 0 0 1 1-1h1a1 1 0 0 0 1-1v-1a1 1 0 0 1 1-1h.172a2 2 0 0 0 1.414-.586l.814-.814a6.5 6.5 0 1 0-4-4z",
             }
             circle {
                 cx: "16.5",
@@ -28301,13 +29620,13 @@ impl IconShape for LdKeySquare {
     fn child_elements(&self) -> Element {
         rsx! {
             path {
-                d: "M12.4 2.7c.9-.9 2.5-.9 3.4 0l5.5 5.5c.9.9.9 2.5 0 3.4l-3.7 3.7c-.9.9-2.5.9-3.4 0L8.7 9.8c-.9-.9-.9-2.5 0-3.4Z",
+                d: "M12.4 2.7a2.5 2.5 0 0 1 3.4 0l5.5 5.5a2.5 2.5 0 0 1 0 3.4l-3.7 3.7a2.5 2.5 0 0 1-3.4 0L8.7 9.8a2.5 2.5 0 0 1 0-3.4z",
             }
             path {
                 d: "m14 7 3 3",
             }
             path {
-                d: "M9.4 10.6 2 18v3c0 .6.4 1 1 1h4v-3h3v-3h2l1.4-1.4",
+                d: "m9.4 10.6-6.814 6.814A2 2 0 0 0 2 18.828V21a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1v-1a1 1 0 0 1 1-1h1a1 1 0 0 0 1-1v-1a1 1 0 0 1 1-1h.172a2 2 0 0 0 1.414-.586l.814-.814",
             }
         }
     }
@@ -28333,16 +29652,16 @@ impl IconShape for LdKey {
     }
     fn child_elements(&self) -> Element {
         rsx! {
-            circle {
-                cx: "7.5",
-                cy: "15.5",
-                r: "5.5",
+            path {
+                d: "m15.5 7.5 2.3 2.3a1 1 0 0 0 1.4 0l2.1-2.1a1 1 0 0 0 0-1.4L19 4",
             }
             path {
                 d: "m21 2-9.6 9.6",
             }
-            path {
-                d: "m15.5 7.5 3 3L22 7l-3-3",
+            circle {
+                cx: "7.5",
+                cy: "15.5",
+                r: "5.5",
             }
         }
     }
@@ -28946,7 +30265,7 @@ impl IconShape for LdLassoSelect {
                 d: "M5 18a2 2 0 1 0 0-4 2 2 0 0 0 0 4z",
             }
             path {
-                d: "M14.33 22h-.09a.35.35 0 0 1-.24-.32v-10a.34.34 0 0 1 .33-.34c.08 0 .15.03.21.08l7.34 6a.33.33 0 0 1-.21.59h-4.49l-2.57 3.85a.35.35 0 0 1-.28.14v0z",
+                d: "M14.33 22h-.09a.35.35 0 0 1-.24-.32v-10a.34.34 0 0 1 .33-.34c.08 0 .15.03.21.08l7.34 6a.33.33 0 0 1-.21.59h-4.49l-2.57 3.85a.35.35 0 0 1-.28.14z",
             }
         }
     }
@@ -29475,6 +30794,82 @@ impl IconShape for LdLeafyGreen {
 }
 
 #[derive(Copy, Clone, Debug, PartialEq)]
+pub struct LdLectern;
+impl IconShape for LdLectern {
+    fn view_box(&self) -> &str {
+        "0 0 24 24"
+    }
+    fn xmlns(&self) -> &str {
+        "http://www.w3.org/2000/svg"
+    }
+    fn fill_and_stroke<'a>(&self, user_color: &'a str) -> (&'a str, &'a str, &'a str) {
+        ("none", user_color, "2")
+    }
+    fn stroke_linecap(&self) -> &str {
+        "round"
+    }
+    fn stroke_linejoin(&self) -> &str {
+        "round"
+    }
+    fn child_elements(&self) -> Element {
+        rsx! {
+            path {
+                d: "M16 12h3a2 2 0 0 0 1.902-1.38l1.056-3.333A1 1 0 0 0 21 6H3a1 1 0 0 0-.958 1.287l1.056 3.334A2 2 0 0 0 5 12h3",
+            }
+            path {
+                d: "M18 6V3a1 1 0 0 0-1-1h-3",
+            }
+            rect {
+                height: "12",
+                rx: "1",
+                width: "8",
+                x: "8",
+                y: "10",
+            }
+        }
+    }
+}
+
+#[derive(Copy, Clone, Debug, PartialEq)]
+pub struct LdLetterText;
+impl IconShape for LdLetterText {
+    fn view_box(&self) -> &str {
+        "0 0 24 24"
+    }
+    fn xmlns(&self) -> &str {
+        "http://www.w3.org/2000/svg"
+    }
+    fn fill_and_stroke<'a>(&self, user_color: &'a str) -> (&'a str, &'a str, &'a str) {
+        ("none", user_color, "2")
+    }
+    fn stroke_linecap(&self) -> &str {
+        "round"
+    }
+    fn stroke_linejoin(&self) -> &str {
+        "round"
+    }
+    fn child_elements(&self) -> Element {
+        rsx! {
+            path {
+                d: "M15 12h6",
+            }
+            path {
+                d: "M15 6h6",
+            }
+            path {
+                d: "m3 13 3.553-7.724a.5.5 0 0 1 .894 0L11 13",
+            }
+            path {
+                d: "M3 18h18",
+            }
+            path {
+                d: "M4 11h6",
+            }
+        }
+    }
+}
+
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct LdLibraryBig;
 impl IconShape for LdLibraryBig {
     fn view_box(&self) -> &str {
@@ -29705,36 +31100,6 @@ impl IconShape for LdLightbulb {
 }
 
 #[derive(Copy, Clone, Debug, PartialEq)]
-pub struct LdLineChart;
-impl IconShape for LdLineChart {
-    fn view_box(&self) -> &str {
-        "0 0 24 24"
-    }
-    fn xmlns(&self) -> &str {
-        "http://www.w3.org/2000/svg"
-    }
-    fn fill_and_stroke<'a>(&self, user_color: &'a str) -> (&'a str, &'a str, &'a str) {
-        ("none", user_color, "2")
-    }
-    fn stroke_linecap(&self) -> &str {
-        "round"
-    }
-    fn stroke_linejoin(&self) -> &str {
-        "round"
-    }
-    fn child_elements(&self) -> Element {
-        rsx! {
-            path {
-                d: "M3 3v18h18",
-            }
-            path {
-                d: "m19 9-5 5-4-4-3 3",
-            }
-        }
-    }
-}
-
-#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct LdLink2Off;
 impl IconShape for LdLink2Off {
     fn view_box(&self) -> &str {
@@ -29875,6 +31240,42 @@ impl IconShape for LdLinkedin {
                 cx: "4",
                 cy: "4",
                 r: "2",
+            }
+        }
+    }
+}
+
+#[derive(Copy, Clone, Debug, PartialEq)]
+pub struct LdListCheck;
+impl IconShape for LdListCheck {
+    fn view_box(&self) -> &str {
+        "0 0 24 24"
+    }
+    fn xmlns(&self) -> &str {
+        "http://www.w3.org/2000/svg"
+    }
+    fn fill_and_stroke<'a>(&self, user_color: &'a str) -> (&'a str, &'a str, &'a str) {
+        ("none", user_color, "2")
+    }
+    fn stroke_linecap(&self) -> &str {
+        "round"
+    }
+    fn stroke_linejoin(&self) -> &str {
+        "round"
+    }
+    fn child_elements(&self) -> Element {
+        rsx! {
+            path {
+                d: "M11 18H3",
+            }
+            path {
+                d: "m15 18 2 2 4-4",
+            }
+            path {
+                d: "M16 12H3",
+            }
+            path {
+                d: "M16 6H3",
             }
         }
     }
@@ -30518,6 +31919,44 @@ impl IconShape for LdLoaderCircle {
 }
 
 #[derive(Copy, Clone, Debug, PartialEq)]
+pub struct LdLoaderPinwheel;
+impl IconShape for LdLoaderPinwheel {
+    fn view_box(&self) -> &str {
+        "0 0 24 24"
+    }
+    fn xmlns(&self) -> &str {
+        "http://www.w3.org/2000/svg"
+    }
+    fn fill_and_stroke<'a>(&self, user_color: &'a str) -> (&'a str, &'a str, &'a str) {
+        ("none", user_color, "2")
+    }
+    fn stroke_linecap(&self) -> &str {
+        "round"
+    }
+    fn stroke_linejoin(&self) -> &str {
+        "round"
+    }
+    fn child_elements(&self) -> Element {
+        rsx! {
+            path {
+                d: "M2 12c0-2.8 2.2-5 5-5s5 2.2 5 5 2.2 5 5 5 5-2.2 5-5",
+            }
+            path {
+                d: "M7 20.7a1 1 0 1 1 5-8.7 1 1 0 1 0 5-8.6",
+            }
+            path {
+                d: "M7 3.3a1 1 0 1 1 5 8.6 1 1 0 1 0 5 8.6",
+            }
+            circle {
+                cx: "12",
+                cy: "12",
+                r: "10",
+            }
+        }
+    }
+}
+
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct LdLoader;
 impl IconShape for LdLoader {
     fn view_box(&self) -> &str {
@@ -30537,53 +31976,29 @@ impl IconShape for LdLoader {
     }
     fn child_elements(&self) -> Element {
         rsx! {
-            line {
-                x1: "12",
-                x2: "12",
-                y1: "2",
-                y2: "6",
+            path {
+                d: "M12 2v4",
             }
-            line {
-                x1: "12",
-                x2: "12",
-                y1: "18",
-                y2: "22",
+            path {
+                d: "m16.2 7.8 2.9-2.9",
             }
-            line {
-                x1: "4.93",
-                x2: "7.76",
-                y1: "4.93",
-                y2: "7.76",
+            path {
+                d: "M18 12h4",
             }
-            line {
-                x1: "16.24",
-                x2: "19.07",
-                y1: "16.24",
-                y2: "19.07",
+            path {
+                d: "m16.2 16.2 2.9 2.9",
             }
-            line {
-                x1: "2",
-                x2: "6",
-                y1: "12",
-                y2: "12",
+            path {
+                d: "M12 18v4",
             }
-            line {
-                x1: "18",
-                x2: "22",
-                y1: "12",
-                y2: "12",
+            path {
+                d: "m4.9 19.1 2.9-2.9",
             }
-            line {
-                x1: "4.93",
-                x2: "7.76",
-                y1: "19.07",
-                y2: "16.24",
+            path {
+                d: "M2 12h4",
             }
-            line {
-                x1: "16.24",
-                x2: "19.07",
-                y1: "7.76",
-                y2: "4.93",
+            path {
+                d: "m4.9 4.9 2.9 2.9",
             }
         }
     }
@@ -30981,6 +32396,57 @@ impl IconShape for LdLogOut {
 }
 
 #[derive(Copy, Clone, Debug, PartialEq)]
+pub struct LdLogs;
+impl IconShape for LdLogs {
+    fn view_box(&self) -> &str {
+        "0 0 24 24"
+    }
+    fn xmlns(&self) -> &str {
+        "http://www.w3.org/2000/svg"
+    }
+    fn fill_and_stroke<'a>(&self, user_color: &'a str) -> (&'a str, &'a str, &'a str) {
+        ("none", user_color, "2")
+    }
+    fn stroke_linecap(&self) -> &str {
+        "round"
+    }
+    fn stroke_linejoin(&self) -> &str {
+        "round"
+    }
+    fn child_elements(&self) -> Element {
+        rsx! {
+            path {
+                d: "M13 12h8",
+            }
+            path {
+                d: "M13 18h8",
+            }
+            path {
+                d: "M13 6h8",
+            }
+            path {
+                d: "M3 12h1",
+            }
+            path {
+                d: "M3 18h1",
+            }
+            path {
+                d: "M3 6h1",
+            }
+            path {
+                d: "M8 12h1",
+            }
+            path {
+                d: "M8 18h1",
+            }
+            path {
+                d: "M8 6h1",
+            }
+        }
+    }
+}
+
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct LdLollipop;
 impl IconShape for LdLollipop {
     fn view_box(&self) -> &str {
@@ -31036,7 +32502,7 @@ impl IconShape for LdLuggage {
     fn child_elements(&self) -> Element {
         rsx! {
             path {
-                d: "M6 20h0a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h0",
+                d: "M6 20a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2",
             }
             path {
                 d: "M8 18V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v14",
@@ -31286,7 +32752,7 @@ impl IconShape for LdMailSearch {
                 d: "m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7",
             }
             path {
-                d: "M18 21a3 3 0 1 0 0-6 3 3 0 0 0 0 6v0Z",
+                d: "M18 21a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z",
             }
             circle {
                 cx: "18",
@@ -31433,7 +32899,7 @@ impl IconShape for LdMailbox {
                 points: "15,9 18,9 18,11",
             }
             path {
-                d: "M6.5 5C9 5 11 7 11 9.5V17a2 2 0 0 1-2 2v0",
+                d: "M6.5 5C9 5 11 7 11 9.5V17a2 2 0 0 1-2 2",
             }
             line {
                 x1: "6",
@@ -31483,6 +32949,174 @@ impl IconShape for LdMails {
 }
 
 #[derive(Copy, Clone, Debug, PartialEq)]
+pub struct LdMapPinCheckInside;
+impl IconShape for LdMapPinCheckInside {
+    fn view_box(&self) -> &str {
+        "0 0 24 24"
+    }
+    fn xmlns(&self) -> &str {
+        "http://www.w3.org/2000/svg"
+    }
+    fn fill_and_stroke<'a>(&self, user_color: &'a str) -> (&'a str, &'a str, &'a str) {
+        ("none", user_color, "2")
+    }
+    fn stroke_linecap(&self) -> &str {
+        "round"
+    }
+    fn stroke_linejoin(&self) -> &str {
+        "round"
+    }
+    fn child_elements(&self) -> Element {
+        rsx! {
+            path {
+                d: "M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0",
+            }
+            path {
+                d: "m9 10 2 2 4-4",
+            }
+        }
+    }
+}
+
+#[derive(Copy, Clone, Debug, PartialEq)]
+pub struct LdMapPinCheck;
+impl IconShape for LdMapPinCheck {
+    fn view_box(&self) -> &str {
+        "0 0 24 24"
+    }
+    fn xmlns(&self) -> &str {
+        "http://www.w3.org/2000/svg"
+    }
+    fn fill_and_stroke<'a>(&self, user_color: &'a str) -> (&'a str, &'a str, &'a str) {
+        ("none", user_color, "2")
+    }
+    fn stroke_linecap(&self) -> &str {
+        "round"
+    }
+    fn stroke_linejoin(&self) -> &str {
+        "round"
+    }
+    fn child_elements(&self) -> Element {
+        rsx! {
+            path {
+                d: "M19.43 12.935c.357-.967.57-1.955.57-2.935a8 8 0 0 0-16 0c0 4.993 5.539 10.193 7.399 11.799a1 1 0 0 0 1.202 0 32.197 32.197 0 0 0 .813-.728",
+            }
+            circle {
+                cx: "12",
+                cy: "10",
+                r: "3",
+            }
+            path {
+                d: "m16 18 2 2 4-4",
+            }
+        }
+    }
+}
+
+#[derive(Copy, Clone, Debug, PartialEq)]
+pub struct LdMapPinHouse;
+impl IconShape for LdMapPinHouse {
+    fn view_box(&self) -> &str {
+        "0 0 24 24"
+    }
+    fn xmlns(&self) -> &str {
+        "http://www.w3.org/2000/svg"
+    }
+    fn fill_and_stroke<'a>(&self, user_color: &'a str) -> (&'a str, &'a str, &'a str) {
+        ("none", user_color, "2")
+    }
+    fn stroke_linecap(&self) -> &str {
+        "round"
+    }
+    fn stroke_linejoin(&self) -> &str {
+        "round"
+    }
+    fn child_elements(&self) -> Element {
+        rsx! {
+            path {
+                d: "M15 22a1 1 0 0 1-1-1v-4a1 1 0 0 1 .445-.832l3-2a1 1 0 0 1 1.11 0l3 2A1 1 0 0 1 22 17v4a1 1 0 0 1-1 1z",
+            }
+            path {
+                d: "M18 10a8 8 0 0 0-16 0c0 4.993 5.539 10.193 7.399 11.799a1 1 0 0 0 .601.2",
+            }
+            path {
+                d: "M18 22v-3",
+            }
+            circle {
+                cx: "10",
+                cy: "10",
+                r: "3",
+            }
+        }
+    }
+}
+
+#[derive(Copy, Clone, Debug, PartialEq)]
+pub struct LdMapPinMinusInside;
+impl IconShape for LdMapPinMinusInside {
+    fn view_box(&self) -> &str {
+        "0 0 24 24"
+    }
+    fn xmlns(&self) -> &str {
+        "http://www.w3.org/2000/svg"
+    }
+    fn fill_and_stroke<'a>(&self, user_color: &'a str) -> (&'a str, &'a str, &'a str) {
+        ("none", user_color, "2")
+    }
+    fn stroke_linecap(&self) -> &str {
+        "round"
+    }
+    fn stroke_linejoin(&self) -> &str {
+        "round"
+    }
+    fn child_elements(&self) -> Element {
+        rsx! {
+            path {
+                d: "M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0",
+            }
+            path {
+                d: "M9 10h6",
+            }
+        }
+    }
+}
+
+#[derive(Copy, Clone, Debug, PartialEq)]
+pub struct LdMapPinMinus;
+impl IconShape for LdMapPinMinus {
+    fn view_box(&self) -> &str {
+        "0 0 24 24"
+    }
+    fn xmlns(&self) -> &str {
+        "http://www.w3.org/2000/svg"
+    }
+    fn fill_and_stroke<'a>(&self, user_color: &'a str) -> (&'a str, &'a str, &'a str) {
+        ("none", user_color, "2")
+    }
+    fn stroke_linecap(&self) -> &str {
+        "round"
+    }
+    fn stroke_linejoin(&self) -> &str {
+        "round"
+    }
+    fn child_elements(&self) -> Element {
+        rsx! {
+            path {
+                d: "M18.977 14C19.6 12.701 20 11.343 20 10a8 8 0 0 0-16 0c0 4.993 5.539 10.193 7.399 11.799a1 1 0 0 0 1.202 0 32 32 0 0 0 .824-.738",
+            }
+            circle {
+                cx: "12",
+                cy: "10",
+                r: "3",
+            }
+            path {
+                d: "M16 18h6",
+            }
+        }
+    }
+}
+
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct LdMapPinOff;
 impl IconShape for LdMapPinOff {
     fn view_box(&self) -> &str {
@@ -31503,22 +33137,161 @@ impl IconShape for LdMapPinOff {
     fn child_elements(&self) -> Element {
         rsx! {
             path {
-                d: "M5.43 5.43A8.06 8.06 0 0 0 4 10c0 6 8 12 8 12a29.94 29.94 0 0 0 5-5",
+                d: "M12.75 7.09a3 3 0 0 1 2.16 2.16",
             }
             path {
-                d: "M19.18 13.52A8.66 8.66 0 0 0 20 10a8 8 0 0 0-8-8 7.88 7.88 0 0 0-3.52.82",
+                d: "M17.072 17.072c-1.634 2.17-3.527 3.912-4.471 4.727a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 1.432-4.568",
             }
             path {
-                d: "M9.13 9.13A2.78 2.78 0 0 0 9 10a3 3 0 0 0 3 3 2.78 2.78 0 0 0 .87-.13",
+                d: "m2 2 20 20",
             }
             path {
-                d: "M14.9 9.25a3 3 0 0 0-2.15-2.16",
+                d: "M8.475 2.818A8 8 0 0 1 20 10c0 1.183-.31 2.377-.81 3.533",
             }
-            line {
-                x1: "2",
-                x2: "22",
-                y1: "2",
-                y2: "22",
+            path {
+                d: "M9.13 9.13a3 3 0 0 0 3.74 3.74",
+            }
+        }
+    }
+}
+
+#[derive(Copy, Clone, Debug, PartialEq)]
+pub struct LdMapPinPlusInside;
+impl IconShape for LdMapPinPlusInside {
+    fn view_box(&self) -> &str {
+        "0 0 24 24"
+    }
+    fn xmlns(&self) -> &str {
+        "http://www.w3.org/2000/svg"
+    }
+    fn fill_and_stroke<'a>(&self, user_color: &'a str) -> (&'a str, &'a str, &'a str) {
+        ("none", user_color, "2")
+    }
+    fn stroke_linecap(&self) -> &str {
+        "round"
+    }
+    fn stroke_linejoin(&self) -> &str {
+        "round"
+    }
+    fn child_elements(&self) -> Element {
+        rsx! {
+            path {
+                d: "M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0",
+            }
+            path {
+                d: "M12 7v6",
+            }
+            path {
+                d: "M9 10h6",
+            }
+        }
+    }
+}
+
+#[derive(Copy, Clone, Debug, PartialEq)]
+pub struct LdMapPinPlus;
+impl IconShape for LdMapPinPlus {
+    fn view_box(&self) -> &str {
+        "0 0 24 24"
+    }
+    fn xmlns(&self) -> &str {
+        "http://www.w3.org/2000/svg"
+    }
+    fn fill_and_stroke<'a>(&self, user_color: &'a str) -> (&'a str, &'a str, &'a str) {
+        ("none", user_color, "2")
+    }
+    fn stroke_linecap(&self) -> &str {
+        "round"
+    }
+    fn stroke_linejoin(&self) -> &str {
+        "round"
+    }
+    fn child_elements(&self) -> Element {
+        rsx! {
+            path {
+                d: "M19.914 11.105A7.298 7.298 0 0 0 20 10a8 8 0 0 0-16 0c0 4.993 5.539 10.193 7.399 11.799a1 1 0 0 0 1.202 0 32 32 0 0 0 .824-.738",
+            }
+            circle {
+                cx: "12",
+                cy: "10",
+                r: "3",
+            }
+            path {
+                d: "M16 18h6",
+            }
+            path {
+                d: "M19 15v6",
+            }
+        }
+    }
+}
+
+#[derive(Copy, Clone, Debug, PartialEq)]
+pub struct LdMapPinXInside;
+impl IconShape for LdMapPinXInside {
+    fn view_box(&self) -> &str {
+        "0 0 24 24"
+    }
+    fn xmlns(&self) -> &str {
+        "http://www.w3.org/2000/svg"
+    }
+    fn fill_and_stroke<'a>(&self, user_color: &'a str) -> (&'a str, &'a str, &'a str) {
+        ("none", user_color, "2")
+    }
+    fn stroke_linecap(&self) -> &str {
+        "round"
+    }
+    fn stroke_linejoin(&self) -> &str {
+        "round"
+    }
+    fn child_elements(&self) -> Element {
+        rsx! {
+            path {
+                d: "M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0",
+            }
+            path {
+                d: "m14.5 7.5-5 5",
+            }
+            path {
+                d: "m9.5 7.5 5 5",
+            }
+        }
+    }
+}
+
+#[derive(Copy, Clone, Debug, PartialEq)]
+pub struct LdMapPinX;
+impl IconShape for LdMapPinX {
+    fn view_box(&self) -> &str {
+        "0 0 24 24"
+    }
+    fn xmlns(&self) -> &str {
+        "http://www.w3.org/2000/svg"
+    }
+    fn fill_and_stroke<'a>(&self, user_color: &'a str) -> (&'a str, &'a str, &'a str) {
+        ("none", user_color, "2")
+    }
+    fn stroke_linecap(&self) -> &str {
+        "round"
+    }
+    fn stroke_linejoin(&self) -> &str {
+        "round"
+    }
+    fn child_elements(&self) -> Element {
+        rsx! {
+            path {
+                d: "M19.752 11.901A7.78 7.78 0 0 0 20 10a8 8 0 0 0-16 0c0 4.993 5.539 10.193 7.399 11.799a1 1 0 0 0 1.202 0 19 19 0 0 0 .09-.077",
+            }
+            circle {
+                cx: "12",
+                cy: "10",
+                r: "3",
+            }
+            path {
+                d: "m21.5 15.5-5 5",
+            }
+            path {
+                d: "m21.5 20.5-5-5",
             }
         }
     }
@@ -31545,7 +33318,7 @@ impl IconShape for LdMapPin {
     fn child_elements(&self) -> Element {
         rsx! {
             path {
-                d: "M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z",
+                d: "M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0",
             }
             circle {
                 cx: "12",
@@ -31577,7 +33350,7 @@ impl IconShape for LdMapPinned {
     fn child_elements(&self) -> Element {
         rsx! {
             path {
-                d: "M18 8c0 4.5-6 9-6 9s-6-4.5-6-9a6 6 0 0 1 12 0",
+                d: "M18 8c0 3.613-3.869 7.429-5.393 8.795a1 1 0 0 1-1.214 0C9.87 15.429 6 11.613 6 8a6 6 0 0 1 12 0",
             }
             circle {
                 cx: "12",
@@ -31585,7 +33358,7 @@ impl IconShape for LdMapPinned {
                 r: "2",
             }
             path {
-                d: "M8.835 14H5a1 1 0 0 0-.9.7l-2 6c-.1.1-.1.2-.1.3 0 .6.4 1 1 1h18c.6 0 1-.4 1-1 0-.1 0-.2-.1-.3l-2-6a1 1 0 0 0-.9-.7h-3.835",
+                d: "M8.714 14h-3.71a1 1 0 0 0-.948.683l-2.004 6A1 1 0 0 0 3 22h18a1 1 0 0 0 .948-1.316l-2-6a1 1 0 0 0-.949-.684h-3.712",
             }
         }
     }
@@ -32042,13 +33815,13 @@ impl IconShape for LdMessageCircleCode {
     fn child_elements(&self) -> Element {
         rsx! {
             path {
-                d: "M7.9 20A9 9 0 1 0 4 16.1L2 22Z",
+                d: "M10 9.5 8 12l2 2.5",
             }
             path {
-                d: "m10 10-2 2 2 2",
+                d: "m14 9.5 2 2.5-2 2.5",
             }
             path {
-                d: "m14 10 2 2-2 2",
+                d: "M7.9 20A9 9 0 1 0 4 16.1L2 22z",
             }
         }
     }
@@ -32414,13 +34187,13 @@ impl IconShape for LdMessageSquareCode {
     fn child_elements(&self) -> Element {
         rsx! {
             path {
+                d: "M10 7.5 8 10l2 2.5",
+            }
+            path {
+                d: "m14 7.5 2 2.5-2 2.5",
+            }
+            path {
                 d: "M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z",
-            }
-            path {
-                d: "m10 8-2 2 2 2",
-            }
-            path {
-                d: "m14 8 2 2-2 2",
             }
         }
     }
@@ -32447,28 +34220,31 @@ impl IconShape for LdMessageSquareDashed {
     fn child_elements(&self) -> Element {
         rsx! {
             path {
-                d: "M3 6V5c0-1.1.9-2 2-2h2",
+                d: "M10 17H7l-4 4v-7",
             }
             path {
-                d: "M11 3h3",
+                d: "M14 17h1",
             }
             path {
-                d: "M18 3h1c1.1 0 2 .9 2 2",
+                d: "M14 3h1",
             }
             path {
-                d: "M21 9v2",
+                d: "M19 3a2 2 0 0 1 2 2",
             }
             path {
-                d: "M21 15c0 1.1-.9 2-2 2h-1",
+                d: "M21 14v1a2 2 0 0 1-2 2",
             }
             path {
-                d: "M14 17h-3",
+                d: "M21 9v1",
             }
             path {
-                d: "m7 17-4 4v-5",
+                d: "M3 9v1",
             }
             path {
-                d: "M3 12v-2",
+                d: "M5 3a2 2 0 0 0-2 2",
+            }
+            path {
+                d: "M9 3h1",
             }
         }
     }
@@ -32998,10 +34774,13 @@ impl IconShape for LdMicVocal {
     fn child_elements(&self) -> Element {
         rsx! {
             path {
-                d: "m12 8-9.04 9.06a2.82 2.82 0 1 0 3.98 3.98L16 12",
+                d: "m11 7.601-5.994 8.19a1 1 0 0 0 .1 1.298l.817.818a1 1 0 0 0 1.314.087L15.09 12",
+            }
+            path {
+                d: "M16.5 21.174C15.5 20.5 14.372 20 13 20c-2.058 0-3.928 2.356-6 2-2.072-.356-2.775-3.369-1.5-4.5",
             }
             circle {
-                cx: "17",
+                cx: "16",
                 cy: "7",
                 r: "5",
             }
@@ -33040,6 +34819,63 @@ impl IconShape for LdMic {
                 x2: "12",
                 y1: "19",
                 y2: "22",
+            }
+        }
+    }
+}
+
+#[derive(Copy, Clone, Debug, PartialEq)]
+pub struct LdMicrochip;
+impl IconShape for LdMicrochip {
+    fn view_box(&self) -> &str {
+        "0 0 24 24"
+    }
+    fn xmlns(&self) -> &str {
+        "http://www.w3.org/2000/svg"
+    }
+    fn fill_and_stroke<'a>(&self, user_color: &'a str) -> (&'a str, &'a str, &'a str) {
+        ("none", user_color, "2")
+    }
+    fn stroke_linecap(&self) -> &str {
+        "round"
+    }
+    fn stroke_linejoin(&self) -> &str {
+        "round"
+    }
+    fn child_elements(&self) -> Element {
+        rsx! {
+            path {
+                d: "M18 12h2",
+            }
+            path {
+                d: "M18 16h2",
+            }
+            path {
+                d: "M18 20h2",
+            }
+            path {
+                d: "M18 4h2",
+            }
+            path {
+                d: "M18 8h2",
+            }
+            path {
+                d: "M4 12h2",
+            }
+            path {
+                d: "M4 16h2",
+            }
+            path {
+                d: "M4 20h2",
+            }
+            path {
+                d: "M4 4h2",
+            }
+            path {
+                d: "M4 8h2",
+            }
+            path {
+                d: "M8 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2h-1.5c-.276 0-.494.227-.562.495a2 2 0 0 1-3.876 0C9.994 2.227 9.776 2 9.5 2z",
             }
         }
     }
@@ -33155,13 +34991,13 @@ impl IconShape for LdMilestone {
     fn child_elements(&self) -> Element {
         rsx! {
             path {
-                d: "M18 6H5a2 2 0 0 0-2 2v3a2 2 0 0 0 2 2h13l4-3.5L18 6Z",
-            }
-            path {
                 d: "M12 13v8",
             }
             path {
                 d: "M12 3v3",
+            }
+            path {
+                d: "M4 6a1 1 0 0 0-1 1v5a1 1 0 0 0 1 1h13a2 2 0 0 0 1.152-.365l3.424-2.317a1 1 0 0 0 0-1.635l-3.424-2.318A2 2 0 0 0 17 6z",
             }
         }
     }
@@ -33379,6 +35215,68 @@ impl IconShape for LdMonitorCheck {
             }
             path {
                 d: "M8 21h8",
+            }
+        }
+    }
+}
+
+#[derive(Copy, Clone, Debug, PartialEq)]
+pub struct LdMonitorCog;
+impl IconShape for LdMonitorCog {
+    fn view_box(&self) -> &str {
+        "0 0 24 24"
+    }
+    fn xmlns(&self) -> &str {
+        "http://www.w3.org/2000/svg"
+    }
+    fn fill_and_stroke<'a>(&self, user_color: &'a str) -> (&'a str, &'a str, &'a str) {
+        ("none", user_color, "2")
+    }
+    fn stroke_linecap(&self) -> &str {
+        "round"
+    }
+    fn stroke_linejoin(&self) -> &str {
+        "round"
+    }
+    fn child_elements(&self) -> Element {
+        rsx! {
+            path {
+                d: "M12 17v4",
+            }
+            path {
+                d: "m15.2 4.9-.9-.4",
+            }
+            path {
+                d: "m15.2 7.1-.9.4",
+            }
+            path {
+                d: "m16.9 3.2-.4-.9",
+            }
+            path {
+                d: "m16.9 8.8-.4.9",
+            }
+            path {
+                d: "m19.5 2.3-.4.9",
+            }
+            path {
+                d: "m19.5 9.7-.4-.9",
+            }
+            path {
+                d: "m21.7 4.5-.9.4",
+            }
+            path {
+                d: "m21.7 7.5-.9-.4",
+            }
+            path {
+                d: "M22 13v2a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7",
+            }
+            path {
+                d: "M8 21h8",
+            }
+            circle {
+                cx: "18",
+                cy: "6",
+                r: "3",
             }
         }
     }
@@ -33866,13 +35764,13 @@ impl IconShape for LdMoonStar {
     fn child_elements(&self) -> Element {
         rsx! {
             path {
-                d: "M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z",
+                d: "M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9",
             }
             path {
-                d: "M19 3v4",
+                d: "M20 3v4",
             }
             path {
-                d: "M21 5h-4",
+                d: "M22 5h-4",
             }
         }
     }
@@ -34019,7 +35917,42 @@ impl IconShape for LdMousePointer2 {
     fn child_elements(&self) -> Element {
         rsx! {
             path {
-                d: "m4 4 7.07 17 2.51-7.39L21 11.07z",
+                d: "M4.037 4.688a.495.495 0 0 1 .651-.651l16 6.5a.5.5 0 0 1-.063.947l-6.124 1.58a2 2 0 0 0-1.438 1.435l-1.579 6.126a.5.5 0 0 1-.947.063z",
+            }
+        }
+    }
+}
+
+#[derive(Copy, Clone, Debug, PartialEq)]
+pub struct LdMousePointerBan;
+impl IconShape for LdMousePointerBan {
+    fn view_box(&self) -> &str {
+        "0 0 24 24"
+    }
+    fn xmlns(&self) -> &str {
+        "http://www.w3.org/2000/svg"
+    }
+    fn fill_and_stroke<'a>(&self, user_color: &'a str) -> (&'a str, &'a str, &'a str) {
+        ("none", user_color, "2")
+    }
+    fn stroke_linecap(&self) -> &str {
+        "round"
+    }
+    fn stroke_linejoin(&self) -> &str {
+        "round"
+    }
+    fn child_elements(&self) -> Element {
+        rsx! {
+            path {
+                d: "M2.034 2.681a.498.498 0 0 1 .647-.647l9 3.5a.5.5 0 0 1-.033.944L8.204 7.545a1 1 0 0 0-.66.66l-1.066 3.443a.5.5 0 0 1-.944.033z",
+            }
+            circle {
+                cx: "16",
+                cy: "16",
+                r: "6",
+            }
+            path {
+                d: "m11.8 11.8 8.4 8.4",
             }
         }
     }
@@ -34046,19 +35979,19 @@ impl IconShape for LdMousePointerClick {
     fn child_elements(&self) -> Element {
         rsx! {
             path {
-                d: "m9 9 5 12 1.8-5.2L21 14Z",
-            }
-            path {
-                d: "M7.2 2.2 8 5.1",
+                d: "M14 4.1 12 6",
             }
             path {
                 d: "m5.1 8-2.9-.8",
             }
             path {
-                d: "M14 4.1 12 6",
+                d: "m6 12-1.9 2",
             }
             path {
-                d: "m6 12-1.9 2",
+                d: "M7.2 2.2 8 5.1",
+            }
+            path {
+                d: "M9.037 9.69a.498.498 0 0 1 .653-.653l11 4.5a.5.5 0 0 1-.074.949l-4.349 1.041a1 1 0 0 0-.74.739l-1.04 4.35a.5.5 0 0 1-.95.074z",
             }
         }
     }
@@ -34085,10 +36018,10 @@ impl IconShape for LdMousePointer {
     fn child_elements(&self) -> Element {
         rsx! {
             path {
-                d: "m3 3 7.07 16.97 2.51-7.39 7.39-2.51L3 3z",
+                d: "M12.586 12.586 19 19",
             }
             path {
-                d: "m13 13 6 6",
+                d: "M3.688 3.037a.497.497 0 0 0-.651.651l6.5 15.999a.501.501 0 0 0 .947-.062l1.569-6.083a2 2 0 0 1 1.448-1.479l6.124-1.579a.5.5 0 0 0 .063-.947z",
             }
         }
     }
@@ -35022,7 +36955,7 @@ impl IconShape for LdNotebookPen {
                 d: "M2 18h4",
             }
             path {
-                d: "M18.4 2.6a2.17 2.17 0 0 1 3 3L16 11l-4 1 1-4Z",
+                d: "M21.378 5.626a1 1 0 1 0-3.004-3.004l-5.01 5.012a2 2 0 0 0-.506.854l-.837 2.87a.5.5 0 0 0 .62.62l2.87-.837a2 2 0 0 0 .854-.506z",
             }
         }
     }
@@ -35388,20 +37321,44 @@ impl IconShape for LdOctagonAlert {
     }
     fn child_elements(&self) -> Element {
         rsx! {
-            polygon {
-                points: "7.86 2 16.14 2 22 7.86 22 16.14 16.14 22 7.86 22 2 16.14 2 7.86 7.86 2",
+            path {
+                d: "M12 16h.01",
             }
-            line {
-                x1: "12",
-                x2: "12",
-                y1: "8",
-                y2: "12",
+            path {
+                d: "M12 8v4",
             }
-            line {
-                x1: "12",
-                x2: "12.01",
-                y1: "16",
-                y2: "16",
+            path {
+                d: "M15.312 2a2 2 0 0 1 1.414.586l4.688 4.688A2 2 0 0 1 22 8.688v6.624a2 2 0 0 1-.586 1.414l-4.688 4.688a2 2 0 0 1-1.414.586H8.688a2 2 0 0 1-1.414-.586l-4.688-4.688A2 2 0 0 1 2 15.312V8.688a2 2 0 0 1 .586-1.414l4.688-4.688A2 2 0 0 1 8.688 2z",
+            }
+        }
+    }
+}
+
+#[derive(Copy, Clone, Debug, PartialEq)]
+pub struct LdOctagonMinus;
+impl IconShape for LdOctagonMinus {
+    fn view_box(&self) -> &str {
+        "0 0 24 24"
+    }
+    fn xmlns(&self) -> &str {
+        "http://www.w3.org/2000/svg"
+    }
+    fn fill_and_stroke<'a>(&self, user_color: &'a str) -> (&'a str, &'a str, &'a str) {
+        ("none", user_color, "2")
+    }
+    fn stroke_linecap(&self) -> &str {
+        "round"
+    }
+    fn stroke_linejoin(&self) -> &str {
+        "round"
+    }
+    fn child_elements(&self) -> Element {
+        rsx! {
+            path {
+                d: "M2.586 16.726A2 2 0 0 1 2 15.312V8.688a2 2 0 0 1 .586-1.414l4.688-4.688A2 2 0 0 1 8.688 2h6.624a2 2 0 0 1 1.414.586l4.688 4.688A2 2 0 0 1 22 8.688v6.624a2 2 0 0 1-.586 1.414l-4.688 4.688a2 2 0 0 1-1.414.586H8.688a2 2 0 0 1-1.414-.586z",
+            }
+            path {
+                d: "M8 12h8",
             }
         }
     }
@@ -35434,7 +37391,7 @@ impl IconShape for LdOctagonPause {
                 d: "M14 15V9",
             }
             path {
-                d: "M7.714 2h8.572L22 7.714v8.572L16.286 22H7.714L2 16.286V7.714z",
+                d: "M2.586 16.872A2 2 0 0 1 2 15.458V8.542a2 2 0 0 1 .586-1.414l4.542-4.542A2 2 0 0 1 8.542 2h6.916a2 2 0 0 1 1.414.586l4.542 4.542A2 2 0 0 1 22 8.542v6.916a2 2 0 0 1-.586 1.414l-4.542 4.542a2 2 0 0 1-1.414.586H8.542a2 2 0 0 1-1.414-.586z",
             }
         }
     }
@@ -35460,11 +37417,11 @@ impl IconShape for LdOctagonX {
     }
     fn child_elements(&self) -> Element {
         rsx! {
-            polygon {
-                points: "7.86 2 16.14 2 22 7.86 22 16.14 16.14 22 7.86 22 2 16.14 2 7.86 7.86 2",
-            }
             path {
                 d: "m15 9-6 6",
+            }
+            path {
+                d: "M2.586 16.726A2 2 0 0 1 2 15.312V8.688a2 2 0 0 1 .586-1.414l4.688-4.688A2 2 0 0 1 8.688 2h6.624a2 2 0 0 1 1.414.586l4.688 4.688A2 2 0 0 1 22 8.688v6.624a2 2 0 0 1-.586 1.414l-4.688 4.688a2 2 0 0 1-1.414.586H8.688a2 2 0 0 1-1.414-.586z",
             }
             path {
                 d: "m9 9 6 6",
@@ -35493,8 +37450,35 @@ impl IconShape for LdOctagon {
     }
     fn child_elements(&self) -> Element {
         rsx! {
-            polygon {
-                points: "7.86 2 16.14 2 22 7.86 22 16.14 16.14 22 7.86 22 2 16.14 2 7.86 7.86 2",
+            path {
+                d: "M2.586 16.726A2 2 0 0 1 2 15.312V8.688a2 2 0 0 1 .586-1.414l4.688-4.688A2 2 0 0 1 8.688 2h6.624a2 2 0 0 1 1.414.586l4.688 4.688A2 2 0 0 1 22 8.688v6.624a2 2 0 0 1-.586 1.414l-4.688 4.688a2 2 0 0 1-1.414.586H8.688a2 2 0 0 1-1.414-.586z",
+            }
+        }
+    }
+}
+
+#[derive(Copy, Clone, Debug, PartialEq)]
+pub struct LdOmega;
+impl IconShape for LdOmega {
+    fn view_box(&self) -> &str {
+        "0 0 24 24"
+    }
+    fn xmlns(&self) -> &str {
+        "http://www.w3.org/2000/svg"
+    }
+    fn fill_and_stroke<'a>(&self, user_color: &'a str) -> (&'a str, &'a str, &'a str) {
+        ("none", user_color, "2")
+    }
+    fn stroke_linecap(&self) -> &str {
+        "round"
+    }
+    fn stroke_linejoin(&self) -> &str {
+        "round"
+    }
+    fn child_elements(&self) -> Element {
+        rsx! {
+            path {
+                d: "M3 20h4.5a.5.5 0 0 0 .5-.5v-.282a.52.52 0 0 0-.247-.437 8 8 0 1 1 8.494-.001.52.52 0 0 0-.247.438v.282a.5.5 0 0 0 .5.5H21",
             }
         }
     }
@@ -36009,8 +37993,8 @@ impl IconShape for LdPaintRoller {
 }
 
 #[derive(Copy, Clone, Debug, PartialEq)]
-pub struct LdPaintbrush2;
-impl IconShape for LdPaintbrush2 {
+pub struct LdPaintbrushVertical;
+impl IconShape for LdPaintbrushVertical {
     fn view_box(&self) -> &str {
         "0 0 24 24"
     }
@@ -36029,16 +38013,16 @@ impl IconShape for LdPaintbrush2 {
     fn child_elements(&self) -> Element {
         rsx! {
             path {
-                d: "M14 19.9V16h3a2 2 0 0 0 2-2v-2H5v2c0 1.1.9 2 2 2h3v3.9a2 2 0 1 0 4 0Z",
-            }
-            path {
-                d: "M6 12V2h12v10",
+                d: "M10 2v2",
             }
             path {
                 d: "M14 2v4",
             }
             path {
-                d: "M10 2v2",
+                d: "M17 2a1 1 0 0 1 1 1v9H6V3a1 1 0 0 1 1-1z",
+            }
+            path {
+                d: "M6 12a1 1 0 0 0-1 1v1a2 2 0 0 0 2 2h2a1 1 0 0 1 1 1v2.9a2 2 0 1 0 4 0V17a1 1 0 0 1 1-1h2a2 2 0 0 0 2-2v-1a1 1 0 0 0-1-1",
             }
         }
     }
@@ -36065,13 +38049,13 @@ impl IconShape for LdPaintbrush {
     fn child_elements(&self) -> Element {
         rsx! {
             path {
-                d: "M18.37 2.63 14 7l-1.59-1.59a2 2 0 0 0-2.82 0L8 7l9 9 1.59-1.59a2 2 0 0 0 0-2.82L17 10l4.37-4.37a2.12 2.12 0 1 0-3-3Z",
+                d: "m14.622 17.897-10.68-2.913",
             }
             path {
-                d: "M9 8c-2 3-4 3.5-7 4l8 10c2-1 6-5 6-7",
+                d: "M18.376 2.622a1 1 0 1 1 3.002 3.002L17.36 9.643a.5.5 0 0 0 0 .707l.944.944a2.41 2.41 0 0 1 0 3.408l-.944.944a.5.5 0 0 1-.707 0L8.354 7.348a.5.5 0 0 1 0-.707l.944-.944a2.41 2.41 0 0 1 3.408 0l.944.944a.5.5 0 0 0 .707 0z",
             }
             path {
-                d: "M14.5 17.5 4.5 15",
+                d: "M9 8c-1.804 2.71-3.97 3.46-6.583 3.948a.507.507 0 0 0-.302.819l7.32 8.883a1 1 0 0 0 1.185.204C12.735 20.405 16 16.792 16 15",
             }
         }
     }
@@ -36971,13 +38955,13 @@ impl IconShape for LdPartyPopper {
                 d: "M22 20h.01",
             }
             path {
-                d: "m22 2-2.24.75a2.9 2.9 0 0 0-1.96 3.12v0c.1.86-.57 1.63-1.45 1.63h-.38c-.86 0-1.6.6-1.76 1.44L14 10",
+                d: "m22 2-2.24.75a2.9 2.9 0 0 0-1.96 3.12c.1.86-.57 1.63-1.45 1.63h-.38c-.86 0-1.6.6-1.76 1.44L14 10",
             }
             path {
-                d: "m22 13-.82-.33c-.86-.34-1.82.2-1.98 1.11v0c-.11.7-.72 1.22-1.43 1.22H17",
+                d: "m22 13-.82-.33c-.86-.34-1.82.2-1.98 1.11c-.11.7-.72 1.22-1.43 1.22H17",
             }
             path {
-                d: "m11 2 .33.82c.34.86-.2 1.82-1.11 1.98v0C9.52 4.9 9 5.52 9 6.23V7",
+                d: "m11 2 .33.82c.34.86-.2 1.82-1.11 1.98C9.52 4.9 9 5.52 9 6.23V7",
             }
             path {
                 d: "M11 13c1.93 1.93 2.83 4.17 2 5-.83.83-3.07-.07-5-2-1.93-1.93-2.83-4.17-2-5 .83-.83 3.07.07 5 2Z",
@@ -37130,7 +39114,40 @@ impl IconShape for LdPenLine {
                 d: "M12 20h9",
             }
             path {
-                d: "M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z",
+                d: "M16.376 3.622a1 1 0 0 1 3.002 3.002L7.368 18.635a2 2 0 0 1-.855.506l-2.872.838a.5.5 0 0 1-.62-.62l.838-2.872a2 2 0 0 1 .506-.854z",
+            }
+        }
+    }
+}
+
+#[derive(Copy, Clone, Debug, PartialEq)]
+pub struct LdPenOff;
+impl IconShape for LdPenOff {
+    fn view_box(&self) -> &str {
+        "0 0 24 24"
+    }
+    fn xmlns(&self) -> &str {
+        "http://www.w3.org/2000/svg"
+    }
+    fn fill_and_stroke<'a>(&self, user_color: &'a str) -> (&'a str, &'a str, &'a str) {
+        ("none", user_color, "2")
+    }
+    fn stroke_linecap(&self) -> &str {
+        "round"
+    }
+    fn stroke_linejoin(&self) -> &str {
+        "round"
+    }
+    fn child_elements(&self) -> Element {
+        rsx! {
+            path {
+                d: "m10 10-6.157 6.162a2 2 0 0 0-.5.833l-1.322 4.36a.5.5 0 0 0 .622.624l4.358-1.323a2 2 0 0 0 .83-.5L14 13.982",
+            }
+            path {
+                d: "m12.829 7.172 4.359-4.346a1 1 0 1 1 3.986 3.986l-4.353 4.353",
+            }
+            path {
+                d: "m2 2 20 20",
             }
         }
     }
@@ -37195,7 +39212,7 @@ impl IconShape for LdPen {
     fn child_elements(&self) -> Element {
         rsx! {
             path {
-                d: "M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z",
+                d: "M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z",
             }
         }
     }
@@ -37225,10 +39242,46 @@ impl IconShape for LdPencilLine {
                 d: "M12 20h9",
             }
             path {
-                d: "M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z",
+                d: "M16.376 3.622a1 1 0 0 1 3.002 3.002L7.368 18.635a2 2 0 0 1-.855.506l-2.872.838a.5.5 0 0 1-.62-.62l.838-2.872a2 2 0 0 1 .506-.854z",
             }
             path {
                 d: "m15 5 3 3",
+            }
+        }
+    }
+}
+
+#[derive(Copy, Clone, Debug, PartialEq)]
+pub struct LdPencilOff;
+impl IconShape for LdPencilOff {
+    fn view_box(&self) -> &str {
+        "0 0 24 24"
+    }
+    fn xmlns(&self) -> &str {
+        "http://www.w3.org/2000/svg"
+    }
+    fn fill_and_stroke<'a>(&self, user_color: &'a str) -> (&'a str, &'a str, &'a str) {
+        ("none", user_color, "2")
+    }
+    fn stroke_linecap(&self) -> &str {
+        "round"
+    }
+    fn stroke_linejoin(&self) -> &str {
+        "round"
+    }
+    fn child_elements(&self) -> Element {
+        rsx! {
+            path {
+                d: "m10 10-6.157 6.162a2 2 0 0 0-.5.833l-1.322 4.36a.5.5 0 0 0 .622.624l4.358-1.323a2 2 0 0 0 .83-.5L14 13.982",
+            }
+            path {
+                d: "m12.829 7.172 4.359-4.346a1 1 0 1 1 3.986 3.986l-4.353 4.353",
+            }
+            path {
+                d: "m15 5 4 4",
+            }
+            path {
+                d: "m2 2 20 20",
             }
         }
     }
@@ -37255,22 +39308,22 @@ impl IconShape for LdPencilRuler {
     fn child_elements(&self) -> Element {
         rsx! {
             path {
-                d: "m15 5 4 4",
-            }
-            path {
                 d: "M13 7 8.7 2.7a2.41 2.41 0 0 0-3.4 0L2.7 5.3a2.41 2.41 0 0 0 0 3.4L7 13",
             }
             path {
                 d: "m8 6 2-2",
             }
             path {
-                d: "m2 22 5.5-1.5L21.17 6.83a2.82 2.82 0 0 0-4-4L3.5 16.5Z",
-            }
-            path {
                 d: "m18 16 2-2",
             }
             path {
                 d: "m17 11 4.3 4.3c.94.94.94 2.46 0 3.4l-2.6 2.6c-.94.94-2.46.94-3.4 0L11 17",
+            }
+            path {
+                d: "M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z",
+            }
+            path {
+                d: "m15 5 4 4",
             }
         }
     }
@@ -37297,7 +39350,7 @@ impl IconShape for LdPencil {
     fn child_elements(&self) -> Element {
         rsx! {
             path {
-                d: "M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z",
+                d: "M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z",
             }
             path {
                 d: "m15 5 4 4",
@@ -37327,7 +39380,7 @@ impl IconShape for LdPentagon {
     fn child_elements(&self) -> Element {
         rsx! {
             path {
-                d: "M3.5 8.7c-.7.5-1 1.4-.7 2.2l2.8 8.7c.3.8 1 1.4 1.9 1.4h9.1c.9 0 1.6-.6 1.9-1.4l2.8-8.7c.3-.8 0-1.7-.7-2.2l-7.4-5.3a2.1 2.1 0 0 0-2.4 0Z",
+                d: "M10.83 2.38a2 2 0 0 1 2.34 0l8 5.74a2 2 0 0 1 .73 2.25l-3.04 9.26a2 2 0 0 1-1.9 1.37H7.04a2 2 0 0 1-1.9-1.37L2.1 10.37a2 2 0 0 1 .73-2.25z",
             }
         }
     }
@@ -37406,6 +39459,39 @@ impl IconShape for LdPersonStanding {
             }
             path {
                 d: "M12 10v4",
+            }
+        }
+    }
+}
+
+#[derive(Copy, Clone, Debug, PartialEq)]
+pub struct LdPhilippinePeso;
+impl IconShape for LdPhilippinePeso {
+    fn view_box(&self) -> &str {
+        "0 0 24 24"
+    }
+    fn xmlns(&self) -> &str {
+        "http://www.w3.org/2000/svg"
+    }
+    fn fill_and_stroke<'a>(&self, user_color: &'a str) -> (&'a str, &'a str, &'a str) {
+        ("none", user_color, "2")
+    }
+    fn stroke_linecap(&self) -> &str {
+        "round"
+    }
+    fn stroke_linejoin(&self) -> &str {
+        "round"
+    }
+    fn child_elements(&self) -> Element {
+        rsx! {
+            path {
+                d: "M20 11H4",
+            }
+            path {
+                d: "M20 7H4",
+            }
+            path {
+                d: "M7 21V4a1 1 0 0 1 1-1h4a1 1 0 0 1 0 12H7",
             }
         }
     }
@@ -37834,36 +39920,6 @@ impl IconShape for LdPictureInPicture {
 }
 
 #[derive(Copy, Clone, Debug, PartialEq)]
-pub struct LdPieChart;
-impl IconShape for LdPieChart {
-    fn view_box(&self) -> &str {
-        "0 0 24 24"
-    }
-    fn xmlns(&self) -> &str {
-        "http://www.w3.org/2000/svg"
-    }
-    fn fill_and_stroke<'a>(&self, user_color: &'a str) -> (&'a str, &'a str, &'a str) {
-        ("none", user_color, "2")
-    }
-    fn stroke_linecap(&self) -> &str {
-        "round"
-    }
-    fn stroke_linejoin(&self) -> &str {
-        "round"
-    }
-    fn child_elements(&self) -> Element {
-        rsx! {
-            path {
-                d: "M21.21 15.89A10 10 0 1 1 8 2.83",
-            }
-            path {
-                d: "M22 12A10 10 0 0 0 12 2v10z",
-            }
-        }
-    }
-}
-
-#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct LdPiggyBank;
 impl IconShape for LdPiggyBank {
     fn view_box(&self) -> &str {
@@ -37884,13 +39940,13 @@ impl IconShape for LdPiggyBank {
     fn child_elements(&self) -> Element {
         rsx! {
             path {
-                d: "M19 5c-1.5 0-2.8 1.4-3 2-3.5-1.5-11-.3-11 5 0 1.8 0 3 2 4.5V20h4v-2h3v2h4v-4c1-.5 1.7-1 2-2h2v-4h-2c0-1-.5-1.5-1-2h0V5z",
+                d: "M19 5c-1.5 0-2.8 1.4-3 2-3.5-1.5-11-.3-11 5 0 1.8 0 3 2 4.5V20h4v-2h3v2h4v-4c1-.5 1.7-1 2-2h2v-4h-2c0-1-.5-1.5-1-2V5z",
             }
             path {
                 d: "M2 9v1c0 1.1.9 2 2 2h1",
             }
             path {
-                d: "M16 11h0",
+                d: "M16 11h.01",
             }
         }
     }
@@ -38008,6 +40064,43 @@ impl IconShape for LdPilcrow {
 }
 
 #[derive(Copy, Clone, Debug, PartialEq)]
+pub struct LdPillBottle;
+impl IconShape for LdPillBottle {
+    fn view_box(&self) -> &str {
+        "0 0 24 24"
+    }
+    fn xmlns(&self) -> &str {
+        "http://www.w3.org/2000/svg"
+    }
+    fn fill_and_stroke<'a>(&self, user_color: &'a str) -> (&'a str, &'a str, &'a str) {
+        ("none", user_color, "2")
+    }
+    fn stroke_linecap(&self) -> &str {
+        "round"
+    }
+    fn stroke_linejoin(&self) -> &str {
+        "round"
+    }
+    fn child_elements(&self) -> Element {
+        rsx! {
+            path {
+                d: "M18 11h-4a1 1 0 0 0-1 1v5a1 1 0 0 0 1 1h4",
+            }
+            path {
+                d: "M6 7v13a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V7",
+            }
+            rect {
+                height: "5",
+                rx: "1",
+                width: "16",
+                x: "4",
+                y: "2",
+            }
+        }
+    }
+}
+
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct LdPill;
 impl IconShape for LdPill {
     fn view_box(&self) -> &str {
@@ -38057,23 +40150,17 @@ impl IconShape for LdPinOff {
     }
     fn child_elements(&self) -> Element {
         rsx! {
-            line {
-                x1: "2",
-                x2: "22",
-                y1: "2",
-                y2: "22",
-            }
-            line {
-                x1: "12",
-                x2: "12",
-                y1: "17",
-                y2: "22",
+            path {
+                d: "M12 17v5",
             }
             path {
-                d: "M9 9v1.76a2 2 0 0 1-1.11 1.79l-1.78.9A2 2 0 0 0 5 15.24V17h12",
+                d: "M15 9.34V7a1 1 0 0 1 1-1 2 2 0 0 0 0-4H7.89",
             }
             path {
-                d: "M15 9.34V6h1a2 2 0 0 0 0-4H7.89",
+                d: "m2 2 20 20",
+            }
+            path {
+                d: "M9 9v1.76a2 2 0 0 1-1.11 1.79l-1.78.9A2 2 0 0 0 5 15.24V16a1 1 0 0 0 1 1h11",
             }
         }
     }
@@ -38099,14 +40186,11 @@ impl IconShape for LdPin {
     }
     fn child_elements(&self) -> Element {
         rsx! {
-            line {
-                x1: "12",
-                x2: "12",
-                y1: "17",
-                y2: "22",
+            path {
+                d: "M12 17v5",
             }
             path {
-                d: "M5 17h14v-1.76a2 2 0 0 0-1.11-1.79l-1.78-.9A2 2 0 0 1 15 10.76V6h1a2 2 0 0 0 0-4H8a2 2 0 0 0 0 4h1v4.76a2 2 0 0 1-1.11 1.79l-1.78.9A2 2 0 0 0 5 15.24Z",
+                d: "M9 10.76a2 2 0 0 1-1.11 1.79l-1.78.9A2 2 0 0 0 5 15.24V16a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-.76a2 2 0 0 0-1.11-1.79l-1.78-.9A2 2 0 0 1 15 10.76V7a1 1 0 0 1 1-1 2 2 0 0 0 0-4H8a2 2 0 0 0 0 4 1 1 0 0 1 1 1z",
             }
         }
     }
@@ -38331,46 +40415,7 @@ impl IconShape for LdPlug2 {
                 d: "M5 8h14",
             }
             path {
-                d: "M6 11V8h12v3a6 6 0 1 1-12 0v0Z",
-            }
-        }
-    }
-}
-
-#[derive(Copy, Clone, Debug, PartialEq)]
-pub struct LdPlugZap2;
-impl IconShape for LdPlugZap2 {
-    fn view_box(&self) -> &str {
-        "0 0 24 24"
-    }
-    fn xmlns(&self) -> &str {
-        "http://www.w3.org/2000/svg"
-    }
-    fn fill_and_stroke<'a>(&self, user_color: &'a str) -> (&'a str, &'a str, &'a str) {
-        ("none", user_color, "2")
-    }
-    fn stroke_linecap(&self) -> &str {
-        "round"
-    }
-    fn stroke_linejoin(&self) -> &str {
-        "round"
-    }
-    fn child_elements(&self) -> Element {
-        rsx! {
-            path {
-                d: "m13 2-2 2.5h3L12 7",
-            }
-            path {
-                d: "M10 14v-3",
-            }
-            path {
-                d: "M14 14v-3",
-            }
-            path {
-                d: "M11 19c-1.7 0-3-1.3-3-3v-2h8v2c0 1.7-1.3 3-3 3Z",
-            }
-            path {
-                d: "M12 22v-3",
+                d: "M6 11V8h12v3a6 6 0 1 1-12 0Z",
             }
         }
     }
@@ -38654,13 +40699,13 @@ impl IconShape for LdPointer {
                 d: "M22 14a8 8 0 0 1-8 8",
             }
             path {
-                d: "M18 11v-1a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v0",
+                d: "M18 11v-1a2 2 0 0 0-2-2a2 2 0 0 0-2 2",
             }
             path {
-                d: "M14 10V9a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v1",
+                d: "M14 10V9a2 2 0 0 0-2-2a2 2 0 0 0-2 2v1",
             }
             path {
-                d: "M10 9.5V4a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v10",
+                d: "M10 9.5V4a2 2 0 0 0-2-2a2 2 0 0 0-2 2v10",
             }
             path {
                 d: "M18 11a2 2 0 1 1 4 0v3a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15",
@@ -38871,6 +40916,42 @@ impl IconShape for LdPresentation {
 }
 
 #[derive(Copy, Clone, Debug, PartialEq)]
+pub struct LdPrinterCheck;
+impl IconShape for LdPrinterCheck {
+    fn view_box(&self) -> &str {
+        "0 0 24 24"
+    }
+    fn xmlns(&self) -> &str {
+        "http://www.w3.org/2000/svg"
+    }
+    fn fill_and_stroke<'a>(&self, user_color: &'a str) -> (&'a str, &'a str, &'a str) {
+        ("none", user_color, "2")
+    }
+    fn stroke_linecap(&self) -> &str {
+        "round"
+    }
+    fn stroke_linejoin(&self) -> &str {
+        "round"
+    }
+    fn child_elements(&self) -> Element {
+        rsx! {
+            path {
+                d: "M13.5 22H7a1 1 0 0 1-1-1v-6a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v.5",
+            }
+            path {
+                d: "m16 19 2 2 4-4",
+            }
+            path {
+                d: "M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v2",
+            }
+            path {
+                d: "M6 9V3a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v6",
+            }
+        }
+    }
+}
+
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct LdPrinter;
 impl IconShape for LdPrinter {
     fn view_box(&self) -> &str {
@@ -38890,14 +40971,15 @@ impl IconShape for LdPrinter {
     }
     fn child_elements(&self) -> Element {
         rsx! {
-            polyline {
-                points: "6 9 6 2 18 2 18 9",
-            }
             path {
                 d: "M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2",
             }
+            path {
+                d: "M6 9V3a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v6",
+            }
             rect {
                 height: "8",
+                rx: "1",
                 width: "12",
                 x: "6",
                 y: "14",
@@ -39137,10 +41219,10 @@ impl IconShape for LdQuote {
     fn child_elements(&self) -> Element {
         rsx! {
             path {
-                d: "M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z",
+                d: "M16 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z",
             }
             path {
-                d: "M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z",
+                d: "M5 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z",
             }
         }
     }
@@ -39256,7 +41338,7 @@ impl IconShape for LdRadiation {
     fn child_elements(&self) -> Element {
         rsx! {
             path {
-                d: "M12 12h0.01",
+                d: "M12 12h.01",
             }
             path {
                 d: "M7.5 4.2c-.3-.5-.9-.7-1.3-.4C3.9 5.5 2.3 8.1 2 11c-.1.5.4 1 1 1h5c0-1.5.8-2.8 2-3.4-1.1-1.9-2-3.5-2.5-4.4z",
@@ -39292,7 +41374,7 @@ impl IconShape for LdRadical {
     fn child_elements(&self) -> Element {
         rsx! {
             path {
-                d: "M3 12h4l3 9 4-17h7",
+                d: "M3 12h3.28a1 1 0 0 1 .948.684l2.298 7.934a.5.5 0 0 0 .96-.044L13.82 4.771A1 1 0 0 1 14.792 4H21",
             }
         }
     }
@@ -39332,7 +41414,7 @@ impl IconShape for LdRadioReceiver {
                 y: "8",
             }
             path {
-                d: "M18 12h0",
+                d: "M18 12h.01",
             }
         }
     }
@@ -39553,7 +41635,7 @@ impl IconShape for LdRat {
     fn child_elements(&self) -> Element {
         rsx! {
             path {
-                d: "M17 5c0-1.7-1.3-3-3-3s-3 1.3-3 3c0 .8.3 1.5.8 2H11c-3.9 0-7 3.1-7 7v0c0 2.2 1.8 4 4 4",
+                d: "M17 5c0-1.7-1.3-3-3-3s-3 1.3-3 3c0 .8.3 1.5.8 2H11c-3.9 0-7 3.1-7 7c0 2.2 1.8 4 4 4",
             }
             path {
                 d: "M16.8 3.9c.3-.3.6-.5 1-.7 1.5-.6 3.3.1 3.9 1.6.6 1.5-.1 3.3-1.6 3.9l1.6 2.8c.2.3.2.7.2 1-.2.8-.9 1.2-1.7 1.1 0 0-1.6-.3-2.7-.6H17c-1.7 0-3 1.3-3 3",
@@ -40092,7 +42174,7 @@ impl IconShape for LdRedo2 {
                 d: "m15 14 5-5-5-5",
             }
             path {
-                d: "M20 9H9.5A5.5 5.5 0 0 0 4 14.5v0A5.5 5.5 0 0 0 9.5 20H13",
+                d: "M20 9H9.5A5.5 5.5 0 0 0 4 14.5A5.5 5.5 0 0 0 9.5 20H13",
             }
         }
     }
@@ -40561,22 +42643,28 @@ impl IconShape for LdReplaceAll {
     fn child_elements(&self) -> Element {
         rsx! {
             path {
-                d: "M14 4c0-1.1.9-2 2-2",
+                d: "M14 14a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2",
             }
             path {
-                d: "M20 2c1.1 0 2 .9 2 2",
+                d: "M14 4a2 2 0 0 1 2-2",
             }
             path {
-                d: "M22 8c0 1.1-.9 2-2 2",
+                d: "M16 10a2 2 0 0 1-2-2",
             }
             path {
-                d: "M16 10c-1.1 0-2-.9-2-2",
+                d: "M20 14a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2",
+            }
+            path {
+                d: "M20 2a2 2 0 0 1 2 2",
+            }
+            path {
+                d: "M22 8a2 2 0 0 1-2 2",
             }
             path {
                 d: "m3 7 3 3 3-3",
             }
             path {
-                d: "M6 10V5c0-1.7 1.3-3 3-3h1",
+                d: "M6 10V5a 3 3 0 0 1 3-3h1",
             }
             rect {
                 height: "8",
@@ -40584,12 +42672,6 @@ impl IconShape for LdReplaceAll {
                 width: "8",
                 x: "2",
                 y: "14",
-            }
-            path {
-                d: "M14 14c1.1 0 2 .9 2 2v4c0 1.1-.9 2-2 2",
-            }
-            path {
-                d: "M20 14c1.1 0 2 .9 2 2v4c0 1.1-.9 2-2 2",
             }
         }
     }
@@ -40616,22 +42698,22 @@ impl IconShape for LdReplace {
     fn child_elements(&self) -> Element {
         rsx! {
             path {
-                d: "M14 4c0-1.1.9-2 2-2",
+                d: "M14 4a2 2 0 0 1 2-2",
             }
             path {
-                d: "M20 2c1.1 0 2 .9 2 2",
+                d: "M16 10a2 2 0 0 1-2-2",
             }
             path {
-                d: "M22 8c0 1.1-.9 2-2 2",
+                d: "M20 2a2 2 0 0 1 2 2",
             }
             path {
-                d: "M16 10c-1.1 0-2-.9-2-2",
+                d: "M22 8a2 2 0 0 1-2 2",
             }
             path {
                 d: "m3 7 3 3 3-3",
             }
             path {
-                d: "M6 10V5c0-1.7 1.3-3 3-3h1",
+                d: "M6 10V5a3 3 0 0 1 3-3h1",
             }
             rect {
                 height: "8",
@@ -40758,19 +42840,19 @@ impl IconShape for LdRibbon {
     fn child_elements(&self) -> Element {
         rsx! {
             path {
-                d: "M17.75 9.01c-.52 2.08-1.83 3.64-3.18 5.49l-2.6 3.54-2.97 4-3.5-2.54 3.85-4.97c-1.86-2.61-2.8-3.77-3.16-5.44",
+                d: "M12 11.22C11 9.997 10 9 10 8a2 2 0 0 1 4 0c0 1-.998 2.002-2.01 3.22",
             }
             path {
-                d: "M17.75 9.01A7 7 0 0 0 6.2 9.1C6.06 8.5 6 7.82 6 7c0-3.5 2.83-5 5.98-5C15.24 2 18 3.5 18 7c0 .73-.09 1.4-.25 2.01Z",
+                d: "m12 18 2.57-3.5",
             }
             path {
-                d: "m9.35 14.53 2.64-3.31",
+                d: "M6.243 9.016a7 7 0 0 1 11.507-.009",
             }
             path {
-                d: "m11.97 18.04 2.99 4 3.54-2.54-3.93-5",
+                d: "M9.35 14.53 12 11.22",
             }
             path {
-                d: "M14 8c0 1-1 2-2.01 3.22C11 10 10 9 10 8a2 2 0 1 1 4 0",
+                d: "M9.35 14.53C7.728 12.246 6 10.221 6 7a6 5 0 0 1 12 0c-.005 3.22-1.778 5.235-3.43 7.5l3.557 4.527a1 1 0 0 1-.203 1.43l-1.894 1.36a1 1 0 0 1-1.384-.215L12 18l-2.679 3.593a1 1 0 0 1-1.39.213l-1.865-1.353a1 1 0 0 1-.203-1.422z",
             }
         }
     }
@@ -41609,16 +43691,61 @@ impl IconShape for LdSaveAll {
     fn child_elements(&self) -> Element {
         rsx! {
             path {
-                d: "M6 4a2 2 0 0 1 2-2h10l4 4v10.2a2 2 0 0 1-2 1.8H8a2 2 0 0 1-2-2Z",
+                d: "M10 2v3a1 1 0 0 0 1 1h5",
             }
             path {
-                d: "M10 2v4h6",
-            }
-            path {
-                d: "M18 18v-7h-8v7",
+                d: "M18 18v-6a1 1 0 0 0-1-1h-6a1 1 0 0 0-1 1v6",
             }
             path {
                 d: "M18 22H4a2 2 0 0 1-2-2V6",
+            }
+            path {
+                d: "M8 18a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9.172a2 2 0 0 1 1.414.586l2.828 2.828A2 2 0 0 1 22 6.828V16a2 2 0 0 1-2.01 2z",
+            }
+        }
+    }
+}
+
+#[derive(Copy, Clone, Debug, PartialEq)]
+pub struct LdSaveOff;
+impl IconShape for LdSaveOff {
+    fn view_box(&self) -> &str {
+        "0 0 24 24"
+    }
+    fn xmlns(&self) -> &str {
+        "http://www.w3.org/2000/svg"
+    }
+    fn fill_and_stroke<'a>(&self, user_color: &'a str) -> (&'a str, &'a str, &'a str) {
+        ("none", user_color, "2")
+    }
+    fn stroke_linecap(&self) -> &str {
+        "round"
+    }
+    fn stroke_linejoin(&self) -> &str {
+        "round"
+    }
+    fn child_elements(&self) -> Element {
+        rsx! {
+            path {
+                d: "M13 13H8a1 1 0 0 0-1 1v7",
+            }
+            path {
+                d: "M14 8h1",
+            }
+            path {
+                d: "M17 21v-4",
+            }
+            path {
+                d: "m2 2 20 20",
+            }
+            path {
+                d: "M20.41 20.41A2 2 0 0 1 19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 .59-1.41",
+            }
+            path {
+                d: "M29.5 11.5s5 5 4 5",
+            }
+            path {
+                d: "M9 3h6.2a2 2 0 0 1 1.4.6l3.8 3.8a2 2 0 0 1 .6 1.4V15",
             }
         }
     }
@@ -41855,7 +43982,7 @@ impl IconShape for LdScanEye {
                 r: "1",
             }
             path {
-                d: "M5 12s2.5-5 7-5 7 5 7 5-2.5 5-7 5-7-5-7-5",
+                d: "M18.944 12.33a1 1 0 0 0 0-.66 7.5 7.5 0 0 0-13.888 0 1 1 0 0 0 0 .66 7.5 7.5 0 0 0 13.888 0",
             }
         }
     }
@@ -41940,6 +44067,58 @@ impl IconShape for LdScanLine {
             }
             path {
                 d: "M7 12h10",
+            }
+        }
+    }
+}
+
+#[derive(Copy, Clone, Debug, PartialEq)]
+pub struct LdScanQrCode;
+impl IconShape for LdScanQrCode {
+    fn view_box(&self) -> &str {
+        "0 0 24 24"
+    }
+    fn xmlns(&self) -> &str {
+        "http://www.w3.org/2000/svg"
+    }
+    fn fill_and_stroke<'a>(&self, user_color: &'a str) -> (&'a str, &'a str, &'a str) {
+        ("none", user_color, "2")
+    }
+    fn stroke_linecap(&self) -> &str {
+        "round"
+    }
+    fn stroke_linejoin(&self) -> &str {
+        "round"
+    }
+    fn child_elements(&self) -> Element {
+        rsx! {
+            path {
+                d: "M17 12v4a1 1 0 0 1-1 1h-4",
+            }
+            path {
+                d: "M17 3h2a2 2 0 0 1 2 2v2",
+            }
+            path {
+                d: "M17 8V7",
+            }
+            path {
+                d: "M21 17v2a2 2 0 0 1-2 2h-2",
+            }
+            path {
+                d: "M3 7V5a2 2 0 0 1 2-2h2",
+            }
+            path {
+                d: "M7 17h.01",
+            }
+            path {
+                d: "M7 21H5a2 2 0 0 1-2-2v-2",
+            }
+            rect {
+                height: "5",
+                rx: "1",
+                width: "5",
+                x: "7",
+                y: "7",
             }
         }
     }
@@ -42065,58 +44244,6 @@ impl IconShape for LdScan {
             }
             path {
                 d: "M7 21H5a2 2 0 0 1-2-2v-2",
-            }
-        }
-    }
-}
-
-#[derive(Copy, Clone, Debug, PartialEq)]
-pub struct LdScatterChart;
-impl IconShape for LdScatterChart {
-    fn view_box(&self) -> &str {
-        "0 0 24 24"
-    }
-    fn xmlns(&self) -> &str {
-        "http://www.w3.org/2000/svg"
-    }
-    fn fill_and_stroke<'a>(&self, user_color: &'a str) -> (&'a str, &'a str, &'a str) {
-        ("none", user_color, "2")
-    }
-    fn stroke_linecap(&self) -> &str {
-        "round"
-    }
-    fn stroke_linejoin(&self) -> &str {
-        "round"
-    }
-    fn child_elements(&self) -> Element {
-        rsx! {
-            circle {
-                cx: "7.5",
-                cy: "7.5",
-                r: ".5",
-            }
-            circle {
-                cx: "18.5",
-                cy: "5.5",
-                r: ".5",
-            }
-            circle {
-                cx: "11.5",
-                cy: "11.5",
-                r: ".5",
-            }
-            circle {
-                cx: "7.5",
-                cy: "16.5",
-                r: ".5",
-            }
-            circle {
-                cx: "17.5",
-                cy: "14.5",
-                r: ".5",
-            }
-            path {
-                d: "M3 3v18h18",
             }
         }
     }
@@ -42458,18 +44585,18 @@ impl IconShape for LdSearchCode {
     fn child_elements(&self) -> Element {
         rsx! {
             path {
-                d: "m9 9-2 2 2 2",
+                d: "m13 13.5 2-2.5-2-2.5",
             }
             path {
-                d: "m13 13 2-2-2-2",
+                d: "m21 21-4.3-4.3",
+            }
+            path {
+                d: "M9 8.5 7 11l2 2.5",
             }
             circle {
                 cx: "11",
                 cy: "11",
                 r: "8",
-            }
-            path {
-                d: "m21 21-4.3-4.3",
             }
         }
     }
@@ -42581,6 +44708,36 @@ impl IconShape for LdSearch {
 }
 
 #[derive(Copy, Clone, Debug, PartialEq)]
+pub struct LdSection;
+impl IconShape for LdSection {
+    fn view_box(&self) -> &str {
+        "0 0 24 24"
+    }
+    fn xmlns(&self) -> &str {
+        "http://www.w3.org/2000/svg"
+    }
+    fn fill_and_stroke<'a>(&self, user_color: &'a str) -> (&'a str, &'a str, &'a str) {
+        ("none", user_color, "2")
+    }
+    fn stroke_linecap(&self) -> &str {
+        "round"
+    }
+    fn stroke_linejoin(&self) -> &str {
+        "round"
+    }
+    fn child_elements(&self) -> Element {
+        rsx! {
+            path {
+                d: "M16 5a4 3 0 0 0-8 0c0 4 8 3 8 7a4 3 0 0 1-8 0",
+            }
+            path {
+                d: "M8 19a4 3 0 0 0 8 0c0-4-8-3-8-7a4 3 0 0 1 8 0",
+            }
+        }
+    }
+}
+
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct LdSendHorizontal;
 impl IconShape for LdSendHorizontal {
     fn view_box(&self) -> &str {
@@ -42601,7 +44758,7 @@ impl IconShape for LdSendHorizontal {
     fn child_elements(&self) -> Element {
         rsx! {
             path {
-                d: "m3 3 3 9-3 9 19-9Z",
+                d: "M3.714 3.048a.498.498 0 0 0-.683.627l2.843 7.627a2 2 0 0 1 0 1.396l-2.842 7.627a.498.498 0 0 0 .682.627l18-8.5a.5.5 0 0 0 0-.904z",
             }
             path {
                 d: "M6 12h16",
@@ -42675,10 +44832,10 @@ impl IconShape for LdSend {
     fn child_elements(&self) -> Element {
         rsx! {
             path {
-                d: "m22 2-7 20-4-9-9-4Z",
+                d: "M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z",
             }
             path {
-                d: "M22 2 11 13",
+                d: "m21.854 2.147-10.94 10.939",
             }
         }
     }
@@ -43969,7 +46126,7 @@ impl IconShape for LdShrub {
                 d: "M12 22v-7l-2-2",
             }
             path {
-                d: "M17 8v.8A6 6 0 0 1 13.8 20v0H10v0A6.5 6.5 0 0 1 7 8h0a5 5 0 0 1 10 0Z",
+                d: "M17 8v.8A6 6 0 0 1 13.8 20H10A6.5 6.5 0 0 1 7 8a5 5 0 0 1 10 0Z",
             }
             path {
                 d: "m14 14-2 2",
@@ -44038,7 +46195,7 @@ impl IconShape for LdSigma {
     fn child_elements(&self) -> Element {
         rsx! {
             path {
-                d: "M18 7V4H6l6 8-6 8h12v-3",
+                d: "M18 7V5a1 1 0 0 0-1-1H6.5a.5.5 0 0 0-.4.8l4.5 6a2 2 0 0 1 0 2.4l-4.5 6a.5.5 0 0 0 .4.8H17a1 1 0 0 0 1-1v-2",
             }
         }
     }
@@ -44210,6 +46367,36 @@ impl IconShape for LdSignal {
 }
 
 #[derive(Copy, Clone, Debug, PartialEq)]
+pub struct LdSignature;
+impl IconShape for LdSignature {
+    fn view_box(&self) -> &str {
+        "0 0 24 24"
+    }
+    fn xmlns(&self) -> &str {
+        "http://www.w3.org/2000/svg"
+    }
+    fn fill_and_stroke<'a>(&self, user_color: &'a str) -> (&'a str, &'a str, &'a str) {
+        ("none", user_color, "2")
+    }
+    fn stroke_linecap(&self) -> &str {
+        "round"
+    }
+    fn stroke_linejoin(&self) -> &str {
+        "round"
+    }
+    fn child_elements(&self) -> Element {
+        rsx! {
+            path {
+                d: "m21 17-2.156-1.868A.5.5 0 0 0 18 15.5v.5a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1c0-2.545-3.991-3.97-8.5-4a1 1 0 0 0 0 5c4.153 0 4.745-11.295 5.708-13.5a2.5 2.5 0 1 1 3.31 3.284",
+            }
+            path {
+                d: "M3 21h18",
+            }
+        }
+    }
+}
+
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct LdSignpostBig;
 impl IconShape for LdSignpostBig {
     fn view_box(&self) -> &str {
@@ -44266,13 +46453,13 @@ impl IconShape for LdSignpost {
     fn child_elements(&self) -> Element {
         rsx! {
             path {
+                d: "M12 13v8",
+            }
+            path {
                 d: "M12 3v3",
             }
             path {
-                d: "M18.5 13h-13L2 9.5 5.5 6h13L22 9.5Z",
-            }
-            path {
-                d: "M12 13v8",
+                d: "M18 6a2 2 0 0 1 1.387.56l2.307 2.22a1 1 0 0 1 0 1.44l-2.307 2.22A2 2 0 0 1 18 13H6a2 2 0 0 1-1.387-.56l-2.306-2.22a1 1 0 0 1 0-1.44l2.306-2.22A2 2 0 0 1 6 6z",
             }
         }
     }
@@ -44412,24 +46599,21 @@ impl IconShape for LdSkull {
     }
     fn child_elements(&self) -> Element {
         rsx! {
-            circle {
-                cx: "9",
-                cy: "12",
-                r: "1",
+            path {
+                d: "m12.5 17-.5-1-.5 1h1z",
+            }
+            path {
+                d: "M15 22a1 1 0 0 0 1-1v-1a2 2 0 0 0 1.56-3.25 8 8 0 1 0-11.12 0A2 2 0 0 0 8 20v1a1 1 0 0 0 1 1z",
             }
             circle {
                 cx: "15",
                 cy: "12",
                 r: "1",
             }
-            path {
-                d: "M8 20v2h8v-2",
-            }
-            path {
-                d: "m12.5 17-.5-1-.5 1h1z",
-            }
-            path {
-                d: "M16 20a2 2 0 0 0 1.56-3.25 8 8 0 1 0-11.12 0A2 2 0 0 0 8 20",
+            circle {
+                cx: "9",
+                cy: "12",
+                r: "1",
             }
         }
     }
@@ -45027,7 +47211,7 @@ impl IconShape for LdSofa {
                 d: "M20 9V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v3",
             }
             path {
-                d: "M2 11v5a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-5a2 2 0 0 0-4 0v2H6v-2a2 2 0 0 0-4 0Z",
+                d: "M2 16a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-5a2 2 0 0 0-4 0v1.5a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5V11a2 2 0 0 0-4 0z",
             }
             path {
                 d: "M4 18v2",
@@ -45162,7 +47346,7 @@ impl IconShape for LdSparkle {
     fn child_elements(&self) -> Element {
         rsx! {
             path {
-                d: "m12 3-1.9 5.8a2 2 0 0 1-1.287 1.288L3 12l5.8 1.9a2 2 0 0 1 1.288 1.287L12 21l1.9-5.8a2 2 0 0 1 1.287-1.288L21 12l-5.8-1.9a2 2 0 0 1-1.288-1.287Z",
+                d: "M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z",
             }
         }
     }
@@ -45189,19 +47373,19 @@ impl IconShape for LdSparkles {
     fn child_elements(&self) -> Element {
         rsx! {
             path {
-                d: "m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z",
+                d: "M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z",
             }
             path {
-                d: "M5 3v4",
+                d: "M20 3v4",
             }
             path {
-                d: "M19 17v4",
+                d: "M22 5h-4",
             }
             path {
-                d: "M3 5h4",
+                d: "M4 17v2",
             }
             path {
-                d: "M17 19h4",
+                d: "M5 18H3",
             }
         }
     }
@@ -46069,6 +48253,46 @@ impl IconShape for LdSquareBottomDashedScissors {
 }
 
 #[derive(Copy, Clone, Debug, PartialEq)]
+pub struct LdSquareChartGantt;
+impl IconShape for LdSquareChartGantt {
+    fn view_box(&self) -> &str {
+        "0 0 24 24"
+    }
+    fn xmlns(&self) -> &str {
+        "http://www.w3.org/2000/svg"
+    }
+    fn fill_and_stroke<'a>(&self, user_color: &'a str) -> (&'a str, &'a str, &'a str) {
+        ("none", user_color, "2")
+    }
+    fn stroke_linecap(&self) -> &str {
+        "round"
+    }
+    fn stroke_linejoin(&self) -> &str {
+        "round"
+    }
+    fn child_elements(&self) -> Element {
+        rsx! {
+            rect {
+                height: "18",
+                rx: "2",
+                width: "18",
+                x: "3",
+                y: "3",
+            }
+            path {
+                d: "M9 8h7",
+            }
+            path {
+                d: "M8 12h6",
+            }
+            path {
+                d: "M11 16h5",
+            }
+        }
+    }
+}
+
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct LdSquareCheckBig;
 impl IconShape for LdSquareCheckBig {
     fn view_box(&self) -> &str {
@@ -46089,10 +48313,10 @@ impl IconShape for LdSquareCheckBig {
     fn child_elements(&self) -> Element {
         rsx! {
             path {
-                d: "m9 11 3 3L22 4",
+                d: "M21 10.5V19a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h12.5",
             }
             path {
-                d: "M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11",
+                d: "m9 11 3 3L22 4",
             }
         }
     }
@@ -46288,18 +48512,18 @@ impl IconShape for LdSquareCode {
     }
     fn child_elements(&self) -> Element {
         rsx! {
+            path {
+                d: "M10 9.5 8 12l2 2.5",
+            }
+            path {
+                d: "m14 9.5 2 2.5-2 2.5",
+            }
             rect {
                 height: "18",
                 rx: "2",
                 width: "18",
                 x: "3",
                 y: "3",
-            }
-            path {
-                d: "m10 10-2 2 2 2",
-            }
-            path {
-                d: "m14 14 2-2-2-2",
             }
         }
     }
@@ -46326,19 +48550,19 @@ impl IconShape for LdSquareDashedBottomCode {
     fn child_elements(&self) -> Element {
         rsx! {
             path {
-                d: "m10 10-2 2 2 2",
+                d: "M10 9.5 8 12l2 2.5",
             }
             path {
-                d: "m14 14 2-2-2-2",
+                d: "M14 21h1",
+            }
+            path {
+                d: "m14 9.5 2 2.5-2 2.5",
             }
             path {
                 d: "M5 21a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2",
             }
             path {
                 d: "M9 21h1",
-            }
-            path {
-                d: "M14 21h1",
             }
         }
     }
@@ -46467,13 +48691,13 @@ impl IconShape for LdSquareDashedMousePointer {
     fn child_elements(&self) -> Element {
         rsx! {
             path {
+                d: "M12.034 12.681a.498.498 0 0 1 .647-.647l9 3.5a.5.5 0 0 1-.033.943l-3.444 1.068a1 1 0 0 0-.66.66l-1.067 3.443a.5.5 0 0 1-.943.033z",
+            }
+            path {
                 d: "M5 3a2 2 0 0 0-2 2",
             }
             path {
                 d: "M19 3a2 2 0 0 1 2 2",
-            }
-            path {
-                d: "m12 12 4 10 1.7-4.3L22 16Z",
             }
             path {
                 d: "M5 21a2 2 0 0 1-2-2",
@@ -46656,46 +48880,6 @@ impl IconShape for LdSquareFunction {
             }
             path {
                 d: "M9 11.2h5.7",
-            }
-        }
-    }
-}
-
-#[derive(Copy, Clone, Debug, PartialEq)]
-pub struct LdSquareGanttChart;
-impl IconShape for LdSquareGanttChart {
-    fn view_box(&self) -> &str {
-        "0 0 24 24"
-    }
-    fn xmlns(&self) -> &str {
-        "http://www.w3.org/2000/svg"
-    }
-    fn fill_and_stroke<'a>(&self, user_color: &'a str) -> (&'a str, &'a str, &'a str) {
-        ("none", user_color, "2")
-    }
-    fn stroke_linecap(&self) -> &str {
-        "round"
-    }
-    fn stroke_linejoin(&self) -> &str {
-        "round"
-    }
-    fn child_elements(&self) -> Element {
-        rsx! {
-            rect {
-                height: "18",
-                rx: "2",
-                width: "18",
-                x: "3",
-                y: "3",
-            }
-            path {
-                d: "M9 8h7",
-            }
-            path {
-                d: "M8 12h6",
-            }
-            path {
-                d: "M11 16h5",
             }
         }
     }
@@ -46910,10 +49094,10 @@ impl IconShape for LdSquareMousePointer {
     fn child_elements(&self) -> Element {
         rsx! {
             path {
-                d: "M21 11V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h6",
+                d: "M12.034 12.681a.498.498 0 0 1 .647-.647l9 3.5a.5.5 0 0 1-.033.943l-3.444 1.068a1 1 0 0 0-.66.66l-1.067 3.443a.5.5 0 0 1-.943.033z",
             }
             path {
-                d: "m12 12 4 10 1.7-4.3L22 16Z",
+                d: "M21 11V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h6",
             }
         }
     }
@@ -47016,7 +49200,7 @@ impl IconShape for LdSquarePen {
                 d: "M12 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7",
             }
             path {
-                d: "M18.375 2.625a2.121 2.121 0 1 1 3 3L12 15l-4 1 1-4Z",
+                d: "M18.375 2.625a1 1 0 0 1 3 3l-9.013 9.014a2 2 0 0 1-.853.505l-2.873.84a.5.5 0 0 1-.62-.62l.84-2.873a2 2 0 0 1 .506-.852z",
             }
         }
     }
@@ -47233,18 +49417,18 @@ impl IconShape for LdSquarePower {
     }
     fn child_elements(&self) -> Element {
         rsx! {
+            path {
+                d: "M12 7v4",
+            }
+            path {
+                d: "M7.998 9.003a5 5 0 1 0 8-.005",
+            }
             rect {
                 height: "18",
                 rx: "2",
                 width: "18",
                 x: "3",
                 y: "3",
-            }
-            path {
-                d: "M12 7v5",
-            }
-            path {
-                d: "M8 9a5.14 5.14 0 0 0 4 8 4.95 4.95 0 0 0 4-8",
             }
         }
     }
@@ -47472,6 +49656,44 @@ impl IconShape for LdSquareSplitVertical {
                 x2: "20",
                 y1: "12",
                 y2: "12",
+            }
+        }
+    }
+}
+
+#[derive(Copy, Clone, Debug, PartialEq)]
+pub struct LdSquareSquare;
+impl IconShape for LdSquareSquare {
+    fn view_box(&self) -> &str {
+        "0 0 24 24"
+    }
+    fn xmlns(&self) -> &str {
+        "http://www.w3.org/2000/svg"
+    }
+    fn fill_and_stroke<'a>(&self, user_color: &'a str) -> (&'a str, &'a str, &'a str) {
+        ("none", user_color, "2")
+    }
+    fn stroke_linecap(&self) -> &str {
+        "round"
+    }
+    fn stroke_linejoin(&self) -> &str {
+        "round"
+    }
+    fn child_elements(&self) -> Element {
+        rsx! {
+            rect {
+                height: "18",
+                rx: "2",
+                width: "18",
+                x: "3",
+                y: "3",
+            }
+            rect {
+                height: "8",
+                rx: "1",
+                width: "8",
+                x: "8",
+                y: "8",
             }
         }
     }
@@ -47972,10 +50194,16 @@ impl IconShape for LdStethoscope {
     fn child_elements(&self) -> Element {
         rsx! {
             path {
-                d: "M4.8 2.3A.3.3 0 1 0 5 2H4a2 2 0 0 0-2 2v5a6 6 0 0 0 6 6v0a6 6 0 0 0 6-6V4a2 2 0 0 0-2-2h-1a.2.2 0 1 0 .3.3",
+                d: "M11 2v2",
             }
             path {
-                d: "M8 15v1a6 6 0 0 0 6 6v0a6 6 0 0 0 6-6v-4",
+                d: "M5 2v2",
+            }
+            path {
+                d: "M5 3H4a2 2 0 0 0-2 2v4a6 6 0 0 0 12 0V5a2 2 0 0 0-2-2h-1",
+            }
+            path {
+                d: "M8 15a6 6 0 0 0 12 0v-3",
             }
             circle {
                 cx: "20",
@@ -48013,10 +50241,10 @@ impl IconShape for LdSticker {
                 d: "M14 3v4a2 2 0 0 0 2 2h4",
             }
             path {
-                d: "M8 13h0",
+                d: "M8 13h.01",
             }
             path {
-                d: "M16 13h0",
+                d: "M16 13h.01",
             }
             path {
                 d: "M10 16s.8 1 2 1c1.3 0 2-1 2-1",
@@ -48088,7 +50316,7 @@ impl IconShape for LdStore {
                 d: "M2 7h20",
             }
             path {
-                d: "M22 7v3a2 2 0 0 1-2 2v0a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 16 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 12 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 8 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 4 12v0a2 2 0 0 1-2-2V7",
+                d: "M22 7v3a2 2 0 0 1-2 2a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 16 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 12 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 8 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 4 12a2 2 0 0 1-2-2V7",
             }
         }
     }
@@ -48662,7 +50890,7 @@ impl IconShape for LdSwatchBook {
                 d: "M16.7 13H19a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2H7",
             }
             path {
-                d: "M 7 17h0.01",
+                d: "M 7 17h.01",
             }
             path {
                 d: "m11 8 2.3-2.3a2.4 2.4 0 0 1 3.404.004L18.6 7.6a2.4 2.4 0 0 1 .026 3.434L9.9 19.8",
@@ -49060,6 +51288,48 @@ impl IconShape for LdTableColumnsSplit {
             }
             path {
                 d: "M5 3v18",
+            }
+        }
+    }
+}
+
+#[derive(Copy, Clone, Debug, PartialEq)]
+pub struct LdTableOfContents;
+impl IconShape for LdTableOfContents {
+    fn view_box(&self) -> &str {
+        "0 0 24 24"
+    }
+    fn xmlns(&self) -> &str {
+        "http://www.w3.org/2000/svg"
+    }
+    fn fill_and_stroke<'a>(&self, user_color: &'a str) -> (&'a str, &'a str, &'a str) {
+        ("none", user_color, "2")
+    }
+    fn stroke_linecap(&self) -> &str {
+        "round"
+    }
+    fn stroke_linejoin(&self) -> &str {
+        "round"
+    }
+    fn child_elements(&self) -> Element {
+        rsx! {
+            path {
+                d: "M16 12H3",
+            }
+            path {
+                d: "M16 18H3",
+            }
+            path {
+                d: "M16 6H3",
+            }
+            path {
+                d: "M21 12h.01",
+            }
+            path {
+                d: "M21 18h.01",
+            }
+            path {
+                d: "M21 6h.01",
             }
         }
     }
@@ -49812,7 +52082,7 @@ impl IconShape for LdTestTubeDiagonal {
     fn child_elements(&self) -> Element {
         rsx! {
             path {
-                d: "M21 7 6.82 21.18a2.83 2.83 0 0 1-3.99-.01v0a2.83 2.83 0 0 1 0-4L17 3",
+                d: "M21 7 6.82 21.18a2.83 2.83 0 0 1-3.99-.01a2.83 2.83 0 0 1 0-4L17 3",
             }
             path {
                 d: "m16 2 6 6",
@@ -49845,7 +52115,7 @@ impl IconShape for LdTestTube {
     fn child_elements(&self) -> Element {
         rsx! {
             path {
-                d: "M14.5 2v17.5c0 1.4-1.1 2.5-2.5 2.5h0c-1.4 0-2.5-1.1-2.5-2.5V2",
+                d: "M14.5 2v17.5c0 1.4-1.1 2.5-2.5 2.5c-1.4 0-2.5-1.1-2.5-2.5V2",
             }
             path {
                 d: "M8.5 2h7",
@@ -49878,10 +52148,10 @@ impl IconShape for LdTestTubes {
     fn child_elements(&self) -> Element {
         rsx! {
             path {
-                d: "M9 2v17.5A2.5 2.5 0 0 1 6.5 22v0A2.5 2.5 0 0 1 4 19.5V2",
+                d: "M9 2v17.5A2.5 2.5 0 0 1 6.5 22A2.5 2.5 0 0 1 4 19.5V2",
             }
             path {
-                d: "M20 2v17.5a2.5 2.5 0 0 1-2.5 2.5v0a2.5 2.5 0 0 1-2.5-2.5V2",
+                d: "M20 2v17.5a2.5 2.5 0 0 1-2.5 2.5a2.5 2.5 0 0 1-2.5-2.5V2",
             }
             path {
                 d: "M3 2h7",
@@ -50345,7 +52615,7 @@ impl IconShape for LdThumbsDown {
                 d: "M17 14V2",
             }
             path {
-                d: "M9 18.12 10 14H4.17a2 2 0 0 1-1.92-2.56l2.33-8A2 2 0 0 1 6.5 2H20a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-2.76a2 2 0 0 0-1.79 1.11L12 22h0a3.13 3.13 0 0 1-3-3.88Z",
+                d: "M9 18.12 10 14H4.17a2 2 0 0 1-1.92-2.56l2.33-8A2 2 0 0 1 6.5 2H20a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-2.76a2 2 0 0 0-1.79 1.11L12 22a3.13 3.13 0 0 1-3-3.88Z",
             }
         }
     }
@@ -50375,7 +52645,7 @@ impl IconShape for LdThumbsUp {
                 d: "M7 10v12",
             }
             path {
-                d: "M15 5.88 14 10h5.83a2 2 0 0 1 1.92 2.56l-2.33 8A2 2 0 0 1 17.5 22H4a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2h2.76a2 2 0 0 0 1.79-1.11L12 2h0a3.13 3.13 0 0 1 3 3.88Z",
+                d: "M15 5.88 14 10h5.83a2 2 0 0 1 1.92 2.56l-2.33 8A2 2 0 0 1 17.5 22H4a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2h2.76a2 2 0 0 0 1.79-1.11L12 2a3.13 3.13 0 0 1 3 3.88Z",
             }
         }
     }
@@ -50604,6 +52874,98 @@ impl IconShape for LdTicket {
             }
             path {
                 d: "M13 11v2",
+            }
+        }
+    }
+}
+
+#[derive(Copy, Clone, Debug, PartialEq)]
+pub struct LdTicketsPlane;
+impl IconShape for LdTicketsPlane {
+    fn view_box(&self) -> &str {
+        "0 0 24 24"
+    }
+    fn xmlns(&self) -> &str {
+        "http://www.w3.org/2000/svg"
+    }
+    fn fill_and_stroke<'a>(&self, user_color: &'a str) -> (&'a str, &'a str, &'a str) {
+        ("none", user_color, "2")
+    }
+    fn stroke_linecap(&self) -> &str {
+        "round"
+    }
+    fn stroke_linejoin(&self) -> &str {
+        "round"
+    }
+    fn child_elements(&self) -> Element {
+        rsx! {
+            path {
+                d: "M10.5 17h1.227a2 2 0 0 0 1.345-.52L18 12",
+            }
+            path {
+                d: "m12 13.5 3.75.5",
+            }
+            path {
+                d: "m4.5 8 10.58-5.06a1 1 0 0 1 1.342.488L18.5 8",
+            }
+            path {
+                d: "M6 10V8",
+            }
+            path {
+                d: "M6 14v1",
+            }
+            path {
+                d: "M6 19v2",
+            }
+            rect {
+                height: "13",
+                rx: "2",
+                width: "20",
+                x: "2",
+                y: "8",
+            }
+        }
+    }
+}
+
+#[derive(Copy, Clone, Debug, PartialEq)]
+pub struct LdTickets;
+impl IconShape for LdTickets {
+    fn view_box(&self) -> &str {
+        "0 0 24 24"
+    }
+    fn xmlns(&self) -> &str {
+        "http://www.w3.org/2000/svg"
+    }
+    fn fill_and_stroke<'a>(&self, user_color: &'a str) -> (&'a str, &'a str, &'a str) {
+        ("none", user_color, "2")
+    }
+    fn stroke_linecap(&self) -> &str {
+        "round"
+    }
+    fn stroke_linejoin(&self) -> &str {
+        "round"
+    }
+    fn child_elements(&self) -> Element {
+        rsx! {
+            path {
+                d: "m4.5 8 10.58-5.06a1 1 0 0 1 1.342.488L18.5 8",
+            }
+            path {
+                d: "M6 10V8",
+            }
+            path {
+                d: "M6 14v1",
+            }
+            path {
+                d: "M6 19v2",
+            }
+            rect {
+                height: "13",
+                rx: "2",
+                width: "20",
+                x: "2",
+                y: "8",
             }
         }
     }
@@ -51056,7 +53418,7 @@ impl IconShape for LdTractor {
     fn child_elements(&self) -> Element {
         rsx! {
             path {
-                d: "m10 11 11 .9c.6 0 .9.5.8 1.1l-.8 5h-1",
+                d: "m10 11 11 .9a1 1 0 0 1 .8 1.1l-.665 4.158a1 1 0 0 1-.988.842H20",
             }
             path {
                 d: "M16 18h-5",
@@ -51065,7 +53427,7 @@ impl IconShape for LdTractor {
                 d: "M18 5a1 1 0 0 0-1 1v5.573",
             }
             path {
-                d: "M3 4h9l1 7.246",
+                d: "M3 4h8.129a1 1 0 0 1 .99.863L13 11.246",
             }
             path {
                 d: "M4 11V4",
@@ -51502,7 +53864,7 @@ impl IconShape for LdTrees {
     fn child_elements(&self) -> Element {
         rsx! {
             path {
-                d: "M10 10v.2A3 3 0 0 1 8.9 16v0H5v0h0a3 3 0 0 1-1-5.8V10a3 3 0 0 1 6 0Z",
+                d: "M10 10v.2A3 3 0 0 1 8.9 16H5a3 3 0 0 1-1-5.8V10a3 3 0 0 1 6 0Z",
             }
             path {
                 d: "M7 16v6",
@@ -51586,6 +53948,42 @@ impl IconShape for LdTrendingDown {
             }
             polyline {
                 points: "16 17 22 17 22 11",
+            }
+        }
+    }
+}
+
+#[derive(Copy, Clone, Debug, PartialEq)]
+pub struct LdTrendingUpDown;
+impl IconShape for LdTrendingUpDown {
+    fn view_box(&self) -> &str {
+        "0 0 24 24"
+    }
+    fn xmlns(&self) -> &str {
+        "http://www.w3.org/2000/svg"
+    }
+    fn fill_and_stroke<'a>(&self, user_color: &'a str) -> (&'a str, &'a str, &'a str) {
+        ("none", user_color, "2")
+    }
+    fn stroke_linecap(&self) -> &str {
+        "round"
+    }
+    fn stroke_linejoin(&self) -> &str {
+        "round"
+    }
+    fn child_elements(&self) -> Element {
+        rsx! {
+            path {
+                d: "M14.828 14.828 21 21",
+            }
+            path {
+                d: "M21 16v5h-5",
+            }
+            path {
+                d: "m21 3-9 9-4-4-6 6",
+            }
+            path {
+                d: "M21 8V3h-5",
             }
         }
     }
@@ -51830,8 +54228,45 @@ impl IconShape for LdTurtle {
 }
 
 #[derive(Copy, Clone, Debug, PartialEq)]
-pub struct LdTv2;
-impl IconShape for LdTv2 {
+pub struct LdTvMinimalPlay;
+impl IconShape for LdTvMinimalPlay {
+    fn view_box(&self) -> &str {
+        "0 0 24 24"
+    }
+    fn xmlns(&self) -> &str {
+        "http://www.w3.org/2000/svg"
+    }
+    fn fill_and_stroke<'a>(&self, user_color: &'a str) -> (&'a str, &'a str, &'a str) {
+        ("none", user_color, "2")
+    }
+    fn stroke_linecap(&self) -> &str {
+        "round"
+    }
+    fn stroke_linejoin(&self) -> &str {
+        "round"
+    }
+    fn child_elements(&self) -> Element {
+        rsx! {
+            path {
+                d: "M10 7.75a.75.75 0 0 1 1.142-.638l3.664 2.249a.75.75 0 0 1 0 1.278l-3.664 2.25a.75.75 0 0 1-1.142-.64z",
+            }
+            path {
+                d: "M7 21h10",
+            }
+            rect {
+                height: "14",
+                rx: "2",
+                width: "20",
+                x: "2",
+                y: "3",
+            }
+        }
+    }
+}
+
+#[derive(Copy, Clone, Debug, PartialEq)]
+pub struct LdTvMinimal;
+impl IconShape for LdTvMinimal {
     fn view_box(&self) -> &str {
         "0 0 24 24"
     }
@@ -51947,6 +54382,33 @@ impl IconShape for LdTwitter {
         rsx! {
             path {
                 d: "M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z",
+            }
+        }
+    }
+}
+
+#[derive(Copy, Clone, Debug, PartialEq)]
+pub struct LdTypeOutline;
+impl IconShape for LdTypeOutline {
+    fn view_box(&self) -> &str {
+        "0 0 24 24"
+    }
+    fn xmlns(&self) -> &str {
+        "http://www.w3.org/2000/svg"
+    }
+    fn fill_and_stroke<'a>(&self, user_color: &'a str) -> (&'a str, &'a str, &'a str) {
+        ("none", user_color, "2")
+    }
+    fn stroke_linecap(&self) -> &str {
+        "round"
+    }
+    fn stroke_linejoin(&self) -> &str {
+        "round"
+    }
+    fn child_elements(&self) -> Element {
+        rsx! {
+            path {
+                d: "M14 16.5a.5.5 0 0 0 .5.5h.5a2 2 0 0 1 0 4H9a2 2 0 0 1 0-4h.5a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5V8a2 2 0 0 1-4 0V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v3a2 2 0 0 1-4 0v-.5a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5Z",
             }
         }
     }
@@ -52117,7 +54579,7 @@ impl IconShape for LdUndo2 {
                 d: "M9 14 4 9l5-5",
             }
             path {
-                d: "M4 9h10.5a5.5 5.5 0 0 1 5.5 5.5v0a5.5 5.5 0 0 1-5.5 5.5H11",
+                d: "M4 9h10.5a5.5 5.5 0 0 1 5.5 5.5a5.5 5.5 0 0 1-5.5 5.5H11",
             }
         }
     }
@@ -52363,7 +54825,7 @@ impl IconShape for LdUniversity {
                 d: "M18 13v.01",
             }
             path {
-                d: "M14 22v-5a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v5",
+                d: "M14 22v-5a2 2 0 0 0-2-2a2 2 0 0 0-2 2v5",
             }
         }
     }
@@ -52712,6 +55174,41 @@ impl IconShape for LdUserMinus {
 }
 
 #[derive(Copy, Clone, Debug, PartialEq)]
+pub struct LdUserPen;
+impl IconShape for LdUserPen {
+    fn view_box(&self) -> &str {
+        "0 0 24 24"
+    }
+    fn xmlns(&self) -> &str {
+        "http://www.w3.org/2000/svg"
+    }
+    fn fill_and_stroke<'a>(&self, user_color: &'a str) -> (&'a str, &'a str, &'a str) {
+        ("none", user_color, "2")
+    }
+    fn stroke_linecap(&self) -> &str {
+        "round"
+    }
+    fn stroke_linejoin(&self) -> &str {
+        "round"
+    }
+    fn child_elements(&self) -> Element {
+        rsx! {
+            path {
+                d: "M11.5 15H7a4 4 0 0 0-4 4v2",
+            }
+            path {
+                d: "M21.378 16.626a1 1 0 0 0-3.004-3.004l-4.01 4.012a2 2 0 0 0-.506.854l-.837 2.87a.5.5 0 0 0 .62.62l2.87-.837a2 2 0 0 0 .854-.506z",
+            }
+            circle {
+                cx: "10",
+                cy: "7",
+                r: "4",
+            }
+        }
+    }
+}
+
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct LdUserPlus;
 impl IconShape for LdUserPlus {
     fn view_box(&self) -> &str {
@@ -52881,6 +55378,41 @@ impl IconShape for LdUserRoundMinus {
             }
             path {
                 d: "M22 19h-6",
+            }
+        }
+    }
+}
+
+#[derive(Copy, Clone, Debug, PartialEq)]
+pub struct LdUserRoundPen;
+impl IconShape for LdUserRoundPen {
+    fn view_box(&self) -> &str {
+        "0 0 24 24"
+    }
+    fn xmlns(&self) -> &str {
+        "http://www.w3.org/2000/svg"
+    }
+    fn fill_and_stroke<'a>(&self, user_color: &'a str) -> (&'a str, &'a str, &'a str) {
+        ("none", user_color, "2")
+    }
+    fn stroke_linecap(&self) -> &str {
+        "round"
+    }
+    fn stroke_linejoin(&self) -> &str {
+        "round"
+    }
+    fn child_elements(&self) -> Element {
+        rsx! {
+            path {
+                d: "M2 21a8 8 0 0 1 10.821-7.487",
+            }
+            path {
+                d: "M21.378 16.626a1 1 0 0 0-3.004-3.004l-4.01 4.012a2 2 0 0 0-.506.854l-.837 2.87a.5.5 0 0 0 .62.62l2.87-.837a2 2 0 0 0 .854-.506z",
+            }
+            circle {
+                cx: "10",
+                cy: "8",
+                r: "5",
             }
         }
     }
@@ -53286,7 +55818,7 @@ impl IconShape for LdUtensils {
                 d: "M7 2v20",
             }
             path {
-                d: "M21 15V2v0a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7",
+                d: "M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7",
             }
         }
     }
@@ -53727,16 +56259,18 @@ impl IconShape for LdView {
     fn child_elements(&self) -> Element {
         rsx! {
             path {
-                d: "M5 12s2.545-5 7-5c4.454 0 7 5 7 5s-2.546 5-7 5c-4.455 0-7-5-7-5z",
-            }
-            path {
-                d: "M12 13a1 1 0 1 0 0-2 1 1 0 0 0 0 2z",
-            }
-            path {
                 d: "M21 17v2a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-2",
             }
             path {
                 d: "M21 7V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v2",
+            }
+            circle {
+                cx: "12",
+                cy: "12",
+                r: "1",
+            }
+            path {
+                d: "M18.944 12.33a1 1 0 0 0 0-.66 7.5 7.5 0 0 0-13.888 0 1 1 0 0 0 0 .66 7.5 7.5 0 0 0 13.888 0",
             }
         }
     }
@@ -53802,11 +56336,11 @@ impl IconShape for LdVolume1 {
     }
     fn child_elements(&self) -> Element {
         rsx! {
-            polygon {
-                points: "11 5 6 9 2 9 2 15 6 15 11 19 11 5",
+            path {
+                d: "M11 4.702a.705.705 0 0 0-1.203-.498L6.413 7.587A1.4 1.4 0 0 1 5.416 8H3a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2.416a1.4 1.4 0 0 1 .997.413l3.383 3.384A.705.705 0 0 0 11 19.298z",
             }
             path {
-                d: "M15.54 8.46a5 5 0 0 1 0 7.07",
+                d: "M16 9a5 5 0 0 1 0 6",
             }
         }
     }
@@ -53832,14 +56366,53 @@ impl IconShape for LdVolume2 {
     }
     fn child_elements(&self) -> Element {
         rsx! {
-            polygon {
-                points: "11 5 6 9 2 9 2 15 6 15 11 19 11 5",
+            path {
+                d: "M11 4.702a.705.705 0 0 0-1.203-.498L6.413 7.587A1.4 1.4 0 0 1 5.416 8H3a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2.416a1.4 1.4 0 0 1 .997.413l3.383 3.384A.705.705 0 0 0 11 19.298z",
             }
             path {
-                d: "M15.54 8.46a5 5 0 0 1 0 7.07",
+                d: "M16 9a5 5 0 0 1 0 6",
             }
             path {
-                d: "M19.07 4.93a10 10 0 0 1 0 14.14",
+                d: "M19.364 18.364a9 9 0 0 0 0-12.728",
+            }
+        }
+    }
+}
+
+#[derive(Copy, Clone, Debug, PartialEq)]
+pub struct LdVolumeOff;
+impl IconShape for LdVolumeOff {
+    fn view_box(&self) -> &str {
+        "0 0 24 24"
+    }
+    fn xmlns(&self) -> &str {
+        "http://www.w3.org/2000/svg"
+    }
+    fn fill_and_stroke<'a>(&self, user_color: &'a str) -> (&'a str, &'a str, &'a str) {
+        ("none", user_color, "2")
+    }
+    fn stroke_linecap(&self) -> &str {
+        "round"
+    }
+    fn stroke_linejoin(&self) -> &str {
+        "round"
+    }
+    fn child_elements(&self) -> Element {
+        rsx! {
+            path {
+                d: "M16 9a5 5 0 0 1 .95 2.293",
+            }
+            path {
+                d: "M19.364 5.636a9 9 0 0 1 1.889 9.96",
+            }
+            path {
+                d: "m2 2 20 20",
+            }
+            path {
+                d: "m7 7-.587.587A1.4 1.4 0 0 1 5.416 8H3a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2.416a1.4 1.4 0 0 1 .997.413l3.383 3.384A.705.705 0 0 0 11 19.298V11",
+            }
+            path {
+                d: "M9.828 4.172A.686.686 0 0 1 11 4.657v.686",
             }
         }
     }
@@ -53865,8 +56438,8 @@ impl IconShape for LdVolumeX {
     }
     fn child_elements(&self) -> Element {
         rsx! {
-            polygon {
-                points: "11 5 6 9 2 9 2 15 6 15 11 19 11 5",
+            path {
+                d: "M11 4.702a.705.705 0 0 0-1.203-.498L6.413 7.587A1.4 1.4 0 0 1 5.416 8H3a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2.416a1.4 1.4 0 0 1 .997.413l3.383 3.384A.705.705 0 0 0 11 19.298z",
             }
             line {
                 x1: "22",
@@ -53904,8 +56477,8 @@ impl IconShape for LdVolume {
     }
     fn child_elements(&self) -> Element {
         rsx! {
-            polygon {
-                points: "11 5 6 9 2 9 2 15 6 15 11 19 11 5",
+            path {
+                d: "M11 4.702a.705.705 0 0 0-1.203-.498L6.413 7.587A1.4 1.4 0 0 1 5.416 8H3a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2.416a1.4 1.4 0 0 1 .997.413l3.383 3.384A.705.705 0 0 0 11 19.298z",
             }
         }
     }
@@ -54163,7 +56736,7 @@ impl IconShape for LdWand {
                 d: "M17.8 11.8 19 13",
             }
             path {
-                d: "M15 9h0",
+                d: "M15 9h.01",
             }
             path {
                 d: "M17.8 6.2 19 5",
@@ -54685,6 +57258,69 @@ impl IconShape for LdWholeWord {
 }
 
 #[derive(Copy, Clone, Debug, PartialEq)]
+pub struct LdWifiHigh;
+impl IconShape for LdWifiHigh {
+    fn view_box(&self) -> &str {
+        "0 0 24 24"
+    }
+    fn xmlns(&self) -> &str {
+        "http://www.w3.org/2000/svg"
+    }
+    fn fill_and_stroke<'a>(&self, user_color: &'a str) -> (&'a str, &'a str, &'a str) {
+        ("none", user_color, "2")
+    }
+    fn stroke_linecap(&self) -> &str {
+        "round"
+    }
+    fn stroke_linejoin(&self) -> &str {
+        "round"
+    }
+    fn child_elements(&self) -> Element {
+        rsx! {
+            path {
+                d: "M12 20h.01",
+            }
+            path {
+                d: "M5 12.859a10 10 0 0 1 14 0",
+            }
+            path {
+                d: "M8.5 16.429a5 5 0 0 1 7 0",
+            }
+        }
+    }
+}
+
+#[derive(Copy, Clone, Debug, PartialEq)]
+pub struct LdWifiLow;
+impl IconShape for LdWifiLow {
+    fn view_box(&self) -> &str {
+        "0 0 24 24"
+    }
+    fn xmlns(&self) -> &str {
+        "http://www.w3.org/2000/svg"
+    }
+    fn fill_and_stroke<'a>(&self, user_color: &'a str) -> (&'a str, &'a str, &'a str) {
+        ("none", user_color, "2")
+    }
+    fn stroke_linecap(&self) -> &str {
+        "round"
+    }
+    fn stroke_linejoin(&self) -> &str {
+        "round"
+    }
+    fn child_elements(&self) -> Element {
+        rsx! {
+            path {
+                d: "M12 20h.01",
+            }
+            path {
+                d: "M8.5 16.429a5 5 0 0 1 7 0",
+            }
+        }
+    }
+}
+
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct LdWifiOff;
 impl IconShape for LdWifiOff {
     fn view_box(&self) -> &str {
@@ -54724,6 +57360,33 @@ impl IconShape for LdWifiOff {
             }
             path {
                 d: "m2 2 20 20",
+            }
+        }
+    }
+}
+
+#[derive(Copy, Clone, Debug, PartialEq)]
+pub struct LdWifiZero;
+impl IconShape for LdWifiZero {
+    fn view_box(&self) -> &str {
+        "0 0 24 24"
+    }
+    fn xmlns(&self) -> &str {
+        "http://www.w3.org/2000/svg"
+    }
+    fn fill_and_stroke<'a>(&self, user_color: &'a str) -> (&'a str, &'a str, &'a str) {
+        ("none", user_color, "2")
+    }
+    fn stroke_linecap(&self) -> &str {
+        "round"
+    }
+    fn stroke_linejoin(&self) -> &str {
+        "round"
+    }
+    fn child_elements(&self) -> Element {
+        rsx! {
+            path {
+                d: "M12 20h.01",
             }
         }
     }
