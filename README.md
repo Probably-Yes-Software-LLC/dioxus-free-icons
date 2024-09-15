@@ -18,7 +18,7 @@ dioxus-free-icons = { version = "0.8", features = ["font-awesome-brands"] }
 
 ### Support features
 
-The following features are available. Please see [react-icons site](https://react-icons.github.io/react-icons) to check the icon name and icon design. 
+The following features are available. Please see [react-icons site](https://react-icons.github.io/react-icons) to check the icon name and icon design.
 
 - [bootstrap](https://docs.rs/dioxus-free-icons/latest/dioxus_free_icons/icons/bs_icons/index.html)
 - [font-awesome-brands](https://docs.rs/dioxus-free-icons/latest/dioxus_free_icons/icons/fa_brands_icons/index.html)
@@ -82,14 +82,14 @@ Icon Library|License|Version
 [Font Awesome](https://fontawesome.com/)|[CC BY 4.0 License](https://creativecommons.org/licenses/by/4.0/)| [6.1.1](https://github.com/FortAwesome/Font-Awesome/tree/6.1.1)
 [Heroicons](https://heroicons.com/)|[MIT License](https://github.com/tailwindlabs/heroicons/blob/master/LICENSE)| [1.0.6](https://github.com/tailwindlabs/heroicons/tree/v1.0.6)
 [Ionicons](https://ionic.io/ionicons)|[MIT License](https://github.com/ionic-team/ionicons/blob/main/LICENSE)| [6.0.2](https://github.com/ionic-team/ionicons/tree/v6.0.2)
-[Lucide](https://lucide.dev)|[ISC License](https://github.com/lucide-icons/lucide/blob/main/LICENSE)| [0.265.0](https://github.com/lucide-icons/lucide/tree/v0.265.0)
+[Lucide](https://lucide.dev)|[ISC License](https://github.com/lucide-icons/lucide/blob/0.441.0/LICENSE)| [0.441.0](https://github.com/lucide-icons/lucide/tree/0.441.0)
 [Material Design icons](https://developers.google.com/fonts/docs/material_icons)|[Apache License 2.0](https://github.com/google/material-design-icons/blob/master/LICENSE)| [4.0.0](https://github.com/google/material-design-icons/tree/4.0.0)
 [Octicons](https://primer.style/octicons/)|[MIT License](https://github.com/primer/octicons/blob/main/LICENSE)| [17.3.0](https://github.com/primer/octicons/tree/v17.3.0)
 
 ## Contribution
 
-The project welcomes all contributions from anyone willing to work in good faith with other contributors and the community. 
-In particular, contributions regarding support for other free icons such as Material Design icons or Ionicons are welcome. 
+The project welcomes all contributions from anyone willing to work in good faith with other contributors and the community.
+In particular, contributions regarding support for other free icons such as Material Design icons or Ionicons are welcome.
 This library aims to be a react-icons-like library for dioxus projects.
 
 ### Development
