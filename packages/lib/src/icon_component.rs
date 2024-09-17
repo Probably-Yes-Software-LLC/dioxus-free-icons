@@ -18,6 +18,20 @@ pub trait IconShape {
     }
 }
 
+impl IconShape for () {
+    fn view_box(&self) -> &str {
+        "0 0 0 0"
+    }
+
+    fn xmlns(&self) -> &str {
+        "http://www.w3.org/2000/svg"
+    }
+
+    fn child_elements(&self) -> Element {
+        rsx! {}
+    }
+}
+
 /// Icon component Props
 #[derive(PartialEq, Props, Clone)]
 pub struct IconProps<T: IconShape + Clone + PartialEq + 'static> {
