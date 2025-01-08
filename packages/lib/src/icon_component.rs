@@ -51,6 +51,9 @@ pub struct IconProps<T: IconShape + Clone + PartialEq + 'static> {
     /// An class for the `<svg>` element.
     pub class: Option<String>,
 
+    /// An accessible, short-text description for the icon.
+    pub title: Option<String>,
+
     /// The style of the `<svg>` element.
     pub style: Option<String>,
 }
@@ -64,6 +67,7 @@ pub fn Icon<T: IconShape + Clone + PartialEq + 'static>(props: IconProps<T>) -> 
         width,
         fill,
         class,
+        title,
         style,
     } = props;
 
@@ -88,14 +92,14 @@ pub fn Icon<T: IconShape + Clone + PartialEq + 'static>(props: IconProps<T>) -> 
             fill,
             stroke,
             stroke_width,
-            stroke_linecap: "{props.icon.stroke_linecap()}",
-            stroke_linejoin: "{props.icon.stroke_linejoin()}",
-            if let Some(title_text) = props.title {
+            stroke_linecap: "{icon.stroke_linecap()}",
+            stroke_linejoin: "{icon.stroke_linejoin()}",
+            if let Some(title_text) = title {
                 title {
                     "{title_text}"
                 }
             }
-            {props.icon.child_elements()}
+            {icon.child_elements()}
         }
     )
 }
